@@ -1,9 +1,14 @@
+import Banner from '@/components/banner/Banner'
+import HeadingText from '@/components/heading/HeadingText'
 import React from 'react'
 
-const index = () => {
+const Home = () => {
   return (
-    <div>index</div>
+    <>
+      <HeadingText/>
+      <Banner/>
+    </>
   )
 }
 
-export default index
+export default Home
