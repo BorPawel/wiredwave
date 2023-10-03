@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Banner = () => {
+const Banner = ({banner}) => {
+ 
   return (
-    <div>Banner</div>
+    <div className="w-full bg-grey min-h-[500px] rounded-3xl"></div>
   )
 }
 

@@ -10,7 +10,7 @@ import Navbar from '../navbar/Navbar';
 
 export default function Layout({ children }) {
   return (
-   <div className="bg-[#181818] min-h-screen text-white p-3">
+   <div className="bg-dark min-h-screen text-white p-3">
     <Head>
       <title>WiredWave</title>
     </Head>
