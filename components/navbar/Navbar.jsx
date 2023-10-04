@@ -3,7 +3,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 const Navbar = () => {
   return (
-    <div className="w-full flex justify-between items-center p-4 md:p-6 px-8 md:px-12 fixed">
+    <nav className="w-full flex justify-between items-center p-4 md:p-6 px-8 md:px-12 fixed">
       <div className="">WiredWave</div>
       <div className="flex gap-4 md:gap-6 lg:gap-8">
         <div className="bg-grey p-3 rounded-full">
@@ -17,7 +17,7 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
