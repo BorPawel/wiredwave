@@ -9,7 +9,7 @@ const Product = ({ product: { name, image, slug, price,stars } }) => {
       <Link href={`/product/${slug.current}`}>
         <img src={urlFor(image && image[0])} alt="" className="w-full" />
       </Link>
-      <div className="flex justify-between items-end">
+      <div className="flex justify-between items-end pt-6">
         <div>
           <p className="font-thin">{name}</p>
           <span className="font-bold text-xl">${price.toFixed(2)}</span>
