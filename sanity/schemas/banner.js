@@ -13,14 +13,24 @@ export default {
       },
     },
     {
-        name: 'product',
-        title: 'Product',
+        name: 'name',
+        title: 'Name',
         type:'string',
     },
     {
         name: 'smallText',
         title: 'SmallText',
         type: 'string'
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+          source: 'name',
+          maxLength: 90
+      }
+      
     },
     {
         name: 'bigText',
