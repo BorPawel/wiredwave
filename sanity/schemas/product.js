@@ -31,6 +31,18 @@ export default {
             name: 'price',
             title: 'Price',
             type: 'number',
+
+        },
+        {
+            name: 'stars',
+            title: 'Stars',
+            type: 'number',
+            validation: Rule => Rule.min(0).max(5)
+        },
+        {
+            name: 'reviews',
+            title: 'Reviews',
+            type: 'number'
         },
         {
             name: 'details',
