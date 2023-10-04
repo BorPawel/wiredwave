@@ -12,9 +12,10 @@ const Home = ({ banner, products }) => {
       <HeadingText />
       <Banner banner={banner[0]} />
       <Categories />
-      <div className="min-h-[500px] flex flex-wrap gap-6">
-        {products.map((product, index) => <Product key={index} product={product} />)}
-        
+      <div className="min-h-[700px] flex flex-col justify-center items-center md:items-start md:flex-row md:justify-evenly gap-20">
+       
+        <div className="flex flex-col gap-20 "> {products.map((product, index) => index%2===0 && <Product key={index} product={product} />)}</div>
+        <div className="flex flex-col gap-20  md:pt-36"> {products.map((product, index) => index%2!==0 && <Product key={index} product={product} />)}</div>
       </div>
     </>
   );
