@@ -16,14 +16,14 @@ export default function Layout({ children }) {
 
   },[])
   return (
-   <div className="bg-dark min-h-screen text-white p-3">
+   <div className="bg-dark min-h-screen text-white p-3 ">
     <Head>
       <title>WiredWave</title>
     </Head>
     <header>
      <Navbar />
     </header>
-    <main className="main_container m-auto w-full max-w-[1400px]">
+    <main className="main_container m-auto w-full max-w-[1400px] ">
       {children}
     </main>
     {/* <footer>Footer</footer> */}
