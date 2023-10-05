@@ -1,10 +1,12 @@
 import React from "react";
 import { client, urlFor } from "@/sanity/lib/client";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-const ProductDetails = ({
-  product: { image, name, stars, reviews, price, details },
-  products,
-}) => {
+import { useStateContext } from "@/context/StateContext";
+import Quantity from "@/components/reusable/Quantity";
+const ProductDetails = ({ product }) => {
+  const {  qty, addItemToCart } = useStateContext();
+  const { image, name, details, price,stars, reviews } = product;
+ 
   return (
     <div className=" w-full min-h-[500px] flex flex-col lg:flex-row">
       <div className="flex w-full flex-col lg:flex-row lg:w-1/2">
@@ -12,7 +14,7 @@ const ProductDetails = ({
           <img src={urlFor(image && image[0])} alt="" />
         </div>
         <div className="w-20 md:w-24 lg:w-32 flex lg:flex-col gap-4 lg:order-1">
-          {image.map((img) => (
+          {image?.map((img) => (
             <img src={urlFor(img && img)} alt="" className="" />
           ))}
         </div>
@@ -28,17 +30,11 @@ const ProductDetails = ({
           <h5>Description</h5>
           <p className="text-sm">{details}</p>
         </div>
-        <div className="flex w-16 justify-between items-center m-4">
-          <span>
-            {" "}
-            <AiOutlineMinus />
-          </span>
-          <span className="w-1/3 flex justify-center items-center">1</span>
-          <span>
-            <AiOutlinePlus />
-          </span>
-        </div>
+        <Quantity/>
         <h3 className="font-bold">${price}</h3>
+        <button onClick={() => addItemToCart(product, qty)}>
+          ADD TO CART
+        </button>
       </div>
     </div>
   );
