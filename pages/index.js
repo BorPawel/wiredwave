@@ -18,9 +18,10 @@ const Home = ({ banner, products }) => {
       <Categories />
       <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-around flex-wrap gap-6">
         {products.map((product, index) => {
-          const slug_slice = product.slug.current.split('-')[0]
-          console.log(slug_slice)
-          return slug_slice === category.toLowerCase() && <Product key={index} product={product} />;
+          console.log(product)
+          const slug_slice = category.toLowerCase() === product.slug.current.split('-')[0]
+          
+          return slug_slice  && <Product key={index} product={product} />;
         })}
       </div>
     </>
