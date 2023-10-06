@@ -5,13 +5,13 @@ const Quantity = () => {
   const { decQty, incQty,qty } = useStateContext();
 
   return (
-    <div className="flex w-16 justify-between items-center m-4">
-      <span onClick={decQty}>
+    <div className="flex justify-between items-center">
+      <span className=" p-2 cursor-pointer hover:text-red-600" onClick={decQty}>
         {" "}
         <AiOutlineMinus />
       </span>
-      <span className="w-1/3 flex justify-center items-center">{qty}</span>
-      <span>
+      <span className="w-1/3 flex justify-center items-center p-4">{qty}</span>
+      <span className=" p-2 cursor-pointer hover:text-green-600">
         <AiOutlinePlus onClick={incQty} />
       </span>
     </div>
