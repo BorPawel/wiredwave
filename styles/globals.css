@@ -86,3 +86,8 @@ p{
 .small_img_active{
   background-color: #0074E4;
 }
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
