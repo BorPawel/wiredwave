@@ -20,8 +20,6 @@ const ProductDetails = ({ product, products }) => {
   useEffect(() => {
     document.querySelectorAll(".small_img")[0].classList.add("small_img_active");
    
-
-
   }, []);
 
   return (

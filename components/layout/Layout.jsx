@@ -7,6 +7,7 @@ import Head from 'next/head';
 import '../../styles/globals.css'
 
 import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Layout({ children }) {
     <main className="main_container m-auto w-full max-w-[1400px]">
       {children}
     </main>
-    {/* <footer>Footer</footer> */}
+    <Footer/>
    </div>
   )
 }
