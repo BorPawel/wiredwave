@@ -11,6 +11,20 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [category, setCategory] = useState('Wireless');
+
+ 
+
+  const categoryHandler = (category, id) => {
+    const categories = document.querySelectorAll(".categories");
+    categories.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    categories[id].classList.add("active");
+    setCategory(category);
+
+  };
 
   const showCartHandler = () => {
     if (!showCart) {
@@ -94,7 +108,9 @@ export const StateContext = ({ children }) => {
         decQty,
         addItemToCart,
         deleteItemFromCart,
-        incQtyInCart
+        incQtyInCart,
+        categoryHandler,
+        category
       }}
     >
       {children}

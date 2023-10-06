@@ -3,7 +3,9 @@ import React from "react";
 
 import { urlFor } from "@/sanity/lib/client";
 import { AiFillStar } from "react-icons/ai";
+import { useStateContext } from "@/context/StateContext";
 const Product = ({ product: { name, image, slug, price, stars } }) => {
+
   return (
     <div className="w-[320px] lg:w-[350px] h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0">
       <Link href={`/product/${slug.current}`} >
