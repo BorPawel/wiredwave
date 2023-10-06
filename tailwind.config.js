@@ -15,10 +15,10 @@ module.exports = {
       },
     },
     dropShadow: {
-      // glow: [
-      //   "1px 1px 65px rgba(255,255, 255, 1)",
-      //   "0 0px 65px rgba(255, 255,255, 1)",
-      // ],
+      glow: [
+        "1px 1px 20px rgba(255,255, 255, 0.6)",
+        "0 0px 45px rgba(255, 255,255, 0.35)",
+      ],
       smallCircle: [
         "1px 1px 5px rgba(0, 116, 228, 1)",
         "1px 1px 10px rgba(0, 116, 228, 1)",

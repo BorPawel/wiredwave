@@ -55,3 +55,30 @@ p{
   left: 50%;
   transform: translate(-50%)
 }
+
+.clip_path{
+  clip-path: polygon(100% 0, 100% 100%, 63% 78%, 0 78%, 0 0);
+}
+.custom-shape-divider-top-1696561410 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1696561410 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 184px;
+  transform: rotateY(180deg);
+  
+}
+
+.custom-shape-divider-top-1696561410 .shape-fill {
+  fill: var(--dark);
+}
