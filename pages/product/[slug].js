@@ -18,8 +18,9 @@ const ProductDetails = ({ product, products }) => {
     smallImg[index].classList.add("small_img_active");
   };
   useEffect(() => {
-    document.querySelectorAll(".small_img")[0].classList.add("small_img_active");
-   
+    document
+      .querySelectorAll(".small_img")[0]
+      .classList.add("small_img_active");
   }, []);
 
   return (
@@ -59,12 +60,21 @@ const ProductDetails = ({ product, products }) => {
           <Quantity />
         </div>
         <h3 className="font-bold drop-shadow-glow">${price}</h3>
-        <button
-          className="p-4 w-40 bg-blue rounded-[30px]"
-          onClick={() => addItemToCart(product, qty)}
-        >
-          Add to Cart
-        </button>
+        <div className="flex justify-between lg:justify-start items-center w-full lg:items-start lg:gap-6 ">
+         
+          <button
+            className="p-4 w-40 bg-blue rounded-[30px] font-bold"
+            onClick={() => addItemToCart(product, qty)}
+          >
+            Add to Cart
+          </button>
+          <button
+            className="p-4 w-40 border-2 border-blue text-blue font-bold rounded-[30px]"
+            
+          >
+            Buy Now
+          </button>
+        </div>
       </div>
     </div>
   );
