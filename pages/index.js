@@ -14,7 +14,7 @@ const Home = ({ banner, products }) => {
   return (
     <>
       
-      <HeadingText />
+      {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
       <Categories />
       <div className="min-h-[700px] flex items-start flex-row justify-evenly">

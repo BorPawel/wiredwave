@@ -4,7 +4,7 @@ import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
 const ProductDetails = ({ product }) => {
-  const {  qty, addItemToCart } = useStateContext();
+  const { incQty, decQty, qty, addItemToCart } = useStateContext();
   const { image, name, details, price,stars, reviews } = product;
  
   return (

@@ -64,6 +64,22 @@ export const StateContext = ({ children }) => {
         const updatedCartItems = cartItems.filter(item => item._id !== product._id)
         setCartItems(updatedCartItems);
     }
+
+    const incQtyInCart = (product) => {
+        const findProduct = cartItems.find(item => item._id === product._id)
+        const newCartItem = cartItems.filter(item => item._id !== findProduct._id)
+        setTotalQuantities(prev => prev + 1)
+        setCartItems([...newCartItem, {...findProduct, quantity: findProduct.quantity + 1}])
+        setTotalPrice(prev => prev + findProduct.price)
+       
+       
+        // setCartItems(updateQuantity)
+        // setTotalPrice(prev => prev + findProduct.price)
+        // setTotalQuantities(prev => prev + 1)
+        
+
+        console.log(findProduct)
+    }
   return (
     <Context.Provider
       value={{
@@ -77,7 +93,8 @@ export const StateContext = ({ children }) => {
         incQty,
         decQty,
         addItemToCart,
-        deleteItemFromCart
+        deleteItemFromCart,
+        incQtyInCart
       }}
     >
       {children}

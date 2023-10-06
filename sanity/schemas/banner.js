@@ -33,6 +33,12 @@ export default {
       
     },
     {
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+
+  },
+    {
         name: 'bigText',
         title: 'BigText',
         type: 'string'
