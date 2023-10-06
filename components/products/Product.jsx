@@ -5,7 +5,7 @@ import { urlFor } from "@/sanity/lib/client";
 import { AiFillStar } from "react-icons/ai";
 const Product = ({ product: { name, image, slug, price, stars } }) => {
   return (
-    <div className="w-[160px] md:w-[320px] lg:w-[350px] h-[300px] md:h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0">
+    <div className="w-[320px] lg:w-[350px] h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0">
       <Link href={`/product/${slug.current}`} >
         <img
           src={urlFor(image && image[0])}

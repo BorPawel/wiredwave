@@ -17,7 +17,7 @@ const Home = ({ banner, products }) => {
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
       <Categories />
-      <div className="min-h-[700px] flex items-start flex-row justify-evenly">
+      <div className="min-h-[700px] flex items-start flex-col md:flex-row justify-evenly">
        
         <div className="flex flex-col gap-20 "> {products.map((product, index) => index%2===0 && <Product key={index} product={product} />)}</div>
         <div className="flex flex-col gap-20  md:pt-36"> {products.map((product, index) => index%2!==0 && <Product key={index} product={product} />)}</div>

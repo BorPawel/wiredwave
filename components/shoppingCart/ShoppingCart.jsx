@@ -9,7 +9,7 @@ const ShoppingCart = () => {
   const { showCartHandler, cartItems, totalPrice, deleteItemFromCart, decQty,incQtyInCart } =
     useStateContext();
   return (
-    <div className="w-screen bg-[rgba(0,0,0,0.5)] fixed right-0 top-0 z-100 flex items-end justify-end">
+    <div className="w-screen bg-[rgba(0,0,0,0.5)] fixed right-0 top-0 z-50 flex items-end justify-end ">
       <div className="h-screen w-[600px] bg-grey relative p-6 flex justify-between flex-col">
         <AiOutlineArrowLeft
           className="text-3xl text-blue cursor-pointer absolute"
