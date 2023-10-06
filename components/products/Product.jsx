@@ -26,15 +26,15 @@ const Product = ({ product: { name, image, slug, price, stars } }) => {
           ></path>
         </svg>
       </div>
-      <div className="flex justify-between items-end p-4 min-h-[100px]">
+      <div className="flex justify-between items-end p-6 min-h-[100px]">
         <div>
-          <p className="font-thin text-sm">{name}</p>
-          <span className="font-bold text-xl">${price.toFixed(2)}</span>
+          <p className="font-thin text-lg">{name}</p>
+          <span className="font-bold text-2xl">${price.toFixed(2)}</span>
         </div>
-        {/* <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4">
           <AiFillStar className="text-4xl md:text-5xl text-blue"/>
           <span className="text-xl md:text-2xl">{stars}</span>
-        </div> */}
+        </div>
       </div>
     </div>
   );

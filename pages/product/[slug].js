@@ -3,10 +3,10 @@ import { client, urlFor } from "@/sanity/lib/client";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product,products }) => {
   const { incQty, decQty, qty, addItemToCart } = useStateContext();
   const { image, name, details, price,stars, reviews } = product;
- 
+ console.log(products)
   return (
     <div className=" w-full min-h-[500px] flex flex-col lg:flex-row">
       <div className="flex w-full flex-col lg:flex-row lg:w-1/2">
@@ -62,9 +62,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]';
-
   const product = await client.fetch(query);
+
   const products = await client.fetch(productsQuery);
+
   return {
     props: {
       product,
