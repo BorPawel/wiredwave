@@ -17,6 +17,7 @@ const ShoppingCart = () => {
     deleteItemFromCart,
     decQty,
     incQtyInCart,
+    decQtyInCart
   } = useStateContext();
   return (
     <div className="w-screen bg-[rgba(0,0,0,0.5)] fixed right-0 top-0 z-50 flex items-end justify-end ">
@@ -56,7 +57,7 @@ const ShoppingCart = () => {
                         className=" p-2 cursor-pointer hover:text-red-600"
                       >
                         {" "}
-                        <AiOutlineMinus />
+                        <AiOutlineMinus onClick={() => decQtyInCart(item)}/>
                       </span>
                       <span className="w-1/3 flex justify-center items-center">
                         {item.quantity}

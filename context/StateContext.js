@@ -11,9 +11,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
-  const [category, setCategory] = useState('Wireless');
-
- 
+  const [category, setCategory] = useState("Wireless");
 
   const categoryHandler = (category, id) => {
     const categories = document.querySelectorAll(".categories");
@@ -23,7 +21,6 @@ export const StateContext = ({ children }) => {
 
     categories[id].classList.add("active");
     setCategory(category);
-
   };
 
   const showCartHandler = () => {
@@ -70,30 +67,46 @@ export const StateContext = ({ children }) => {
     toast.success(`${qty} ${product.name} added to the cart.`);
   };
 
-    const deleteItemFromCart = (product) => {
-        const findProduct = cartItems.find(item => item._id === product._id)
+  const deleteItemFromCart = (product) => {
+    const findProduct = cartItems.find((item) => item._id === product._id);
 
-        setTotalPrice(prev => prev - findProduct.price * findProduct.quantity)
-        setTotalQuantities(prev => prev - findProduct.quantity)
-        const updatedCartItems = cartItems.filter(item => item._id !== product._id)
-        setCartItems(updatedCartItems);
+    setTotalPrice((prev) => prev - findProduct.price * findProduct.quantity);
+    setTotalQuantities((prev) => prev - findProduct.quantity);
+    const updatedCartItems = cartItems.filter(
+      (item) => item._id !== product._id
+    );
+    setCartItems(updatedCartItems);
+  };
+
+  const incQtyInCart = (product) => {
+    const findProduct = cartItems.find((item) => item._id === product._id);
+    const newCartItem = cartItems.filter(
+      (item) => item._id !== findProduct._id
+    );
+    setTotalQuantities((prev) => prev + 1);
+    setCartItems([
+      ...newCartItem,
+      { ...findProduct, quantity: findProduct.quantity + 1 },
+    ]);
+    setTotalPrice((prev) => prev + findProduct.price);
+  };
+
+  const decQtyInCart = (product) => {
+    const findProduct = cartItems.find((item) => item._id === product._id);
+    const newCartItem = cartItems.filter(
+      (item) => item._id !== findProduct._id
+    );
+    if (findProduct.quantity > 1) {
+      setTotalQuantities((prev) => prev - 1);
+      setCartItems([
+        ...newCartItem,
+        { ...findProduct, quantity: findProduct.quantity - 1 },
+      ]);
+      setTotalPrice((prev) => prev - findProduct.price);
+    }else{
+      deleteItemFromCart(product)
     }
-
-    const incQtyInCart = (product) => {
-        const findProduct = cartItems.find(item => item._id === product._id)
-        const newCartItem = cartItems.filter(item => item._id !== findProduct._id)
-        setTotalQuantities(prev => prev + 1)
-        setCartItems([...newCartItem, {...findProduct, quantity: findProduct.quantity + 1}])
-        setTotalPrice(prev => prev + findProduct.price)
-       
-       
-        // setCartItems(updateQuantity)
-        // setTotalPrice(prev => prev + findProduct.price)
-        // setTotalQuantities(prev => prev + 1)
-        
-
-        console.log(findProduct)
-    }
+  };
   return (
     <Context.Provider
       value={{
@@ -110,7 +123,8 @@ export const StateContext = ({ children }) => {
         deleteItemFromCart,
         incQtyInCart,
         categoryHandler,
-        category
+        category,
+        decQtyInCart
       }}
     >
       {children}
