@@ -18,7 +18,7 @@ export function ProductGallery({ image }) {
       .classList.add("small_img_active");
   }, []);
   return (
-    <div className="flex lg:flex-col lg:w-6/12 gap-2">
+    <div className="flex lg:flex-col lg:w-6/12 gap-2 p-2">
       <div className="w-28 lg:w-32 flex flex-col lg:flex-row lg:order-2 gap-4">
         {image?.map((img, index) => (
           <img

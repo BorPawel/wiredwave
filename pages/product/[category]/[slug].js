@@ -34,7 +34,7 @@ const ProductDetails = ({ product, products }) => {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start">
         <ProductGallery image={image} />
-        <div className="w-full lg:w-6/12 flex flex-col items-start justify-evenly gap-6 lg:gap-8">
+        <div className="w-full lg:w-6/12 flex flex-col items-start justify-evenly gap-6 lg:gap-8 p-2">
           <h3 className="text-4xl font-medium lg:text-5xl">{name}</h3>
           <Reviews stars={stars} reviews={reviews} />
           <p className="text-sm md:w-3/4 pr-2">{shortDesc}</p>
