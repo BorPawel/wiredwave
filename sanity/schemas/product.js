@@ -52,5 +52,52 @@ export default {
       title: "Details",
       type: "string",
     },
+    {
+        name: 'shortDesc',
+        title: 'Short Description',
+        type: 'string'
+    },
+    {
+        name: 'longDesc',
+        title: 'Long Description',
+        type: 'string'
+    },
+    {
+        name: "bluetooth",
+        title: "Bluetooth",
+        type: "number",
+
+      },
+      {
+        name: 'connector',
+        title: 'Connector',
+        type: 'string'
+    },
+      {
+        name: 'colors',
+        title: 'Colors',
+        type:'array',
+        of: [{ type: "string" }],
+      },
+      {
+        name: 'batteryLife',
+        title: 'Battery Life',
+        type: 'number'
+      },
+      {
+        name: 'chargingTime',
+        title: 'Charging Time',
+        type: 'number'
+      },
+      {
+        name: 'micro',
+        title: 'Microphone',
+        type: 'string'
+      },
+      {
+        name: 'freq',
+        title: 'Headphone frequency response',
+        type: 'string'
+      }
   ],
 };
