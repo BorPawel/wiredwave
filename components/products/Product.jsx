@@ -4,10 +4,11 @@ import React from "react";
 import { urlFor } from "@/sanity/lib/client";
 import { AiFillStar } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
-const Product = ({ product: { name, image, slug, price, stars } }) => {
+const Product = ({ product: { name, image, slug, price, stars,category } }) => {
+
   return (
     <div className="w-[320px] lg:w-[350px] h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0 hover:scale-110 duration-200">
-      <Link href={`/product/${slug.current}`}>
+      <Link href={`/product/${category.toLowerCase()}/${slug.current}`}>
         <img
           src={urlFor(image && image[0])}
           alt=""

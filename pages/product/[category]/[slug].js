@@ -27,6 +27,7 @@ const ProductDetails = ({ product, products }) => {
     batteryLife,
     shortDesc,
     longDesc,
+    micro
   } = product;
 
   return (
@@ -38,7 +39,7 @@ const ProductDetails = ({ product, products }) => {
           <Reviews stars={stars} reviews={reviews} />
           <p className="text-sm md:w-3/4 pr-2">{shortDesc}</p>
 
-          <Specs batteryLife={batteryLife} bluetooth={bluetooth} />
+          <Specs batteryLife={batteryLife} bluetooth={bluetooth} micro={micro}/>
           <div className="flex justify-center items-center gap-2">
             <h5 className="font-bold">Quantity:</h5>
             <Quantity />
@@ -62,26 +63,35 @@ const ProductDetails = ({ product, products }) => {
 };
 
 export const getStaticPaths = async () => {
-  const query = `*[_type == "product"]{
+  const query = `*[_type == "product" ]{
+    category,
         slug {
             current
-        }
-    }`;
+        },
+      
 
+    }`;
   const products = await client.fetch(query);
-  const paths = products.map((product) => ({
-    params: {
-      slug: product.slug.current,
-    },
-  }));
+  console.log(products);
+
+  const paths = products.map((product) => {
+    return {
+      params: {
+        category: product.category,
+        slug: product.slug.current,
+      },
+    };
+  });
 
   return {
     paths,
     fallback: "blocking",
   };
 };
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({ params: { slug, category } }) => {
+  console.log(slug, category);
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
+
   const productsQuery = '*[_type == "product"]';
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
