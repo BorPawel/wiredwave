@@ -21,6 +21,7 @@ export const StateContext = ({ children }) => {
 
     categories[id].classList.add("active");
     setCategory(category);
+
   };
 
   const showCartHandler = () => {

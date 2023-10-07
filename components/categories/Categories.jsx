@@ -11,13 +11,16 @@ const Categories = () => {
   ];
   const liClass = "categories font-bold md:self-center cursor-pointer";
 
-  const { categoryHandler } = useStateContext();
+  const { categoryHandler, category } = useStateContext();
 
   useEffect(() => {
     const categories = document.querySelectorAll(".categories");
-    categories[0].classList.add("active");
+    console.log(category)
+    categoriesArray.forEach(
+      (item, index) => item === category && categories[index].classList.add("active")
+    );
   }, []);
-
+ 
   return (
     <div className=" my-16 md:text-lg">
       <ul className=" h-24 flex justify-around p-4">
@@ -32,7 +35,7 @@ const Categories = () => {
             {item}
           </li>
         ))}
-      </ul> 
+      </ul>
     </div>
   );
 };
