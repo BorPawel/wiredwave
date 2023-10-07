@@ -11,8 +11,8 @@ const Banner = ({
   const circle =
     "rounded-full border-solid border-2 border-blue absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]";
   return (
-    <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 ">
-      <div className="hidden lg:block absolute top-[35%] left-[75%]">
+    <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible">
+      <div className="hidden lg:block absolute top-[35%] left-[70%]">
         <span
           className={`w-[20px] h-[20px] ${circle} bg-blue drop-shadow-smallCircle`}
         ></span>
@@ -55,7 +55,7 @@ const Banner = ({
         </div>
       </div>
       <div className="lg:w-6/12 order-1 lg:order-2 flex justify-center items-center z-0 relative">
-        <h1 className="lg:hidden absolute z-[-1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-8xl md:text-[9rem] lg:text-[10vw] md:tracking-wider font-bold text-grey">
+        <h1 className="lg:hidden absolute z-[-1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[22vw] md:tracking-wider font-bold text-grey">
           {bigText}
         </h1>
         <img src={urlFor(image && image[0]).width(700)} alt="" className="" />
