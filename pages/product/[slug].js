@@ -3,6 +3,8 @@ import { client, urlFor } from "@/sanity/lib/client";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
+import ButtonOutline from "@/components/reusable/button/ButtonOutline";
+import ButtonFull from "@/components/reusable/button/ButtonFull";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart } = useStateContext();
   const { image, name, details, price, stars, reviews } = product;
@@ -62,19 +64,12 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <h3 className="font-bold drop-shadow-glow">${price}</h3>
         <div className="flex justify-between lg:justify-start items-center w-full lg:items-start lg:gap-6 ">
-         
-          <button
-            className="p-4 w-40 bg-blue rounded-[30px] font-bold"
+          <ButtonFull
+            buttonText="Add to Cart"
             onClick={() => addItemToCart(product, qty)}
-          >
-            Add to Cart
-          </button>
-          <button
-            className="p-4 w-40 border-2 border-blue text-blue font-bold rounded-[30px]"
-            
-          >
-            Buy Now
-          </button>
+            className="p-4 w-40 "
+          />
+          <ButtonOutline buttonText="Buy Now" />
         </div>
       </div>
     </div>
