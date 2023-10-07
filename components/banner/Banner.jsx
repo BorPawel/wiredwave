@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { urlFor } from "@/sanity/lib/client";
 import Image from "next/image";
@@ -5,30 +6,14 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import HeadingText from "../heading/HeadingText";
 import Link from "next/link";
 import ButtonFull from "@/components/reusable/button/ButtonFull";
+import { Circles } from "../reusable/circles/Circles";
 const Banner = ({
   banner: { smallText, desc, bigText, image, buttonText, slug, price, name },
 }) => {
-  const circle =
-    "rounded-full border-solid border-2 border-blue absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]";
+ 
   return (
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible">
-      <div className="hidden lg:block absolute top-[35%] left-[70%]">
-        <span
-          className={`w-[20px] h-[20px] ${circle} bg-blue drop-shadow-smallCircle`}
-        ></span>
-        <span
-          className={`w-[10vw] h-[10vw] ${circle} border-[8px] drop-shadow-inner`}
-        ></span>
-        <span
-          className={`w-[25vw] h-[25vw] ${circle} border-[6px] drop-shadow-inner `}
-        ></span>
-        <span
-          className={`w-[35vw] h-[35vw] ${circle} border-[4px] drop-shadow-inner opacity-60`}
-        ></span>
-        <span
-          className={`w-[50vw] h-[50vw] ${circle} order-[1px] drop-shadow-outer opacity-20`}
-        ></span>
-      </div>
+     <Circles   />
       <h1 className="hidden lg:block absolute z-[-1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:text-[9rem] lg:text-[20vw] md:tracking-wider font-bold text-grey">
         {bigText}
       </h1>
