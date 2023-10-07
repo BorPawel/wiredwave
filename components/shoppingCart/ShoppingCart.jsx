@@ -28,13 +28,13 @@ const ShoppingCart = () => {
         <div className="flex flex-col gap-6 p-2 relative mt-6 ">
           {cartItems.map((item, index) => (
             <div key={index} className="flex relative  flex-col p-2">
-              <div className="flex relative w-full">
+              <div className="flex relative w-full gap-4">
                 <img
                   src={urlFor(item.image && item.image[0])}
                   className="w-36"
                 />
                 <div className="w-full flex flex-col justify-evenly">
-                  <div className="flex justify-between">
+                  <div className="flex justify-between  items-center">
                     <p className="text-2xl text-blue">{item.name}</p>
                     <FaTrashAlt
                       className="text-red-600 cursor-pointer"

@@ -10,18 +10,18 @@ import { useStateContext } from "@/context/StateContext";
 import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 
 const Home = ({ banner, products }) => {
-  const { showCart,category } = useStateContext();
+  const { showCart, category } = useStateContext();
   return (
     <>
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
       <Categories />
-      <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-around flex-wrap gap-6">
+      <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-around flex-wrap gap-6 ">
         {products.map((product, index) => {
-          console.log(product)
-          const slug_slice = category.toLowerCase() === product.slug.current.split('-')[0]
-          
-          return slug_slice  && <Product key={index} product={product} />;
+          const slug_slice =
+            category.toLowerCase() === product.slug.current.split("-")[0];
+
+          return slug_slice && <Product key={index} product={product} />;
         })}
       </div>
     </>

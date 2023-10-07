@@ -31,6 +31,7 @@ const ProductDetails = ({ product, products }) => {
             <img
               src={urlFor(img && img)}
               alt=""
+              key={index}
               className="small_img bg-grey rounded-[20px]"
               onMouseEnter={() => toggleProduct(img, index)}
             />
