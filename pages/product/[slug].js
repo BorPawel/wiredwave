@@ -20,6 +20,7 @@ const ProductDetails = ({ product, products }) => {
     bluetooth,
     batteryLife,
     shortDesc,
+    longDesc
   } = product;
   const [bigImage, setBigImage] = useState(image[0]);
 
@@ -102,9 +103,12 @@ const ProductDetails = ({ product, products }) => {
 
       <div className="w-full border-y-2 border-grey flex items-center justify-center gap-12">
         <p className={mainDescClass}>Description</p>
+        <p className={mainDescClass}>Spec</p>
         <p className={mainDescClass}>Reviews</p>
       </div>
-      <div className="min-h-[500px]"></div>
+      <div className="min-h-[500px]">
+        <p className="text-sm">{longDesc}</p>
+      </div>
     </div>
   );
 };

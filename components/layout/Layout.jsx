@@ -13,11 +13,11 @@ export default function Layout({ children }) {
   useEffect(() => {
     const main_container = document.querySelector('.main_container');
     const navbar = document.querySelector('nav');
-    main_container.style.marginTop = `${navbar.offsetHeight}px`
+    main_container.style.paddingTop = `${navbar.offsetHeight}px`
 
   },[])
   return (
-   <div className="bg-dark min-h-screen text-white p-3 ">
+   <div className="bg-dark min-h-screen text-white">
     <Head>
       <title>WiredWave</title>
     </Head>
