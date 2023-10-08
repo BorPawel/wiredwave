@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 import { BiSolidDownArrow } from "react-icons/bi";
-export function Description({ longDesc }) {
+import { SpecTable } from "../spec_table/SpecTable";
+export function Description({ product }) {
   const [isToggled, setIsToggled] = useState(false);
 
   const toggleDescription = () => {
@@ -12,11 +13,11 @@ export function Description({ longDesc }) {
     if (!isToggled) {
       desc.style.maxHeight = desc.scrollHeight + 12 + "px";
       desc.style.paddingTop = "8px";
-      descArrow.style.transform = "rotate(180deg)"
+      descArrow.style.transform = "rotate(180deg)";
     } else {
       desc.style.maxHeight = "0";
       desc.style.paddingTop = "0";
-      descArrow.style.transform = "rotate(0deg)"
+      descArrow.style.transform = "rotate(0deg)";
     }
   };
 
@@ -34,11 +35,10 @@ export function Description({ longDesc }) {
           <BiSolidDownArrow className="desc_arrow text-xl md:text-2xl lg:text-3xl duration-300" />
         </div>
         <p className="description text-sm max-h-0 overflow-hidden duration-300 ">
-          {longDesc}
+          {product.longDesc}
         </p>
       </div>
-
-      <div>asdasdasd</div>
+      <SpecTable product={product} />
     </div>
   );
 }

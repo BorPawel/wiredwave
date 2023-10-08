@@ -11,6 +11,7 @@ import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 
 const Home = ({ banner, products }) => {
   const { showCart, category } = useStateContext();
+  console.log(products)
   return (
     <>
       {/* <HeadingText /> */}
