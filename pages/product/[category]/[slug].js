@@ -27,7 +27,8 @@ const ProductDetails = ({ product, products }) => {
     batteryLife,
     shortDesc,
     longDesc,
-    micro
+    micro,
+    colors
   } = product;
 
   return (
@@ -40,6 +41,10 @@ const ProductDetails = ({ product, products }) => {
           <p className="text-sm md:w-3/4 pr-2">{shortDesc}</p>
 
           <Specs batteryLife={batteryLife} bluetooth={bluetooth} micro={micro}/>
+          <div className="flex-center gap-4 ">
+            <p>Available colors:</p>
+          {colors?.map(color => <div className={`w-6 h-6 rounded-full bg-[`+color+']'}></div>)}
+          </div>
           <div className="flex justify-center items-center gap-2">
             <h5 className="font-bold">Quantity:</h5>
             <Quantity />
