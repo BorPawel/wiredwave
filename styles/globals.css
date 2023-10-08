@@ -46,7 +46,7 @@ p{
 }
 .active::before{
   content:'';
-  width: 45%;
+  width: 30px;
   height: 8px;
   border-radius: 15px;
   position: absolute;

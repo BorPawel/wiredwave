@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+
+import { BiSolidDownArrow } from "react-icons/bi";
 export function Description({ longDesc }) {
   const [isToggled, setIsToggled] = useState(false);
 
   const toggleDescription = () => {
     setIsToggled((prev) => !prev);
     const desc = document.querySelector(".description");
+    const descArrow = document.querySelector(".desc_arrow");
     if (!isToggled) {
       desc.style.maxHeight = desc.scrollHeight + 12 + "px";
       desc.style.paddingTop = "8px";
+      descArrow.style.transform = "rotate(180deg)"
     } else {
       desc.style.maxHeight = "0";
       desc.style.paddingTop = "0";
+      descArrow.style.transform = "rotate(0deg)"
     }
   };
 
   return (
-    <div className="min-h-[500px] w-full ">
+    <div className="min-h-[500px] w-full flex flex-col items-center">
       <div
-        className="border-y-2  border-grey p-2 cursor-pointer flex flex-col"
+        className="lg:w-3/4 border-y-2  border-grey p-2 cursor-pointer flex flex-col"
         onClick={toggleDescription}
       >
         <div className="flex justify-between items-center ">
           <button className="text-xl md:text-2xl lg:text-3xl">
             Description
           </button>
-          {!isToggled ? (
-            <AiOutlinePlus className="text-xl md:text-2xl lg:text-3xl" />
-          ) : (
-            <AiOutlineMinus className="text-xl md:text-2xl lg:text-3xl" />
-          )}
+
+          <BiSolidDownArrow className="desc_arrow text-xl md:text-2xl lg:text-3xl duration-300" />
         </div>
-        <p className="description text-sm max-h-0 overflow-hidden duration-200 ">
+        <p className="description text-sm max-h-0 overflow-hidden duration-300 ">
           {longDesc}
         </p>
       </div>
