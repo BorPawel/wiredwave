@@ -48,11 +48,6 @@ export default {
       type: "number",
     },
     {
-      name: "details",
-      title: "Details",
-      type: "string",
-    },
-    {
         name: 'shortDesc',
         title: 'Short Description',
         type: 'string'
@@ -62,12 +57,7 @@ export default {
         title: 'Long Description',
         type: 'string'
     },
-    {
-        name: "bluetooth",
-        title: "Bluetooth",
-        type: "number",
 
-      },
       {
         name: 'connector',
         title: 'Connector',
@@ -80,18 +70,60 @@ export default {
         of: [{ type: "string" }],
       },
       {
+        name: "bluetooth",
+        title: "Bluetooth",
+        type: "number",
+
+      },
+      {
         name: 'batteryLife',
         title: 'Battery Life',
         type: 'number'
       },
       {
-        name: 'chargingTime',
-        title: 'Charging Time',
-        type: 'number'
+        name: 'driverSize',
+        title: 'Audio Driver Size',
+        type: 'string'
+      },
+     
+      {
+        name: 'soundQuality',
+        title: 'Sound Quality',
+        type: 'string'
+      },
+      {
+        name: 'noiseCancel',
+        title: 'Noise Cancellation',
+        type: 'string'
+      },
+      {
+        name: 'portability',
+        title: 'Portability',
+        type: 'string'
+      },
+      {
+          name: 'comfort',
+          title: 'Comfort',
+          type: 'string'
       },
       {
         name: 'micro',
         title: 'Microphone',
+        type: 'string'
+      },
+      {
+        name: 'controls',
+        title: 'Controls',
+        type: 'string'
+      },
+      {
+        name: 'chargingTime',
+        title: 'Charging Time',
+        type: 'string'
+      },
+      {
+        name: 'durability',
+        title: 'Durability',
         type: 'string'
       },
       {
