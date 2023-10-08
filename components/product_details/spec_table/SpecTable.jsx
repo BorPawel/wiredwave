@@ -25,58 +25,58 @@ export function SpecTable({
         </tr>
       </thead>
       <tbody  className="text-sm">
-        <tr>
+       {bluetooth && <tr>
           <td>Wireless Connectivity</td>
-          <td>{bluetooth.toFixed(1)}</td>
-        </tr>
-        <tr>
+          <td>{bluetooth?.toFixed(1)}</td>
+        </tr>}
+      {  batteryLife && <tr>
           <td>BatteryLife</td>
-          <td>{batteryLife}</td>
-        </tr>
-        <tr>
+          <td>Up to {batteryLife} hours</td>
+        </tr>}
+       { driverSize &&  <tr>
           <td>Audio Driver Size</td>
           <td>{driverSize}</td>
-        </tr>
-        <tr>
+        </tr>}
+        { soundQuality && <tr>
           <td>Sound Quality</td>
           <td>{soundQuality}</td>
-        </tr>
-        <tr>
+        </tr>}
+       {noiseCancel && <tr>
           <td>Noise Cancellation</td>
           <td>{noiseCancel}</td>
-        </tr>
-        <tr>
+        </tr>}
+      {portability &&  <tr>
           <td>Portability</td>
           <td>{portability}</td>
-        </tr>
-        <tr>
+        </tr>}
+        { connector && <tr>
           <td>Connector</td>
           <td>{connector}</td>
-        </tr>
-        <tr>
+        </tr>}
+        { comfort && <tr>
           <td>Comfort</td>
           <td>{comfort}</td>
-        </tr>
-        <tr>
+        </tr>}
+       { micro && <tr>
           <td>Microphone</td>
           <td>{micro}</td>
-        </tr>
-        <tr>
+        </tr>}
+       { controls && <tr>
           <td>Controls</td>
           <td>{controls}</td>
-        </tr>
-        <tr>
+        </tr>}
+        { chargingTime && <tr>
           <td>Charging Time</td>
           <td>{chargingTime}</td>
-        </tr>
-        <tr>
+        </tr>}
+     { durability &&   <tr>
           <td>Durability</td>
           <td>{durability}</td>
-        </tr>
-        <tr>
+        </tr>}
+       { freq && <tr>
           <td>Headphone frequency response</td>
           <td>{freq}</td>
-        </tr>
+        </tr>}
       </tbody>
     </table>
   );

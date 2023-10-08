@@ -35,7 +35,7 @@ export function Description({ product }) {
           <BiSolidDownArrow className="desc_arrow text-xl md:text-2xl lg:text-3xl duration-300" />
         </div>
         <p className="description text-sm max-h-0 overflow-hidden duration-300 ">
-          {product.longDesc}
+          {product?.longDesc}
         </p>
       </div>
       <SpecTable product={product} />

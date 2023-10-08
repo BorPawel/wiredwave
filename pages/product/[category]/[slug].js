@@ -21,23 +21,23 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start">
-        <ProductGallery image={product.image} />
+        <ProductGallery image={product?.image} />
         <div className="w-full lg:w-6/12 flex flex-col items-start justify-evenly gap-6 lg:gap-8 p-2">
-          <h3 className="text-4xl font-medium lg:text-5xl">{product.name}</h3>
-          <Reviews stars={product.stars} reviews={product.reviews} />
-          <p className="text-sm md:w-3/4 pr-2">{product.shortDesc}</p>
+          <h3 className="text-4xl font-medium lg:text-5xl">{product?.name}</h3>
+          <Reviews stars={product?.stars} reviews={product?.reviews} />
+          <p className="text-sm md:w-3/4 pr-2">{product?.shortDesc}</p>
 
           <Specs
-            batteryLife={product.batteryLife}
-            bluetooth={product.bluetooth}
-            micro={product.micro}
+            batteryLife={product?.batteryLife}
+            bluetooth={product?.bluetooth}
+            micro={product?.micro}
           />
-        { product.colors && <Colors colors={product.colors} />}
+          {product?.colors && <Colors colors={product?.colors} />}
           <div className="flex justify-center items-center gap-2">
             <h5 className="font-bold">Quantity:</h5>
             <Quantity />
           </div>
-          <h3 className="font-bold drop-shadow-glow">${product.price}</h3>
+          <h3 className="font-bold drop-shadow-glow">${product?.price}</h3>
           <div className="flex justify-between lg:justify-start items-center w-full lg:items-start lg:gap-6 ">
             <ButtonFull
               buttonText="Add to Cart"
@@ -51,7 +51,6 @@ const ProductDetails = ({ product, products }) => {
 
       <Navigation />
       <Description product={product} />
-     
     </div>
   );
 };
