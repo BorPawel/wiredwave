@@ -20,6 +20,11 @@ export default function Layout({ children }) {
    <div className="bg-dark min-h-screen text-white">
     <Head>
       <title>WiredWave</title>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `history.scrollRestoration = "manual"`,
+        }}
+      />
     </Head>
     <header>
      <Navbar />

@@ -14,6 +14,7 @@ import { ProductGallery } from "@/components/product_details/product_gallery/Pro
 import { Specs } from "@/components/product_details/first_specs/Specs";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
 import { Description } from "@/components/product_details/description/Description";
+import { Colors } from "@/components/product_details/colors/Colors";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart } = useStateContext();
   const {
@@ -28,9 +29,9 @@ const ProductDetails = ({ product, products }) => {
     shortDesc,
     longDesc,
     micro,
-    colors
+    colors,
   } = product;
-
+  console.log(colors);
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start">
@@ -40,11 +41,12 @@ const ProductDetails = ({ product, products }) => {
           <Reviews stars={stars} reviews={reviews} />
           <p className="text-sm md:w-3/4 pr-2">{shortDesc}</p>
 
-          <Specs batteryLife={batteryLife} bluetooth={bluetooth} micro={micro}/>
-          <div className="flex-center gap-4 ">
-            <p>Available colors:</p>
-          {colors?.map(color => <div className={`w-6 h-6 rounded-full bg-[`+color+']'}></div>)}
-          </div>
+          <Specs
+            batteryLife={batteryLife}
+            bluetooth={bluetooth}
+            micro={micro}
+          />
+        {  colors && <Colors colors={colors} />}
           <div className="flex justify-center items-center gap-2">
             <h5 className="font-bold">Quantity:</h5>
             <Quantity />
@@ -78,7 +80,6 @@ export const getStaticPaths = async () => {
     }`;
   const products = await client.fetch(query);
 
-
   const paths = products.map((product) => {
     return {
       params: {
@@ -94,7 +95,6 @@ export const getStaticPaths = async () => {
   };
 };
 export const getStaticProps = async ({ params: { slug, category } }) => {
-  
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
 
   const productsQuery = '*[_type == "product"]';
