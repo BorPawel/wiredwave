@@ -1,6 +1,11 @@
 import React from "react";
 import { client, urlFor } from "@/sanity/lib/client";
-import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineArrowLeft,
+  AiOutlineMinus,
+  AiOutlinePlus,
+} from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
 import ButtonOutline from "@/components/reusable/button/ButtonOutline";
@@ -15,11 +20,16 @@ import { Specs } from "@/components/product_details/first_specs/Specs";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
 import { Description } from "@/components/product_details/description/Description";
 import { Colors } from "@/components/product_details/colors/Colors";
+import Link from "next/link";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart } = useStateContext();
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 mt-4 ">
+      <Link href="/" className="z-10 flex items-center gap-4">
+        <AiOutlineArrowLeft className="text-3xl text-blue cursor-pointer" />
+        Back to Homepage
+      </Link>
       <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start">
         <ProductGallery image={product?.image} />
         <div className="w-full lg:w-6/12 flex flex-col items-start justify-evenly gap-6 lg:gap-8 p-2">
