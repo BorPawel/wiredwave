@@ -1,6 +1,6 @@
 export default {
-  name: "saleBanner",
-  title: "Sale Banner",
+  name: "sale",
+  title: "Sale",
   type: "document",
   fields: [
     {
@@ -10,6 +10,16 @@ export default {
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
     },
     {
       name: "precent",
@@ -23,21 +33,20 @@ export default {
       type: "date",
       options: {
         dateFormat: "MM-DD",
-      }
+      },
     },
     {
       name: "endDate",
       title: "End Date",
       type: "date",
       options: {
-        dateFormat: "MM-DD"
-      }
+        dateFormat: "MM-DD",
+      },
     },
     {
-        name: 'saleName',
-        title: 'Sale Name',
-        type: 'string',
-        
-    }
+      name: "saleName",
+      title: "Sale Name",
+      type: "string",
+    },
   ],
 };
