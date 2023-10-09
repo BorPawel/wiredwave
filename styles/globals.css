@@ -121,3 +121,6 @@ p {
     transform: translate3d(-100%,0,0)
   }
 }
+.stroked{
+  -webkit-text-stroke: 1px black;
+}

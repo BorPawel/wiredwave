@@ -28,41 +28,51 @@ const Categories = ({ products }) => {
 
   return (
     <div className=" my-16 md:text-lg p-2">
-      {/* <ul className=" h-24 flex justify-around p-4">
-        {categoriesArray.map((item, index) => (
-          <li
-            className={
-              index % 2 === 0 ? `${liClass} self-start` : `${liClass} self-end`
-            }
-            key={index}
-            onClick={() => categoryHandler(item, index)}
-          >
-            {item}
-          </li>
-        ))}
-      </ul> */}
       <Swiper
         spaceBetween={50}
         slidesPerView={2}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+          },
+          500: {
+            slidesPerView: 3,
+          },
+          739: {
+            slidesPerView: 4,
+          },
+          1065: {
+            slidesPerView: 5,
+          },
+        }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         className="flex"
       >
-        {/* <SwiperSlide className="bg-blue">Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide> */}
-        {categoriesArray.map((category, index) => (
-          <SwiperSlide key={index}>
-            {products.find((item) => item.category === category) && (
-              <div className="min-h-[100px] bg-blue">
-                {category}
+        {categoriesArray.map((category, index) => {
+          let findProduct = products.find((item) => item.category === category);
+          return (
+            <SwiperSlide key={index}>
+              {
+                <div className="rounded-[20px] bg-grey flex flex-col relative z-0 overflow-hidden">
+                  <div className="bg-blue w-1/2 h-full absolute left-[100%] translate-x-[-50%] -skew-x-[40deg] "></div>
+                  <p className=" text-2xl lg:text-4xl font-bold absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20 stroked">
+                    {category}
+                  </p>
 
-                <img src={urlFor(products[index].image && products[index].image[0])} alt="" />
-              </div>
-            )}
-          </SwiperSlide>
-        ))}
+                  {console.log(
+                    products.find((item) => item.category === "Watches")
+                  )}
+                  <img
+                    src={urlFor(findProduct.image && findProduct.image[0])}
+                    alt=""
+                    className="  z-10"
+                  />
+                </div>
+              }
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );
