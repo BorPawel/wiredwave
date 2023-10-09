@@ -1,3 +1,4 @@
+
 import Banner from "@/components/banner/Banner";
 import HeadingText from "@/components/heading/HeadingText";
 import React, { useEffect, useState, useRef } from "react";
@@ -8,6 +9,8 @@ import Product from "@/components/products/Product";
 
 import { useStateContext } from "@/context/StateContext";
 import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
+import { LogosMarquee } from "@/components/marquee/LogosMarquee";
+import SaleBanner from "@/components/sale_banner/SaleBanner";
 
 const Home = ({ banner, products, logos }) => {
   const { showCart, category } = useStateContext();
@@ -29,28 +32,8 @@ const Home = ({ banner, products, logos }) => {
             )
           );
         })}
-        <div className="w-full h-[200px] bg-grey my-36 flex overflow-hidden">
-          <div className="w-[1300px] flex  logos_wrapper gap-8 marquee1">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={urlFor(logo.images)}
-                className="logos w-[200px] object-contain "
-               
-              />
-            ))}
-          </div>
-          <div className="w-[1300px] flex  logos_wrapper gap-8 marquee2">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={urlFor(logo.images)}
-                className="logos w-[200px] object-contain  "
-              
-              />
-            ))}
-          </div>
-        </div>
+        <LogosMarquee  logos={logos} />
+        <SaleBanner />
       </div>
     </>
   );
