@@ -94,17 +94,30 @@ p {
 .spec_table tr:nth-child(even){
   background-color:  var(--grey);
 }
-.marquee{
-  animation: marquee 10s infinite
+.marquee1{
+  transform: translate3d(-80%,0,0);
+  animation: marquee1 20s infinite linear
 }
-.marquee:hover{
-  animation-play-state: paused;
-}
-@keyframes marquee {
+
+@keyframes marquee1 {
   0%{
-      transform: translate3d(0,0,0)
+      transform: translate3d(-80%,0,0)
   }
   100%{
     transform: translate3d(-200%,0,0)
+  }
+}
+
+.marquee2{
+  transform: translate3d(20%,0,0);
+  animation: marquee2 20s infinite linear
+}
+
+@keyframes marquee2 {
+  0%{
+    transform: translate3d(20%,0,0);
+  }
+  100%{
+    transform: translate3d(-100%,0,0)
   }
 }

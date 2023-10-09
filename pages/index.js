@@ -1,6 +1,6 @@
 import Banner from "@/components/banner/Banner";
 import HeadingText from "@/components/heading/HeadingText";
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { client, urlFor } from "../sanity/lib/client";
 import Categories from "@/components/categories/Categories";
 
@@ -11,7 +11,8 @@ import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 
 const Home = ({ banner, products, logos }) => {
   const { showCart, category } = useStateContext();
-  console.log(logos);
+
+
   return (
     <>
       {/* <HeadingText /> */}
@@ -28,10 +29,25 @@ const Home = ({ banner, products, logos }) => {
             )
           );
         })}
-        <div className="w-full h-[200px] bg-grey my-36 flex overflow-hidden ">
-          <div className="flex marquee">
+        <div className="w-full h-[200px] bg-grey my-36 flex overflow-hidden">
+          <div className="w-[1300px] flex  logos_wrapper gap-8 marquee1">
             {logos.map((logo, index) => (
-              <img key={index} src={urlFor(logo.images)} className="" />
+              <img
+                key={index}
+                src={urlFor(logo.images)}
+                className="logos w-[200px] object-contain "
+               
+              />
+            ))}
+          </div>
+          <div className="w-[1300px] flex  logos_wrapper gap-8 marquee2">
+            {logos.map((logo, index) => (
+              <img
+                key={index}
+                src={urlFor(logo.images)}
+                className="logos w-[200px] object-contain  "
+              
+              />
             ))}
           </div>
         </div>
