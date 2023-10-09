@@ -32,6 +32,7 @@ export default function Layout({ children }) {
     <main className="main_container m-auto w-full max-w-[1400px]">
       {children}
     </main>
+  
     <Footer/>
    </div>
   )
