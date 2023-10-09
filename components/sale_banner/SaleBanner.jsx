@@ -1,13 +1,45 @@
-import React from 'react'
-import { client } from "@/sanity/lib/client";
-
-const SaleBanner = () => {
-
+import { urlFor } from "@/sanity/lib/client";
+import React from "react";
+import moment from "moment";
+import ButtonFull from '@/components/reusable/button/ButtonFull'
+import ButtonOutline from "../reusable/button/ButtonOutline";
+moment.locale("en");
+const SaleBanner = ({ sale }) => {
+  const { saleName, image, precent, startDate, endDate } = sale[0];
+  const dateStart = moment(startDate).format("MMM Do");
+  const dateEnd = moment(endDate).format("MMM Do");
+  const className = "w-full md:w-1/3 h-[200px] md:h-[400px]";
   return (
-    <div className="w-full min-h-[400px] bg-grey rounded-[30px] relative">
-        <div className="absolute h-full w-1/4 bg-blue left-[50%] -skew-x-[30deg]"></div>
-    </div>
-  )
-}
+    <div className="min-w-[320px] w-full p-2">
+      <div className="min-h-[400px]  bg-grey rounded-[30px] mt-12 relative overflow-hidden flex flex-col md:flex-row justify-between">
+        <div className="bg-blue w-[200px] h-full absolute left-[50%] translate-x-[-50%] -skew-x-[40deg] -z-1"></div>
 
-export default SaleBanner
+        <div
+          className={`z-20  flex justify-center items-center flex-col ${className}`}
+        >
+          <div>
+            <p>Up to {precent}%</p>
+            <h2 className="text-6xl">{saleName}</h2>
+            <p>
+              <span>{dateStart}</span> - <span >{dateEnd}</span>
+            </p>
+          </div>
+        </div>
+        <div className={`flex justify-center items-center ${className}`}>
+          <img
+            src={urlFor(image && image)}
+            alt=""
+            className=" z-20 h-[300px] md:h-auto md:w-full"
+          />
+        </div>
+        <div className={`z-20 flex-center gap-6 flex-col ${className} mt-6 md:mt-0`}>
+          {" "}
+          <h5 className="text-center ">Time to Shine: Fall Watch Discounts Await!</h5>
+          <ButtonOutline buttonText='Show Now' className="p-6 px-12"/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SaleBanner;

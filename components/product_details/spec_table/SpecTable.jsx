@@ -27,7 +27,7 @@ export function SpecTable({
       <tbody  className="text-sm">
        {bluetooth && <tr>
           <td>Wireless Connectivity</td>
-          <td>{bluetooth?.toFixed(1)}</td>
+          <td>Bluetooth {bluetooth?.toFixed(1)}</td>
         </tr>}
       {  batteryLife && <tr>
           <td>BatteryLife</td>

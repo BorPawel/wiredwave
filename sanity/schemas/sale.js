@@ -32,7 +32,7 @@ export default {
       title: "End Date",
       type: "date",
       options: {
-        dateFormat: "MM-DD",
+        dateFormat: "MMM-DD",
       },
     },
     {
@@ -40,7 +40,7 @@ export default {
       title: "End Date",
       type: "date",
       options: {
-        dateFormat: "MM-DD",
+        dateFormat: "MMM-DD",
       },
     },
     {

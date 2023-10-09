@@ -17,15 +17,6 @@ const Categories = ({ products }) => {
 
   const { categoryHandler, category } = useStateContext();
 
-  // useEffect(() => {
-  //   const categories = document.querySelectorAll(".categories");
-  //   console.log(category);
-  //   categoriesArray.forEach(
-  //     (item, index) =>
-  //       item === category && categories[index].classList.add("active")
-  //   );
-  // }, []);
-
   return (
     <div className=" my-16 md:text-lg p-2">
       <Swiper
@@ -38,10 +29,10 @@ const Categories = ({ products }) => {
           500: {
             slidesPerView: 3,
           },
-          739: {
+         900: {
             slidesPerView: 4,
           },
-          1065: {
+          1265: {
             slidesPerView: 5,
           },
         }}
@@ -60,13 +51,10 @@ const Categories = ({ products }) => {
                     {category}
                   </p>
 
-                  {console.log(
-                    products.find((item) => item.category === "Watches")
-                  )}
                   <img
                     src={urlFor(findProduct.image && findProduct.image[0])}
                     alt=""
-                    className="  z-10"
+                    className="z-10"
                   />
                 </div>
               }

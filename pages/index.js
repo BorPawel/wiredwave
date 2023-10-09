@@ -11,8 +11,7 @@ import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 import { LogosMarquee } from "@/components/marquee/LogosMarquee";
 import SaleBanner from "@/components/sale_banner/SaleBanner";
 
-
-const Home = ({ banner, products, logos }) => {
+const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
 
   return (
@@ -20,7 +19,7 @@ const Home = ({ banner, products, logos }) => {
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
       <Categories products={products} />
-      <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-around flex-wrap gap-6 ">
+      <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-between md:justify-around lg:justify-between flex-wrap gap-6 p-4">
         {products.map((product, index) => {
           // const slug_slice =
           // category.toLowerCase() === product.slug.current.split("-")[0];
@@ -31,12 +30,12 @@ const Home = ({ banner, products, logos }) => {
             )
           );
         })}
-        <LogosMarquee logos={logos} />
-        <SaleBanner />
-        <div className="w-full">
-         
-        </div>
+       
+      
       </div>
+      <LogosMarquee logos={logos} />
+      
+      <SaleBanner sale={sale} />
     </>
   );
 };
@@ -47,14 +46,19 @@ export const getServerSideProps = async () => {
 
   const productQuery = '*[_type == "product"]';
   const products = await client.fetch(productQuery);
+
   const logosQuery = '*[_type == "logos"]';
   const logos = await client.fetch(logosQuery);
+
+  const saleQuery = '*[_type == "sale"]';
+  const sale = await client.fetch(saleQuery);
 
   return {
     props: {
       banner,
       products,
       logos,
+      sale,
     },
   };
 };

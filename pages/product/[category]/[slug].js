@@ -15,7 +15,7 @@ import { FaBluetooth } from "react-icons/fa";
 import { BsBatteryFull, BsFillMicFill } from "react-icons/bs";
 
 import { Reviews } from "@/components/product_details/reviews/Reviews";
-import { ProductGallery } from "@/components/product_details/product_gallery/ProductGallery";
+import { ProductGallery } from "@/components/product_details/productGallery/ProductGallery";
 import { Specs } from "@/components/product_details/first_specs/Specs";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
 import { Description } from "@/components/product_details/description/Description";
@@ -92,8 +92,8 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params: { slug, category } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-
   const productsQuery = '*[_type == "product"]';
+ 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
 
