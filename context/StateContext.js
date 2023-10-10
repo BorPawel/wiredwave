@@ -14,12 +14,12 @@ export const StateContext = ({ children }) => {
   const [category, setCategory] = useState("Wireless");
 
   const categoryHandler = (category, id) => {
-    const categories = document.querySelectorAll(".categories");
-    categories.forEach((item) => {
-      item.classList.remove("active");
-    });
+    // const categories = document.querySelectorAll(".categories");
+    // categories.forEach((item) => {
+    //   item.classList.remove("active");
+    // });
 
-    categories[id].classList.add("active");
+    // categories[id].classList.add("active");
     setCategory(category);
 
   };
