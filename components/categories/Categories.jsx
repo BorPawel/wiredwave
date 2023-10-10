@@ -20,16 +20,18 @@ const Categories = ({ products }) => {
   return (
     <div className=" my-16 md:text-lg p-2">
       <Swiper
-        spaceBetween={50}
+        spaceBetween={60}
         slidesPerView={2}
         breakpoints={{
           0: {
             slidesPerView: 2,
+            spaceBetween: 20,
           },
           500: {
             slidesPerView: 3,
+            spaceBetween: 20,
           },
-         900: {
+          900: {
             slidesPerView: 4,
           },
           1265: {

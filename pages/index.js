@@ -10,6 +10,7 @@ import { useStateContext } from "@/context/StateContext";
 import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 import { LogosMarquee } from "@/components/marquee/LogosMarquee";
 import SaleBanner from "@/components/sale_banner/SaleBanner";
+import HotSales from "@/components/hotSales/HotSales";
 
 const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
@@ -36,6 +37,7 @@ const Home = ({ banner, products, logos, sale }) => {
       <LogosMarquee logos={logos} />
       
       <SaleBanner sale={sale} />
+      <HotSales  />
     </>
   );
 };

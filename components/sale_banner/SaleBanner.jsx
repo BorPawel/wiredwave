@@ -11,7 +11,7 @@ const SaleBanner = ({ sale }) => {
   const className = "w-full md:w-1/3 h-[200px] md:h-[400px]";
   return (
     <div className="min-w-[320px] w-full p-2">
-      <div className="min-h-[400px]  bg-grey rounded-[30px] mt-12 relative overflow-hidden flex flex-col md:flex-row justify-between">
+      <div className="min-h-[400px]  bg-grey rounded-[30px] relative overflow-hidden flex flex-col md:flex-row justify-between">
         <div className="bg-blue w-[200px] h-full absolute left-[50%] translate-x-[-50%] -skew-x-[40deg] -z-1"></div>
 
         <div
