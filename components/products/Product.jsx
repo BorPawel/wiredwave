@@ -2,12 +2,14 @@ import Link from "next/link";
 import React from "react";
 
 import { urlFor } from "@/sanity/lib/client";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiFillFire } from "react-icons/ai";
+import {BsFire } from "react-icons/bs";
 import { useStateContext } from "@/context/StateContext";
 const Product = ({ product: { name, image, slug, price, stars,category } }) => {
 
   return (
     <div className="w-[320px] lg:w-[350px] h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0 hover:scale-110 duration-200">
+      <BsFire className="absolute right-0 top-0 text-6xl text-red-600" />
       <Link href={`/product/${category.toLowerCase()}/${slug.current}`}>
         <img
           src={urlFor(image && image[0])}
@@ -16,6 +18,7 @@ const Product = ({ product: { name, image, slug, price, stars,category } }) => {
         />
       </Link>
       <div className="custom-shape-divider-top-1696561410">
+
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

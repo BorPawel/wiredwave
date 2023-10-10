@@ -95,7 +95,7 @@ p {
   background-color:  var(--grey);
 }
 .marquee1{
-  transform: translate3d(-80%,0,0);
+  
   animation: marquee1 20s infinite linear
 }
 

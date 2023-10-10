@@ -37,7 +37,7 @@ const Home = ({ banner, products, logos, sale }) => {
       <LogosMarquee logos={logos} />
       
       <SaleBanner sale={sale} />
-      <HotSales  />
+      <HotSales  products={products}/>
     </>
   );
 };
