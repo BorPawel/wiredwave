@@ -22,7 +22,7 @@ import { Description } from "@/components/product_details/description/Descriptio
 import { Colors } from "@/components/product_details/colors/Colors";
 import Link from "next/link";
 const ProductDetails = ({ product, products }) => {
-  const { incQty, decQty, qty, addItemToCart } = useStateContext();
+  const { incQty, decQty, qty, addItemToCart, setProductColor, color } = useStateContext();
 
   return (
     <div className="flex flex-col gap-12 mt-4 ">
@@ -42,7 +42,7 @@ const ProductDetails = ({ product, products }) => {
             bluetooth={product?.bluetooth}
             micro={product?.micro}
           />
-          {product?.colors && <Colors colors={product?.colors} />}
+          {product?.colors && <Colors colors={product?.colors} setProductColor={setProductColor}/>}
           <div className="flex justify-center items-center gap-2">
             <h5 className="font-bold">Quantity:</h5>
             <Quantity />
@@ -51,7 +51,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="flex justify-between lg:justify-start items-center w-full lg:items-start lg:gap-6 ">
             <ButtonFull
               buttonText="Add to Cart"
-              onClick={() => addItemToCart(product, qty)}
+              onClick={() => addItemToCart(product, qty, color)}
               className="p-4 w-40 "
             />
             <ButtonOutline buttonText="Buy Now" />
