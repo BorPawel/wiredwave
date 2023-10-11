@@ -11,7 +11,8 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
-  const [color, setColor] = useState('')
+  const [color, setColor] = useState("");
+
   const [category, setCategory] = useState("Wireless");
 
   const categoryHandler = (category, id) => {
@@ -22,11 +23,10 @@ export const StateContext = ({ children }) => {
 
     // categories[id].classList.add("active");
     setCategory(category);
-
   };
   const setProductColor = (color) => {
-    setColor(color)
-  }
+    setColor(color);
+  };
   const showCartHandler = () => {
     if (!showCart) {
       document.querySelector("body").style.overflow = "hidden";
@@ -59,7 +59,6 @@ export const StateContext = ({ children }) => {
           return {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity,
-          
           };
       });
 
@@ -109,15 +108,14 @@ export const StateContext = ({ children }) => {
         { ...findProduct, quantity: findProduct.quantity - 1 },
       ]);
       setTotalPrice((prev) => prev - findProduct.price);
-    }else{
-      deleteItemFromCart(product)
+    } else {
+      deleteItemFromCart(product);
     }
   };
 
   const chooseColor = (product, color) => {
     const findProduct = cartItems.find((item) => item._id === product._id);
-
-  }
+  };
   return (
     <Context.Provider
       value={{
@@ -137,7 +135,7 @@ export const StateContext = ({ children }) => {
         category,
         decQtyInCart,
         color,
-        setProductColor
+        setProductColor,
       }}
     >
       {children}

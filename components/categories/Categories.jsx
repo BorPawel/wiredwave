@@ -77,16 +77,16 @@ const Categories = ({ products }) => {
                     className="min-h-[250px] flex justify-center items-center cursor-pointer"
                     onClick={() => handleClick(category, index)}
                   >
-                    <div className="bg-grey  h-full w-full rounded-[20px] relative category_container overflow-hidden flex z-0">
-                      <p className=" text-2xl lg:text-3xl font-bold absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]  z-20 ">
+                    <div className=" h-full w-full rounded-[20px] relative category_container overflow-hidden flex z-0 p-6">
+                      <p className=" text-1xl lg:text-2xl font-bold absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]  z-20 ">
                         {category}
                       </p>
-                      <div className="bg-blue w-1/2 h-full absolute left-[100%] translate-x-[-50%] -skew-x-[40deg] -z-1"></div>
+                      {/* <div className="bg-blue w-1/2 h-full absolute left-[100%] translate-x-[-50%] -skew-x-[40deg] -z-1"></div> */}
 
                       <img
                         src={urlFor(findProduct.image && findProduct.image[0])}
                         alt=""
-                        className="z-10"
+                        className="z-10 "
                       />
                     </div>
                   </div>

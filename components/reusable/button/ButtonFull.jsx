@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ buttonText, onClick, className }) => {
+const ButtonFull = ({ buttonText, onClick, className }) => {
   return (
     <button
       className={`bg-blue rounded-[30px] font-bold ${className}`}
@@ -11,4 +11,4 @@ const Button = ({ buttonText, onClick, className }) => {
   );
 };
 
-export default Button;
+export default ButtonFull;

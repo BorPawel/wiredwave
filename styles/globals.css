@@ -124,3 +124,7 @@ p {
 .stroked{
   -webkit-text-stroke: 1px black;
 }
+
+.test{
+  transition: opacity 5s;
+}
