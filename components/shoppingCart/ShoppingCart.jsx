@@ -21,44 +21,33 @@ const ShoppingCart = () => {
     decQtyInCart,
   } = useStateContext();
   return (
-    <div className="w-screen bg-dark fixed right-0 top-0 z-50 flex-center ">
-      <div className="h-screen w-[1400px] relative flex justify-between flex-col ">
-        <div className="flex flex-col gap-6 p-2 relative mt-6 ">
-          <IoIosArrowBack
-            className="text-4xl pl-2 cursor-pointer "
-            onClick={showCartHandler}
-          />
-
-          {cartItems.map(
-            (item, index) =>
-              item && (
-                <div className="flex">
-                  <img
-                    src={urlFor(item.image && item.image[0])}
-                    className="h-20"
-                  />
-                  <div className="flex w-full justify-between px-4">
-                    <div className="flex flex-col justify-between">
-                      <p className="text-lg text-blue">{item.name}</p>
-
-                      <div className="flex gap-2 items-center">
-                        <p>Color: </p>
-                        <div
-                          className={`w-6 h-6 rounded-full`}
-                          style={{
-                            backgroundColor: item.color,
-                          }}
-                        ></div>
+    <div className="w-screen min-h-screen bg-dark fixed right-0 top-0 z-50 flex-center overflow-auto">
+      <div className="w-[1400px] flex flex-col h-screen">
+        <div className="flex-center h-[200px]">
+          <h2>Your Cart</h2>
+        </div>
+        <div className="text-3xl p-2 pl-4">
+          <IoIosArrowBack onClick={() => showCartHandler()} />
+        </div>
+        <div className="flex flex-col lg:flex-row h-screen gap-4">
+          <div className="lg:w-8/12 flex flex-grow">
+            {cartItems.length === 0 ? (
+              <div className="w-full h-full flex-center">
+                Your Cart is Empty
+              </div>
+            ) : (
+              <div className="w-full h-full flex flex-col gap-4">
+                {cartItems.map((item, index) => (
+                  <div className="flex w-full bg-grey rounded-[20px] p-2" key={index}>
+                    <img
+                      src={urlFor(item.image && item.image[0])}
+                      className="h-20 lg:h-32"
+                    />
+                    <div className="flex items-center justify-between w-full px-2 md:px-6">
+                      <div className="flex flex-col">
+                        <p>{item.name}</p>
+                        Color:{item.color}
                       </div>
-                      <p>
-                        ${Math.round(item.price * item.quantity * 100) / 100}
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-end justify-between pt-2">
-                      <FaTrashAlt
-                        className="text-red-600 cursor-pointer"
-                        onClick={() => deleteItemFromCart(item)}
-                      />
 
                       <div className="flex justify-between items-center gap-2">
                         <span
@@ -75,18 +64,70 @@ const ShoppingCart = () => {
                           <AiOutlinePlus onClick={() => incQtyInCart(item)} />
                         </span>
                       </div>
+                      <div className="flex-center">
+                        <p>{(item.price * item.quantity).toFixed(2)}</p>
+                      </div>
+                      <div className="flex-center">
+                        <FaTrashAlt
+                          className="text-red-600 cursor-pointer"
+                          onClick={() => deleteItemFromCart(item)}
+                        />
+                      </div>
                     </div>
                   </div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className=" lg:w-4/12">
+            <div className="bg-grey rounded-[20px] flex flex-col justify-between flex-grow">
+              <h5 className="p-6">Order Summary </h5>
+              <div className="border-y-[1px]  gap-2 flex flex-col  w-full p-6">
+                <div className="flex justify-between">
+                  <p>Subtotal</p>
+                  <p>${totalPrice.toFixed(2)}</p>
                 </div>
-              )
-          )}
+                <div className="flex justify-between">
+                  <p>Shipping</p>
+                  <p>Free</p>
+                </div>
+              </div>
+              <div className="flex justify-between p-6">
+                <h5>Total</h5>
+                <p>${totalPrice.toFixed(2)}</p>
+              </div>
+              <ButtonFull
+                buttonText={`Pay $${totalPrice.toFixed(2)}`}
+                className="self-end p-6 px-16 w-full md:rounded-none md:rounded-t-[20px] lg:rounded-[20px]"
+              ></ButtonFull>
+            </div>
+          </div>
         </div>
-
-        <ButtonFull
-          buttonText={`Pay $${Math.round(totalPrice * 100) / 100}`}
-          className="block md:hidden p-6 px-16 w-full rounded-none rounded-t-[20px]"
-        ></ButtonFull>
       </div>
+
+      {/* <div className="flex ">
+          <div className="h-[400px] bg-grey rounded-[20px] flex flex-col justify-between">
+            <h5 className="p-6">Order Summary </h5>
+            <div className="border-y-[1px]  gap-2 flex flex-col  w-full p-6">
+              <div className="flex justify-between">
+                <p>Subtotal</p>
+                <p>${totalPrice.toFixed(2)}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Shipping</p>
+                <p>Free</p>
+              </div>
+            </div>
+            <div className="flex justify-between p-6">
+              <h5>Total</h5>
+              <p>${totalPrice.toFixed(2)}</p>
+            </div>
+            <ButtonFull
+              buttonText={`Pay $${totalPrice.toFixed(2)}`}
+              className="self-end p-6 px-16 w-full md:rounded-none md:rounded-t-[20px] lg:rounded-[20px]"
+            ></ButtonFull>
+          </div>
+        </div> */}
     </div>
   );
 };
