@@ -2,23 +2,25 @@ import Link from "next/link";
 import React from "react";
 
 import { urlFor } from "@/sanity/lib/client";
-import { AiFillStar, AiFillFire } from "react-icons/ai";
-import {BsFire } from "react-icons/bs";
+import { AiFillStar, AiFillFire, AiOutlinePlus } from "react-icons/ai";
+import { BsFire } from "react-icons/bs";
 import { useStateContext } from "@/context/StateContext";
-const Product = ({ product: { name, image, slug, price, stars,category, hot } }) => {
-
+const Product = ({
+  product: { name, image, slug, price, stars, category, hot },
+}) => {
+  // max-w-[320px] h-[200px] lg:w-[350px] md:h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0 hover:scale-110 duration-200
   return (
-    <div className="w-[320px] lg:w-[350px] h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0 hover:scale-110 duration-200">
-     {hot && <BsFire className="absolute right-0 top-0 text-6xl text-red-600" />}
-      <Link href={`/product/${category.toLowerCase()}/${slug.current}`}>
-        <img
-          src={urlFor(image && image[0])}
-          alt=""
-          className="w-full absolute"
-        />
+    <div className="bg-grey relative flex items-center md:flex-col max-w-[400px] w-[320px] md:w-[350px] rounded-[20px]">
+      {hot ? (
+        <BsFire className="absolute right-0 top-0 text-3xl text-red-600" />
+      ) : null}
+      <Link
+        href={`/product/${category.toLowerCase()}/${slug.current}`}
+        className="flex-center"
+      >
+        <img src={urlFor(image && image[0])} alt="" className="w-28 md:w-3/4" />
       </Link>
-      <div className="custom-shape-divider-top-1696561410">
-
+      {/* <div className="custom-shape-divider-top-1696561410">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,16 +32,21 @@ const Product = ({ product: { name, image, slug, price, stars,category, hot } })
             className="shape-fill"
           ></path>
         </svg>
+      </div> */}
+      <div className="flex flex-col p-4 min-h-[100px] md:flex-row md:items-end md:justify-around md:w-full">
+        <div className="">
+          <p className="font-thin text-base">{name}</p>
+          <span className="font-bold text-lg">${price.toFixed(2)}</span>
+        </div>
+
+        <div className="flex gap-2">
+          <AiFillStar className="text-2xl md:text-3xl text-blue" />
+          <span className="text-base md:text-xl">{stars}</span>
+        </div>
       </div>
-      <div className="flex justify-between items-end p-6 min-h-[100px]">
-        <div>
-          <p className="font-thin text-lg">{name}</p>
-          <span className="font-bold text-2xl">${price.toFixed(2)}</span>
-        </div>
-        <div className="flex justify-center items-center gap-4">
-          <AiFillStar className="text-4xl md:text-5xl text-blue" />
-          <span className="text-xl md:text-2xl">{stars}</span>
-        </div>
+
+      <div className="absolute w-10 h-10 bg-blue right-0 bottom-0 rounded-ee-[20px] flex-center">
+        <AiOutlinePlus />
       </div>
     </div>
   );

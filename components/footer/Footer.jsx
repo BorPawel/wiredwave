@@ -19,7 +19,7 @@ const Footer = () => {
           <h5>Contact Us</h5>
           <div className="flex flex-col gap-2">
             <p className="text-sm">Phone: +48 123456789</p>
-            <p className="text-sm">Mail: wiredwave@gmail.com</p>
+            <p className="text-sm">E-mail: wiredwave@gmail.com</p>
             <p className="text-sm">Durham, 1870 Jennifer Lane</p>
           </div>
         </div>

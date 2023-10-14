@@ -1,11 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 :root {
   --dark: #181818;
@@ -13,7 +15,9 @@
   --blue: #0074e4;
   --white: #fff;
 }
-
+body{
+  overflow-x: hidden ;
+}
 h1 {
   font-size: clamp(2.8rem, 3.25vw + 2rem, 4.56rem);
 }

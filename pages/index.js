@@ -20,7 +20,7 @@ const Home = ({ banner, products, logos, sale }) => {
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
       <Categories products={products} />
-      <div className="min-h-[700px] flex items-center flex-col md:flex-row justify-between md:justify-around lg:justify-between flex-wrap gap-6 p-4">
+      <div className="min-h-[700px] flex items-center justify-center md:justify-around lg:justify-between flex-wrap gap-6 p-4">
         {products.map((product, index) => {
           // const slug_slice =
           // category.toLowerCase() === product.slug.current.split("-")[0];
