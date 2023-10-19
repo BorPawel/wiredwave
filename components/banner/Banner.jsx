@@ -17,7 +17,7 @@ const Banner = ({
       <h1 className="hidden lg:block absolute z-[-1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:text-[9rem] lg:text-[20vw] md:tracking-wider font-bold text-grey">
         {bigText}
       </h1>
-      <div className="lg:w-6/12  order-2 lg:order-1 p-4 px-8 md:pl-16 flex flex-col gap-8 items-center lg:items-start justify-center">
+      <div className="lg:w-6/12  order-2 lg:order-1 p-4 px-8 md:pl-16 flex flex-col gap-8 items-center justify-center ">
         <div className=" flex flex-col h-3/4 justify-center gap-6">
           <div>
             <h1 className="w-full text-blue font-bold text-4xl md:text-7xl ">

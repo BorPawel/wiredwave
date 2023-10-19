@@ -18,24 +18,25 @@ export function ProductGallery({ image }) {
       .classList.add("small_img_active");
   }, []);
   return (
-    <div className="flex lg:flex-col lg:w-6/12 gap-2 p-2">
-      <div className="w-28 lg:w-32 flex flex-col lg:flex-row lg:order-2 gap-4">
+    <div className="flex flex-col lg:w-7/12 gap-2 p-2">
+     
+      <div className=" flex-center">
+        <img
+          src={urlFor(bigImage)}
+          alt=""
+          className="rounded-[20px]  w-[600px]"
+        />
+      </div>
+       <div className="w-full flex-center gap-2 md:gap-4 lg:gap-6">
         {image?.map((img, index) => (
           <img
             src={urlFor(img && img)}
             alt=""
             key={index}
-            className="small_img bg-grey rounded-[20px]"
+            className="w-20 md:w-28 lg:w-32 small_img bg-grey rounded-[20px]"
             onMouseEnter={() => toggleProduct(img, index)}
           />
         ))}
-      </div>
-      <div className=" flex lg:order-1">
-        <img
-          src={urlFor(bigImage)}
-          alt=""
-          className="rounded-[20px] bg-grey w-[600px]"
-        />
       </div>
     </div>
   );

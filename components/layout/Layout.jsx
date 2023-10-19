@@ -29,7 +29,7 @@ export default function Layout({ children }) {
     <header>
      <Navbar />
     </header>
-    <main className="main_container m-auto w-full max-w-[1400px]">
+    <main className="main_container m-auto w-full max-w-[1600px]">
       {children}
     </main>
   

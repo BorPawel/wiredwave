@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex-center gap-4 flex-col border-t-[1px] p-6 lg:p-8 ">
+      <div className="w-full flex-center gap-4 flex-col border-t-[1px] p-6 lg:p-8 border-grey">
         <ul className="flex gap-6 text-2xl">
           <li><BsFacebook/></li>
           <li><BsInstagram/></li>

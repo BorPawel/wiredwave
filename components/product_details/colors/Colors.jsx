@@ -9,7 +9,7 @@ export function Colors({ colors, setProductColor }) {
   }
   return (
     <div className="flex-center gap-4 ">
-      <p>Available colors:</p>
+      <p>Colors:</p>
       <div className="flex-center gap-6">
         {colors?.map((color, index) => (
           <div
