@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 :root {
   --dark: #181818;
@@ -15,8 +15,8 @@
   --blue: #0074e4;
   --white: #fff;
 }
-body{
-  overflow-x: hidden ;
+body {
+  overflow-x: hidden;
 }
 h1 {
   font-size: clamp(2.8rem, 3.25vw + 2rem, 4.56rem);
@@ -41,7 +41,7 @@ p {
   color: var(--blue);
   position: relative;
 }
-.active::before {
+/* .active::before {
   content: "";
   width: 30px;
   height: 8px;
@@ -51,7 +51,28 @@ p {
   bottom: -10px;
   left: 50%;
   transform: translate(-50%);
+} */
+.list_underline {
+  position: relative;
 }
+.list_underline::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.list_underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 .clip_path {
   clip-path: polygon(100% 0, 100% 100%, 63% 78%, 0 78%, 0 0);
@@ -89,46 +110,44 @@ p {
 }
 .spec_table {
   border-collapse: collapse;
-
 }
-.spec_table :where(td,th){
+.spec_table :where(td, th) {
   padding: 10px;
 }
 
-.spec_table tr:nth-child(even){
-  background-color:  var(--grey);
+.spec_table tr:nth-child(even) {
+  background-color: var(--grey);
 }
-.marquee1{
-  
-  animation: marquee1 20s infinite linear
+.marquee1 {
+  animation: marquee1 20s infinite linear;
 }
 
 @keyframes marquee1 {
-  0%{
-      transform: translate3d(-80%,0,0)
+  0% {
+    transform: translate3d(-80%, 0, 0);
   }
-  100%{
-    transform: translate3d(-200%,0,0)
+  100% {
+    transform: translate3d(-200%, 0, 0);
   }
 }
 
-.marquee2{
-  transform: translate3d(20%,0,0);
-  animation: marquee2 20s infinite linear
+.marquee2 {
+  transform: translate3d(20%, 0, 0);
+  animation: marquee2 20s infinite linear;
 }
 
 @keyframes marquee2 {
-  0%{
-    transform: translate3d(20%,0,0);
+  0% {
+    transform: translate3d(20%, 0, 0);
   }
-  100%{
-    transform: translate3d(-100%,0,0)
+  100% {
+    transform: translate3d(-100%, 0, 0);
   }
 }
-.stroked{
+.stroked {
   -webkit-text-stroke: 1px black;
 }
 
-.test{
+.test {
   transition: opacity 5s;
 }

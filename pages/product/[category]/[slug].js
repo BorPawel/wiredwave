@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { client, urlFor } from "@/sanity/lib/client";
 import {
   AiFillStar,
@@ -25,6 +25,9 @@ import { IoIosArrowBack } from "react-icons/io";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart, setProductColor, color } =
     useStateContext();
+  
+    const [tabToggle, setTabToggle] = useState('Description');
+
 
   return (
     <div className="flex flex-col gap-4 mt-4 ">
@@ -96,7 +99,7 @@ const ProductDetails = ({ product, products }) => {
 
       <Navigation />
 
-      
+
       {/* <Description product={product} /> */}
 
       <div className="w-full p-2"></div>
