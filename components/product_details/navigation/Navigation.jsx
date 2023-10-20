@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-export function Navigation() {
+export function Navigation({setTabToggle, navArray}) {
   const mainDescClass = "m-2 hover:text-blue cursor-pointer";
-  const navArray = ["Description", "Specification", "Reviews"];
+  //const navArray = ["Description", "Specification", "Reviews"];
   const [toggle, setToggle] = useState("Specification");
 
   const itemsRef = useRef([]);
@@ -14,6 +14,8 @@ export function Navigation() {
 
     itemsRef.current.forEach(item => item.classList.remove('active'))
     current_item.classList.add('active')
+
+    setTabToggle(current_item.children[0].innerText)
   };
 
   useEffect(() => {

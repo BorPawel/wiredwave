@@ -22,13 +22,15 @@ import { Description } from "@/components/product_details/description/Descriptio
 import { Colors } from "@/components/product_details/colors/Colors";
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
+import { SpecTable } from "@/components/product_details/spec_table/SpecTable";
+import HotSales from "@/components/hotSales/HotSales";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart, setProductColor, color } =
     useStateContext();
-  
-    const [tabToggle, setTabToggle] = useState('Description');
 
-
+  const [tabToggle, setTabToggle] = useState("Description");
+  console.log(tabToggle);
+  const navArray = ["Description", "Specification", "Reviews"];
   return (
     <div className="flex flex-col gap-4 mt-4 ">
       {/* <Link href="/" className="z-10 flex items-center gap-4">
@@ -46,7 +48,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
 
         <ProductGallery image={product?.image} />
-        <div className="w-full lg:w-5/12 flex flex-col items-start gap-2 lg:mt-8 p-2">
+        <div className="w-full lg:w-5/12 flex flex-col items-start gap-2 lg:mt-8 p-4 md:p-2">
           <h3 className="hidden md:block text-4xl font-medium lg:text-5xl">
             {product?.name}
           </h3>
@@ -76,13 +78,16 @@ const ProductDetails = ({ product, products }) => {
 
           <div className="flex flex-col gap-8">
             <p className="font-bold  text-5xl">${product?.price}</p>
-            <div className="flex justify-between lg:justify-start items-center w-full lg:items-start gap-6  ">
+            <div className="flex justify-between lg:justify-start items-center w-full lg:items-start gap-2  lg:gap-10">
               <ButtonFull
                 buttonText="Add to Cart"
                 onClick={() => addItemToCart(product, qty, color)}
-                className="p-4 w-40 "
+                className="p-4 w-40 md:p-4 md:w-40 "
               />
-              <ButtonOutline buttonText="Buy Now" />
+              <ButtonOutline
+                buttonText="Buy Now"
+                className="p-4 w-40 md:p-4 md:w-40 "
+              />
             </div>
           </div>
 
@@ -97,12 +102,32 @@ const ProductDetails = ({ product, products }) => {
         </div>
       </div>
 
-      <Navigation />
-
+      <Navigation setTabToggle={setTabToggle} navArray={navArray} />
 
       {/* <Description product={product} /> */}
 
-      <div className="w-full p-2"></div>
+      <div className="w-full min-h-[400px] text-xl text-white flex justify-center ">
+        {(() => {
+          switch (tabToggle) {
+            case "Description":
+              return <div className="w-[1000px] p-4">{product.longDesc}</div>;
+            case "Specification":
+              return (
+                <div className="w-[1200px] flex-center mb-12">
+                  <SpecTable product={product} />
+                </div>
+              );
+            case "Reviews":
+              return <div>Reviews</div>;
+            default:
+              return <div>default</div>;
+          }
+        })()}
+      </div>
+
+      <div className="w-full flex justify-center">
+        <HotSales products={products} />
+      </div>
     </div>
   );
 };
