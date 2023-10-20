@@ -125,7 +125,7 @@ const ProductDetails = ({ product, products }) => {
         })()}
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center p-4">
         <HotSales products={products} />
       </div>
     </div>

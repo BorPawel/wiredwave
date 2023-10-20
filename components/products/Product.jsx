@@ -33,10 +33,12 @@ const Product = ({
         </div>
       </div>
 
-      <div className="absolute w-10 h-10 bg-blue 
+      <div
+        className="absolute w-10 h-10 bg-blue 
       right-0 bottom-0 rounded-ee-[20px] 
-      flex-center hover:w-full hover:h-20 duration-300 cursor-pointer hover:rounded-es-[20px] group">
-        <AiOutlinePlus className="group-hover:text-3xl"/>
+      flex-center hover:w-full hover:h-1/2 duration-300 cursor-pointer hover:rounded-es-[20px] group"
+      >
+        <AiOutlinePlus className="group-hover:text-3xl" />
 
         {/* <p className="hidden group-hover:block opacity-0 group-hover:opacity-100 delay-600">Add to Cart</p> */}
       </div>

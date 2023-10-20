@@ -4,12 +4,15 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { useStateContext } from "@/context/StateContext";
 import ShoppingCart from "../shoppingCart/ShoppingCart";
+import Image from "next/image";
+
+import logo from '../../assets/logo/logo.png'
 const Navbar = () => {
   const {showCartHandler, cartItems, showCart, totalQuantities } = useStateContext();
 
   return (
-    <nav className="w-full flex justify-between items-center p-4 md:p-6 px-8 md:px-12 fixed z-50">
-      <div className="">WiredWave</div>
+    <nav className="w-full flex justify-between items-center p-4 md:p-6 px-8 md:px-12 fixed z-50 ">
+      <div className=""><Image src={logo} width={100} className="w-12 lg:w-24"/></div>
       <div className="flex gap-4 md:gap-6 lg:gap-8">
         <div className="bg-grey p-3 rounded-full">
           <BiSearchAlt className="text-2xl md:text-3xl lg:text-4xl" />
