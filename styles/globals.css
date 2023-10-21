@@ -56,7 +56,7 @@ p {
   position: relative;
 }
 .list_underline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50%;
   transform: scaleX(0);
@@ -72,7 +72,6 @@ p {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 
 .clip_path {
   clip-path: polygon(100% 0, 100% 100%, 63% 78%, 0 78%, 0 0);
@@ -152,3 +151,24 @@ p {
   transition: opacity 5s;
 }
 
+.active_square {
+  transform: scale(3);
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+.active_text {
+  opacity: 1;
+  transform: translate3d(0,30%,0);
+  transition: transform  0.5s;
+}
+
+.text-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+.text-info.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}

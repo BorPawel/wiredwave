@@ -63,7 +63,7 @@ const Categories = ({ products }) => {
     itemsRef.current.forEach((item) => item.classList.remove("active"));
     current_item.classList.add("active");
 
-    setTabToggle(current_item.children[0].innerText);
+    setTabToggle(current_item.innerText);
   };
 
   useEffect(() => {
@@ -86,7 +86,7 @@ const Categories = ({ products }) => {
             onClick={() => handleClick(category, index)}
             ref={(el) => (itemsRef.current[index] = el)}
           >
-            <p>{category}</p>
+            {category}
           </li>
         ))}
       </ul>

@@ -10,7 +10,7 @@ const Product = ({
 }) => {
   // max-w-[320px] h-[200px] lg:w-[350px] md:h-[450px] rounded-[30px] flex flex-col justify-between relative  bg-grey z-0 hover:scale-110 duration-200
   return (
-    <div className="relative bg-grey flex items-center justify-between md:flex-col  w-[320px] md:w-[350px] md:h-[370px] rounded-[20px] ">
+    <div className="relative flex items-center  md:flex-col  w-[320px] md:w-[350px] md:h-[370px] rounded-[20px] ">
       {hot ? (
         <BsFire className="absolute right-0 top-0 text-3xl text-red-600 md:right-4 md:top-4" />
       ) : null}
