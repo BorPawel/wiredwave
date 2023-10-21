@@ -53,11 +53,15 @@ const ProductList = ({ products }) => {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt-24">
+      <div className="px-8 items-end flex justify-between ">
+        <p className="text-xl text-end ">{category}</p>
+        <p className="text-xs">See all</p>
+      </div>
       <div className="w-full overflow-hidden h-48 relative grid lg:place-content-center pl-12">
         <span className="w-1/2 h-[1px] absolute bg-white top-[50%] left-[50%]"></span>
         <div
-          className="flex gap-16 duration-500 w-[800px]"
+          className="flex gap-6 duration-500 w-[700px]"
           ref={swiperRef}
           style={{
             transform: `translateX(-${
@@ -98,18 +102,20 @@ const ProductList = ({ products }) => {
           </button>
         </div>
       </div>
-      <div className="absolute w-1/2 h-24 bottom-[-40%] left-[5%]">
+      <div className="absolute w-full h-24 bottom-[-40%] pl-8">
         {filterProducts.map((item, index) => {
           const isActive = index === activeIndex;
-          return  (
+          return (
             <div
-              className={`absolute flex flex-col text-info${isActive ? " show" : ""}`}
+              className={`absolute flex flex-col text-info${
+                isActive ? " show" : ""
+              }`}
               ref={(el) => (textRef.current[index] = el)}
             >
               <p className="text-lg">{item.name}</p>
               <p className="text-lg">$ {item.price}</p>
             </div>
-          )
+          );
         })}
       </div>
     </div>
