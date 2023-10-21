@@ -29,7 +29,7 @@ const ProductDetails = ({ product, products }) => {
     useStateContext();
 
   const [tabToggle, setTabToggle] = useState("Description");
-  console.log(tabToggle);
+
   const navArray = ["Description", "Specification", "Reviews"];
   return (
     <div className="flex flex-col gap-4 mt-4 ">

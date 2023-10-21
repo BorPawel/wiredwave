@@ -10,7 +10,7 @@ import logo from "../../assets/logo/logo.png";
 const Navbar = () => {
   const { showCartHandler, cartItems, showCart, totalQuantities } =
     useStateContext();
-  const [scrollDir, setScrollDir] = useState("scrolling down");
+  const [scrollDir, setScrollDir] = useState("scrolling up");
 
   const navRef = useRef(null)
   useEffect(() => {

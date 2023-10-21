@@ -11,6 +11,7 @@ import ShoppingCart from "@/components/shoppingCart/ShoppingCart";
 import { LogosMarquee } from "@/components/marquee/LogosMarquee";
 import SaleBanner from "@/components/sale_banner/SaleBanner";
 import HotSales from "@/components/hotSales/HotSales";
+import { Navigation } from "@/components/product_details/navigation/Navigation";
 
 const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
@@ -19,8 +20,11 @@ const Home = ({ banner, products, logos, sale }) => {
     <>
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
-      <Categories products={products} />
-      <div className="min-h-[700px] flex items-center justify-center md:justify-around lg:justify-between flex-wrap gap-6 p-4">
+      <div className="w-full overflow-hidden">
+        <Categories products={products} />
+      </div>
+
+      <div className="min-h-[700px] flex items-center  md:justify-around lg:justify-between lg:flex-wrap flex-col md:flex-row gap-6 p-4">
         {products.map((product, index) => {
           // const slug_slice =
           // category.toLowerCase() === product.slug.current.split("-")[0];
@@ -31,14 +35,12 @@ const Home = ({ banner, products, logos, sale }) => {
             )
           );
         })}
-       
-      
       </div>
       {/* <LogosMarquee logos={logos} /> */}
-      
+
       <SaleBanner sale={sale} />
-      
-      <HotSales  products={products}/>
+
+      <HotSales products={products} />
     </>
   );
 };
