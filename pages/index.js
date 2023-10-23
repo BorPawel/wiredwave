@@ -38,7 +38,12 @@ const Home = ({ banner, products, logos, sale }) => {
         })}
       </div> */}
 
-      <ProductList products={products} category={category}/>
+      <ProductList products={products} category='Wireless'/>
+      <ProductList products={products}  category='Gaming'/>
+      <ProductList products={products} category='Earphones'/>
+      <ProductList products={products}  category='Speakers'/>
+      <ProductList products={products} category='Watches'/>
+   
       {/* <LogosMarquee logos={logos} /> */}
 
       <SaleBanner sale={sale} />
