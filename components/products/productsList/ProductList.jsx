@@ -54,7 +54,7 @@ const ProductList = ({ products, category }) => {
 
   return (
     <div className="relative w-full mt-24 ">
-      <div className="px-8 items-end flex justify-between ">
+      <div className="px-8 lg:px-28 items-end flex justify-between ">
         <p className="text-xl text-end ">{category}</p>
         <p className="text-xs">See all</p>
       </div>
@@ -102,7 +102,7 @@ const ProductList = ({ products, category }) => {
           </button>
         </div>
       </div>
-      <div className="absolute w-full h-24 bottom-[-40%] pl-8">
+      <div className="absolute w-full h-24 bottom-[-40%] pl-8 lg:pl-28">
         {filterProducts.map((item, index) => {
           const isActive = index === activeIndex;
           return (
