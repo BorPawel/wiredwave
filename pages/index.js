@@ -37,15 +37,14 @@ const Home = ({ banner, products, logos, sale }) => {
           );
         })}
       </div> */}
-<div className="flex flex-col gap-20">
-<ProductList products={products} category='Wireless'/>
-      <ProductList products={products}  category='Gaming'/>
-      <ProductList products={products} category='Earphones'/>
-      <ProductList products={products}  category='Speakers'/>
-      <ProductList products={products} category='Watches'/>
-</div>
-     
-   
+      <div className="flex flex-col gap-20">
+        <ProductList products={products} category="Wireless" />
+        <ProductList products={products} category="Gaming" />
+        <ProductList products={products} category="Earphones" />
+        <ProductList products={products} category="Speakers" />
+        <ProductList products={products} category="Watches" />
+      </div>
+
       {/* <LogosMarquee logos={logos} /> */}
 
       <SaleBanner sale={sale} />
