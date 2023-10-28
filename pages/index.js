@@ -13,6 +13,7 @@ import SaleBanner from "@/components/sale_banner/SaleBanner";
 import HotSales from "@/components/hotSales/HotSales";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
 import ProductList from "@/components/products/productsList/ProductList";
+import ProductSwiper from "@/components/productSwiper/ProductSwiper";
 
 const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
@@ -37,7 +38,7 @@ const Home = ({ banner, products, logos, sale }) => {
           );
         })}
       </div> */}
-      <div className="flex flex-col gap-20">
+      <div className="flex md:hidden flex-col gap-20">
         <ProductList products={products} category="Wireless" />
         <ProductList products={products} category="Gaming" />
         <ProductList products={products} category="Earphones" />
@@ -45,6 +46,9 @@ const Home = ({ banner, products, logos, sale }) => {
         <ProductList products={products} category="Watches" />
       </div>
 
+      <div className="hidden md:flex flex-col gap-20">
+        <ProductSwiper products={products} category="Wireless"/>
+      </div>
       {/* <LogosMarquee logos={logos} /> */}
 
       <SaleBanner sale={sale} />
