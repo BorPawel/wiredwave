@@ -18,36 +18,33 @@ import ProductSwiper from "@/components/productSwiper/ProductSwiper";
 const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
 
+  const categoryArr = [
+    "Wireless",
+    "Gaming",
+    "Earphones",
+    "Speakers",
+    "Watches",
+  ];
   return (
     <>
       {/* <HeadingText /> */}
       <Banner banner={banner[0]} />
-      {/* <div className="w-full overflow-hidden">
-        <Categories products={products} />
-      </div> */}
 
-      {/* <div className="min-h-[700px] flex items-center  md:justify-around lg:justify-between lg:flex-wrap flex-col md:flex-row gap-6 p-4">
-        {products.map((product, index) => {
-          // const slug_slice =
-          // category.toLowerCase() === product.slug.current.split("-")[0];
-
-          return (
-            category === product.category && (
-              <Product key={index} product={product} />
-            )
-          );
-        })}
-      </div> */}
       <div className="flex md:hidden flex-col gap-20">
-        <ProductList products={products} category="Wireless" />
-        <ProductList products={products} category="Gaming" />
-        <ProductList products={products} category="Earphones" />
-        <ProductList products={products} category="Speakers" />
-        <ProductList products={products} category="Watches" />
+        {categoryArr.map((item, index) => (
+          <>
+            <ProductList key={index} products={products} category={item} />
+          </>
+        ))}
       </div>
 
-      <div className="hidden md:flex flex-col gap-20">
-        <ProductSwiper products={products} category="Wireless"/>
+      <div className="hidden md:flex flex-col gap-36">
+        {categoryArr.map((item, index) => (
+          <>
+            <ProductSwiper key={index} products={products} category={item} />
+            <span className="bg-blue w-full h-[1px] drop-shadow-outer"> </span>
+          </>
+        ))}
       </div>
       {/* <LogosMarquee logos={logos} /> */}
 
