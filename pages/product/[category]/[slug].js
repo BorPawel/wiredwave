@@ -33,10 +33,10 @@ const ProductDetails = ({ product, products }) => {
   const navArray = ["Description", "Specification", "Reviews"];
   return (
     <div className="flex flex-col gap-4 mt-4 ">
-      {/* <Link href="/" className="z-10 flex items-center gap-4">
-        <IoIosArrowBack className="text-3xl text-blue cursor-pointer" />
-        Back
-      </Link> */}
+      <Link href="/" className="z-10 flex items-center gap-4">
+        <IoIosArrowBack className="text-3xl cursor-pointer" />
+      
+      </Link>
       <div className="flex  flex-col md:flex-row  gap-8 justify-center ">
         <div className="flex flex-col justify-start w-full md:hidden pl-6">
           <h3 className="text-4xl font-medium lg:text-5xl">{product?.name}</h3>
