@@ -42,7 +42,7 @@ const Home = ({ banner, products, logos, sale }) => {
         {categoryArr.map((item, index) => (
           <>
             <ProductSwiper key={index} products={products} category={item} />
-            <span className="bg-blue w-full h-[1px] drop-shadow-outer"> </span>
+            {/* <span className="bg-blue w-full h-[1px] drop-shadow-outer"> </span> */}
           </>
         ))}
       </div>
