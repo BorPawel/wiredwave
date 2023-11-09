@@ -5,7 +5,7 @@ import Image from "next/image";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import HeadingText from "../heading/HeadingText";
 import Link from "next/link";
-import ButtonFull from "@/components/reusable/button/ButtonFull";
+import ButtonFull from "@/components/reusable/button/Button";
 import { Circles } from "../reusable/circles/Circles";
 const Banner = ({
   banner: { smallText, desc, bigText, image, buttonText, slug, price, name },
@@ -34,7 +34,7 @@ const Banner = ({
           <Link href={`/product/${slug.current}`}>
             <ButtonFull
               buttonText={buttonText}
-              className="w-64 rounded-[90px]  text-2xl p-4"
+              type='full'
             />
           </Link>
         </div>

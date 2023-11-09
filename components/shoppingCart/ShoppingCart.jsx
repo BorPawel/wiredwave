@@ -9,7 +9,7 @@ import { urlFor } from "@/sanity/lib/client";
 import Quantity from "../reusable/Quantity";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaTrashAlt } from "react-icons/fa";
-import ButtonFull from "@/components/reusable/button/ButtonFull";
+import ButtonFull from "@/components/reusable/button/Button";
 const ShoppingCart = () => {
   const {
     showCartHandler,

@@ -1,8 +1,8 @@
 import { urlFor } from "@/sanity/lib/client";
 import React from "react";
 import moment from "moment";
-import ButtonFull from '@/components/reusable/button/ButtonFull'
-import ButtonOutline from "../reusable/button/ButtonOutline";
+
+import Button from "@/components/reusable/button/Button";
 moment.locale("en");
 const SaleBanner = ({ sale }) => {
   const { saleName, image, precent, startDate, endDate } = sale[0];
@@ -35,7 +35,7 @@ const SaleBanner = ({ sale }) => {
         <div className={`z-20 flex-center gap-6 flex-col ${className} mt-6 md:mt-0`}>
           {" "}
           <h5 className="text-center ">Time to Shine: Fall Watch Discounts Await!</h5>
-          <ButtonOutline buttonText='Show Now' className="p-6 px-12"/>
+          <Button buttonText='Show Now' type='outline'/>
         </div>
       </div>
     </div>

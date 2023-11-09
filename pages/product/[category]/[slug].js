@@ -9,7 +9,7 @@ import {
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
 import ButtonOutline from "@/components/reusable/button/ButtonOutline";
-import ButtonFull from "@/components/reusable/button/ButtonFull";
+import ButtonFull from "@/components/reusable/button/Button";
 import { FaBluetooth } from "react-icons/fa";
 
 import { BsBatteryFull, BsFillMicFill } from "react-icons/bs";
