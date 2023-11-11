@@ -8,8 +8,7 @@ import {
 } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
-import ButtonOutline from "@/components/reusable/button/ButtonOutline";
-import ButtonFull from "@/components/reusable/button/Button";
+
 import { FaBluetooth } from "react-icons/fa";
 
 import { BsBatteryFull, BsFillMicFill } from "react-icons/bs";
@@ -24,6 +23,7 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 import { SpecTable } from "@/components/product_details/spec_table/SpecTable";
 import HotSales from "@/components/hotSales/HotSales";
+import Button from "@/components/reusable/button/Button";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart, setProductColor, color } =
     useStateContext();
@@ -79,12 +79,12 @@ const ProductDetails = ({ product, products }) => {
           <div className="flex flex-col gap-8">
             <p className="font-bold  text-5xl">${product?.price}</p>
             <div className="flex justify-between lg:justify-start items-center w-full lg:items-start gap-2  lg:gap-10">
-              <ButtonFull
+              <Button
                 buttonText="Add to Cart"
                 onClick={() => addItemToCart(product, qty, color)}
                 className="p-4 w-40 md:p-4 md:w-40 "
               />
-              <ButtonOutline
+              <Button
                 buttonText="Buy Now"
                 className="p-4 w-40 md:p-4 md:w-40 "
               />
