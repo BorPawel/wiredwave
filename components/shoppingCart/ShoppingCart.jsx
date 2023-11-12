@@ -10,6 +10,7 @@ import Quantity from "../reusable/Quantity";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaTrashAlt } from "react-icons/fa";
 import ButtonFull from "@/components/reusable/button/Button";
+import Button from "@/components/reusable/button/Button";
 const ShoppingCart = () => {
   const {
     showCartHandler,
@@ -119,10 +120,10 @@ const ShoppingCart = () => {
                 <h5>Total</h5>
                 <p>${totalPrice.toFixed(2)}</p>
               </div>
-              <ButtonFull
+              <Button
                 buttonText={`Pay $${totalPrice.toFixed(2)}`}
                 className="self-end p-6 px-16 w-full md:rounded-t-[20px] md:rounded-[20px]"
-              ></ButtonFull>
+              ></Button>
             </div>
           </div>
         </div>
