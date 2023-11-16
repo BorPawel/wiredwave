@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ buttonText, onClick, type }) => {
+const Button = ({ buttonText, onClick ,  className}) => {
  
   return (
     <button
-      className={` relative rounded-[20px] flex font-bold w-[250px] h-16 overflow-hidden group border-blue  border-[1px]`}
+      className={` relative rounded-[20px] flex font-bold w-[250px] h-16 overflow-hidden group border-blue  border-[1px] ${className}`}
       onClick={onClick}
     >
       <span

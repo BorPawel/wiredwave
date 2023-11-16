@@ -15,6 +15,8 @@ export function SpecTable({
     durability,
     freq,
   },
+  className,
+  type
 }) {
   const specArray = [
     `Bluetooth ${bluetooth?.toFixed(1)}`,
@@ -46,8 +48,10 @@ export function SpecTable({
     `Durability`,
     `Headphone frequency response`,
   ];
+
+  const style = type === 'tooltip' ? 'lg:w-full' : 'lg:w-3/4'
   return (
-    <table className="w-full lg:w-3/4 spec_table ">
+    <table className={`w-full ${style} spec_table`}>
       <thead>
         <tr className="text-left text-xl md:text-2xl lg:text-3xl">
           <th >Feature</th>
@@ -57,7 +61,7 @@ export function SpecTable({
       <tbody className="text-sm ">
         {specArray.map((item, index) => (
           <tr key={index}>
-            <td className="h-16">{specLabelArray[index]}</td>
+            <td className={`${className}`}>{specLabelArray[index]}</td>
             <td>{item}</td>
           </tr>
         ))}

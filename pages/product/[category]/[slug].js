@@ -82,11 +82,11 @@ const ProductDetails = ({ product, products }) => {
               <Button
                 buttonText="Add to Cart"
                 onClick={() => addItemToCart(product, qty, color)}
-                className="p-4 w-40 md:p-4 md:w-40 "
+           
               />
               <Button
                 buttonText="Buy Now"
-                className="p-4 w-40 md:p-4 md:w-40 "
+               
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ const ProductDetails = ({ product, products }) => {
             case "Specification":
               return (
                 <div className="w-[1200px] flex-center mb-12">
-                  <SpecTable product={product} />
+                  <SpecTable product={product} className='h-16'/>
                 </div>
               );
             case "Reviews":

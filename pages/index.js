@@ -30,6 +30,7 @@ const Home = ({ banner, products, logos, sale }) => {
       {/* <HeadingText /> */}
       <Banner banner={banner[0]}  />
 
+  
       <div className="flex md:hidden flex-col gap-20">
         {categoryArr.map((item, index) => (
           <>

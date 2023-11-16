@@ -3,6 +3,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import { LiaShippingFastSolid } from "react-icons/lia";
+import { SpecTable } from "../product_details/spec_table/SpecTable";
+import { Reviews } from "../product_details/reviews/Reviews";
+import { Colors } from "../product_details/colors/Colors";
 
 const ProductSwiper = ({ products, category }) => {
   const filterProducts = products.filter(
@@ -11,8 +14,9 @@ const ProductSwiper = ({ products, category }) => {
 
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
-  const toggleTooltip = () => {
+  const toggleTooltip = (e) => {
     setIsTooltipVisible((prev) => !prev);
+    console.log(e.target);
   };
 
   const [smallLeftIndex, setSmallLeftIndex] = useState(0);
@@ -33,7 +37,43 @@ const ProductSwiper = ({ products, category }) => {
   };
 
   return (
-    <div className="bg-grey p-10 rounded-[30px]">
+    <div className="bg-grey p-10 rounded-[30px] relative">
+      {isTooltipVisible ? (
+        <div
+          className={`absolute w-1/3 h-full bg-dark left-0 top-0 z-10 flex flex-col gap-8 `}
+        >
+          <div>
+           
+
+            <p className="hidden md:block text-sm md:w-3/4 pr-2 my-6">
+              {filterProducts[bigIndex]?.shortDesc}
+            </p>
+            <Reviews
+              stars={filterProducts[bigIndex]?.stars}
+              reviews={filterProducts[bigIndex]?.reviews}
+            />
+          </div>
+
+          <span className="h-[2px] w-full md:w-3/4 mb-8 md:mt-3 bg-grey"></span>
+          <div className="flex w-full gap-2 items-start">
+              {filterProducts[bigIndex].image?.map((img, index) => (
+                <img
+                  src={urlFor(img && img)}
+                  alt=""
+                  key={index}
+                  className="w-20 md:w-28 small_img bg-grey rounded-[20px]"
+                  onMouseEnter={() => toggleProduct(img, index)}
+                />
+              ))}
+            </div>
+          <div className="flex flex-col items-start mb-4 w-full">
+            {filterProducts[bigIndex]?.colors && (
+              <Colors colors={filterProducts[bigIndex]?.colors} />
+            )}
+           
+          </div>
+        </div>
+      ) : null}
       <h3 className="w-full flex-center">{category}</h3>
 
       <div className="w-full flex justify-around items-center h-[400px] ">
@@ -89,6 +129,15 @@ const ProductSwiper = ({ products, category }) => {
           </button>
         </div>
       </div>
+      {isTooltipVisible ? (
+        <div className="absolute w-1/3 h-full bg-dark right-0 top-0  z-10">
+          <SpecTable
+            product={filterProducts[bigIndex]}
+            className=""
+            type="tooltip"
+          />
+        </div>
+      ) : null}
     </div>
   );
 };

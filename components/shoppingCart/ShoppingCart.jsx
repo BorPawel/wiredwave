@@ -122,7 +122,7 @@ const ShoppingCart = () => {
               </div>
               <Button
                 buttonText={`Pay $${totalPrice.toFixed(2)}`}
-                className="self-end p-6 px-16 w-full md:rounded-t-[20px] md:rounded-[20px]"
+                className="w-full "
               ></Button>
             </div>
           </div>
