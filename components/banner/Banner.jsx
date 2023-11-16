@@ -8,9 +8,10 @@ import Link from "next/link";
 import ButtonFull from "@/components/reusable/button/Button";
 import { Circles } from "../reusable/circles/Circles";
 const Banner = ({
-  banner: { smallText, desc, bigText, image, buttonText, slug, price, name },
+  banner: { smallText, desc, bigText, image, buttonText, slug, price, name, category },
 }) => {
  
+
   return (
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible">
      <Circles   />
@@ -31,7 +32,7 @@ const Banner = ({
             </p>
           </div>
           <h2 className="font-medium drop-shadow-glow">${price}</h2>
-          <Link href={`/product/${slug.current}`}>
+          <Link href={`/product/${lowCategory}/${slug.current}`}>
             <ButtonFull
               buttonText={buttonText}
               type='full'

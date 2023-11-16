@@ -110,7 +110,7 @@ const ProductDetails = ({ product, products }) => {
         {(() => {
           switch (tabToggle) {
             case "Description":
-              return <div className="w-[1000px] p-4 text-sm md:text-base lg:text-lg">{product.longDesc}</div>;
+              return <div className="w-[1000px] p-4 text-sm md:text-base lg:text-lg">{product?.longDesc}</div>;
             case "Specification":
               return (
                 <div className="w-[1200px] flex-center mb-12">

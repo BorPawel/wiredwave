@@ -7,12 +7,13 @@ import ShoppingCart from "../shoppingCart/ShoppingCart";
 import Image from "next/image";
 
 import logo from "../../assets/logo/logo.png";
+import Link from "next/link";
 const Navbar = () => {
   const { showCartHandler, cartItems, showCart, totalQuantities } =
     useStateContext();
   const [scrollDir, setScrollDir] = useState("scrolling up");
 
-  const navRef = useRef(null)
+  const navRef = useRef(null);
   useEffect(() => {
     const threshold = 0;
     let lastScrollY = window.pageYOffset;
@@ -39,25 +40,25 @@ const Navbar = () => {
 
     window.addEventListener("scroll", onScroll);
 
-
-    if(scrollDir === "scrolling down"){
-      navRef.current.style.transform = 'translate3d(0,-100%,0)'
-      navRef.current.style.transition = 'transform 0.3s'
-
-    }else{
-      navRef.current.style.transform = 'translate3d(0,0,0)'
+    if (scrollDir === "scrolling down") {
+      navRef.current.style.transform = "translate3d(0,-100%,0)";
+      navRef.current.style.transition = "transform 0.3s";
+    } else {
+      navRef.current.style.transform = "translate3d(0,0,0)";
     }
-
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir]);
 
-
-
   return (
-    <nav className="w-full flex justify-between items-center p-4 md:p-6 px-8 md:px-12 fixed z-50 duration-600 nav_active" ref={navRef}>
-      <div className="">
-        <Image src={logo} width={100} className="w-12 lg:w-24" />
+    <nav
+      className="w-full flex justify-between items-center p-4 md:p-2 px-8 md:px-12 fixed z-50 duration-600 nav_active "
+      ref={navRef}
+    >
+      <div className="flex-center">
+        <Link href='/'>
+          <Image src={logo} width={100} className="w-12 lg:w-24" />
+        </Link>
       </div>
       <div className="flex gap-4 md:gap-6 lg:gap-8">
         <div className="bg-grey p-3 rounded-full">
