@@ -8,11 +8,6 @@ import {
 } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
 import Quantity from "@/components/reusable/Quantity";
-
-import { FaBluetooth } from "react-icons/fa";
-
-import { BsBatteryFull, BsFillMicFill } from "react-icons/bs";
-
 import { Reviews } from "@/components/product_details/reviews/Reviews";
 import { ProductGallery } from "@/components/product_details/productGallery/ProductGallery";
 import { Specs } from "@/components/product_details/first_specs/Specs";
@@ -24,6 +19,11 @@ import { IoIosArrowBack } from "react-icons/io";
 import { SpecTable } from "@/components/product_details/spec_table/SpecTable";
 import HotSales from "@/components/hotSales/HotSales";
 import Button from "@/components/reusable/button/Button";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { MdOutlineSecurity } from "react-icons/md";
+import { BiSupport } from "react-icons/bi";
+
+import FreeShipping from "@/components/svg/FreeShipping";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart, setProductColor, color } =
     useStateContext();
@@ -94,10 +94,10 @@ const ProductDetails = ({ product, products }) => {
           <span className="h-[2px] w-full md:w-3/4 my-8 bg-grey"></span>
 
           <div className="w-full grid grid-cols-2 place-items-center md:place-items-start gap-4">
-            <p>Free Shipping</p>
-            <p>24h delivery</p>
-            <p>All time security</p>
-            <p>Support help</p>
+            <span className="flex-center gap-3"><FreeShipping/><p>Free Shipping</p></span>
+            <span className="flex-center gap-3"><LiaShippingFastSolid className="text-[35px]"/><p>24h delivery</p></span>
+            <span className="flex-center gap-3"><MdOutlineSecurity  className="text-[35px]"/><p>All time security</p></span>
+            <span className="flex-center gap-3"><BiSupport  className="text-[35px]"/><p>Support help</p></span>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { urlFor } from "@/sanity/lib/client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
-
+import { LiaShippingFastSolid } from "react-icons/lia";
 
 const ProductSwiper = ({ products, category }) => {
   const filterProducts = products.filter(
