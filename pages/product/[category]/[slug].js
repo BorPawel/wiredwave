@@ -33,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
   const navArray = ["Description", "Specification", "Reviews"];
   return (
     <div className="flex flex-col gap-4 mt-4 ">
-      <Link href="/" className="z-10 flex items-center gap-4">
+      <Link href="/" className="absolute z-10 flex items-center gap-4">
         <IoIosArrowBack className="text-3xl cursor-pointer" />
       
       </Link>
