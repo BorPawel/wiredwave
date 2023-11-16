@@ -47,7 +47,12 @@ const ShoppingCart = () => {
                     <div className="flex items-center justify-between w-full px-2 md:px-6">
                       <div className="flex flex-col">
                         <p className="font-bold">{item.name}</p>
-                        <p className="font-thin">Color:</p>{item.color}
+                        <span className="flex items-center gap-2">
+                        <p className="font-thin">Color: </p><span className='w-5 h-5 rounded-full' style={{
+                          backgroundColor: item.color
+                        }}></span>
+                        </span>
+                       
                         <p className="block md:hidden font-thin">${(item.price * item.quantity).toFixed(2)}</p>
                       </div>
 
