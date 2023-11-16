@@ -118,7 +118,7 @@ const ProductDetails = ({ product, products }) => {
                 </div>
               );
             case "Reviews":
-              return <div>Reviews</div>;
+              return <div>Reviews comming soon</div>;
             default:
               return <div>default</div>;
           }

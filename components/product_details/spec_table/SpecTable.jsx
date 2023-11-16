@@ -59,7 +59,7 @@ export function SpecTable({
         </tr>
       </thead>
       <tbody className="text-sm ">
-        {specArray.map((item, index) => (
+        {specArray.map((item, index) => item && (
           <tr key={index}>
             <td className={`${className}`}>{specLabelArray[index]}</td>
             <td>{item}</td>
