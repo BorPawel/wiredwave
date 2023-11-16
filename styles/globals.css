@@ -185,3 +185,14 @@ p {
 .swiper-product-button:hover{
   box-shadow: inset 0 0 20px #0074e4, 0 0 20px #0074e4;
 }
+
+.marque{
+  animation: scroll 15s linear infinite;
+}
+.marque:hover{
+  -webkit-animation-play-state: paused;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
