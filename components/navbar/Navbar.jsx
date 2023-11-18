@@ -12,8 +12,10 @@ const Navbar = () => {
   const { showCartHandler, cartItems, showCart, totalQuantities } =
     useStateContext();
   const [scrollDir, setScrollDir] = useState("scrolling up");
-
+  const [isSearchbarFocused, setIsSearchbarFocused] = useState(false)
   const navRef = useRef(null);
+  const searchbarRef = useRef(null);
+  const searchInputRef = useRef(null);
   useEffect(() => {
     const threshold = 0;
     let lastScrollY = window.pageYOffset;
@@ -50,6 +52,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir]);
 
+  const toggleSearchbar = () => {
+    setIsSearchbarFocused(prev => !prev);
+    if(isSearchbarFocused){
+      searchbarRef.current.style.width = '60px'
+
+
+    }else{
+      searchbarRef.current.style.width = '400px'
+     
+      
+    }
+  }
   return (
     <nav
       className="w-full flex justify-between items-center p-4 md:p-2 px-8 md:px-12 fixed z-50 duration-600 nav_active "
@@ -61,8 +75,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex gap-4 md:gap-6 lg:gap-8">
-        <div className="bg-grey p-3 rounded-full">
-          <BiSearchAlt className="text-2xl md:text-3xl lg:text-4xl" />
+        <div className="bg-grey p-3 rounded-full  flex justify-around"  ref={searchbarRef}>
+          <BiSearchAlt className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" onClick={toggleSearchbar}/>
+          {isSearchbarFocused ? <input className="w-[300px] rounded-[20px] bg-dark px-2 border-[1px]" ref={searchInputRef}/> : null }
         </div>
         <div className="bg-grey p-3 rounded-full relative">
           {" "}

@@ -40,7 +40,8 @@ const ProductSwiper = ({ products, category }) => {
     <div className="bg-grey p-10 rounded-[30px] relative">
       {isTooltipVisible ? (
         <div
-          className={`absolute w-1/3 h-full bg-dark left-0 top-0 z-10 flex flex-col gap-8 `}
+          className={`absolute w-1/3 h-full bg-dark left-0 top-0 z-10 flex flex-col gap-8`}
+        
         >
           <div>
            
