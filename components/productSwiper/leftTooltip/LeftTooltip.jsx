@@ -3,7 +3,7 @@ import { Reviews } from "@/components/product_details/reviews/Reviews";
 import { urlFor } from "@/sanity/lib/client";
 import React from "react";
 
-const LeftTooltip = ({filterProducts, bigIndex}) => {
+const LeftTooltip = ({ filterProducts, bigIndex }) => {
   return (
     <div
       className={`absolute w-1/3 h-full bg-dark left-0 top-0 z-10 flex flex-col gap-8`}
@@ -26,7 +26,6 @@ const LeftTooltip = ({filterProducts, bigIndex}) => {
             alt=""
             key={index}
             className="w-20 md:w-28 small_img bg-grey rounded-[20px]"
-            onMouseEnter={() => toggleProduct(img, index)}
           />
         ))}
       </div>
