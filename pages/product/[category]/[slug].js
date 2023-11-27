@@ -32,13 +32,13 @@ const ProductDetails = ({ product, products }) => {
 
   const navArray = ["Description", "Specification", "Reviews"];
   return (
-    <div className="flex flex-col gap-4 mt-4 ">
+    <div className="flex flex-col gap-4 mt-12 ">
       <Link href="/" className="absolute z-10 flex items-center gap-4">
         <IoIosArrowBack className="text-3xl cursor-pointer" />
       
       </Link>
-      <div className="flex  flex-col md:flex-row  gap-8 justify-center ">
-        <div className="flex flex-col justify-start w-full md:hidden pl-6">
+      <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
+        <div className="flex flex-col justify-start items-center w-full md:hidden pl-6">
           <h3 className="text-4xl font-medium lg:text-5xl">{product?.name}</h3>
           <div className="flex items-center gap-4">
             <AiFillStar className="text-4xl md:text-5xl text-blue" />
@@ -57,7 +57,7 @@ const ProductDetails = ({ product, products }) => {
             {product?.shortDesc}
           </p>
 
-          <span className="h-[2px] w-full md:w-3/4 mb-8 md:mt-3 bg-grey"></span>
+          <span className="h-[2px] w-full lg:w-3/4 mb-8 lg:mt-3 bg-grey"></span>
 
           <div className="flex flex-col items-start mb-4 ">
             {product?.colors && (
@@ -72,13 +72,13 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
 
-          <p className="block md:hidden text-sm md:w-3/4 pr-2 mb-8 ">
+          <p className="block md:hidden text-sm lg:w-3/4 pr-2 mb-8 ">
             {product?.shortDesc}
           </p>
 
-          <div className="flex flex-col gap-8">
-            <p className="font-bold  text-5xl">${product?.price}</p>
-            <div className="flex justify-between lg:justify-start items-center w-full lg:items-start gap-2  lg:gap-10">
+          <div className="flex flex-col gap-8 w-full  ">
+            <p className="font-bold w-1/2 text-5xl">${product?.price}</p>
+            <div className="flex justify-around lg:justify-start items-center w-full lg:items-start gap-2  lg:gap-10 flex-wrap ">
               <Button
                 buttonText="Add to Cart"
                 onClick={() => addItemToCart(product, qty, color)}
@@ -91,9 +91,9 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
 
-          <span className="h-[2px] w-full md:w-3/4 my-8 bg-grey"></span>
+          <span className="h-[2px] w-full lg:w-3/4 my-8 bg-grey"></span>
 
-          <div className="w-full grid grid-cols-2 place-items-center md:place-items-start gap-4">
+          <div className="w-full grid grid-cols-2 place-items-center lg:place-items-start gap-4">
             <span className="flex-center gap-3"><FreeShipping/><p>Free Shipping</p></span>
             <span className="flex-center gap-3"><LiaShippingFastSolid className="text-[35px]"/><p>24h delivery</p></span>
             <span className="flex-center gap-3"><MdOutlineSecurity  className="text-[35px]"/><p>All time security</p></span>
