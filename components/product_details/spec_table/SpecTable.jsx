@@ -50,15 +50,17 @@ export function SpecTable({
   ];
 
   const style = type === 'tooltip' ? 'lg:w-full' : 'lg:w-3/4'
+  const labels = type === 'tooltip' ? 'md:text-sm' : 'text-xl md:text-2xl'
+  const rows = type === 'tooltip' ? 'text-xs' : 'text-sm'
   return (
     <table className={`w-full ${style} spec_table`}>
       <thead>
-        <tr className="text-left text-xl md:text-2xl lg:text-3xl">
+        <tr className={`text-left ${labels} lg:text-3xl`}>
           <th >Feature</th>
           <th >Specification</th>
         </tr>
       </thead>
-      <tbody className="text-sm ">
+      <tbody className={rows}>
         {specArray.map((item, index) => item && (
           <tr key={index}>
             <td className={`${className}`}>{specLabelArray[index]}</td>
