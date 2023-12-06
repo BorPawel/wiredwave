@@ -125,9 +125,9 @@ const ProductDetails = ({ product, products }) => {
         })()}
       </div>
 
-      <div className="w-full flex justify-center p-4">
+      {/* <div className="w-full flex justify-center p-4">
         <HotSales products={products} text='Other customers also choose these products.' />
-      </div>
+      </div> */}
     </div>
   );
 };

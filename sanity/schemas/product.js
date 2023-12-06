@@ -57,7 +57,30 @@ export default {
       title: "Long Description",
       type: "string",
     },
+    {
+      name: "multipleDesc",
+      title: 'Description with Sections',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'header',
+              title: 'Section Header',
+              type: 'string'
+            },
+            {
+              name: 'sectionDesc',
+              title: 'Section Description',
+              type: 'string'
+            },
+            
+          ]
+        }
 
+      ]
+    },
     {
       name: "connector",
       title: "Connector",
