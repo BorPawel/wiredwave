@@ -14,6 +14,7 @@ import HotSales from "@/components/hotSales/HotSales";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
 import ProductList from "@/components/products/productsList/ProductList";
 import ProductSwiper from "@/components/productSwiper/ProductSwiper";
+import CategoriesHomepage from "@/components/categoriesHomepage/CategoriesHomepage";
 
 const Home = ({ banner, products, logos, sale }) => {
   const { showCart, category } = useStateContext();
@@ -31,7 +32,10 @@ const Home = ({ banner, products, logos, sale }) => {
       <Banner banner={banner[0]}  />
 
   
-      <div className="flex md:hidden flex-col gap-20">
+      <CategoriesHomepage  products={products}/>
+
+
+      {/* <div className="flex md:hidden flex-col gap-20">
         {categoryArr.map((item, index) => (
           <>
             <ProductList key={index} products={products} category={item} />
@@ -43,10 +47,10 @@ const Home = ({ banner, products, logos, sale }) => {
         {categoryArr.map((item, index) => (
           <>
             <ProductSwiper key={index} products={products} category={item} />
-            {/* <span className="bg-blue w-full h-[1px] drop-shadow-outer"> </span> */}
+           
           </>
         ))}
-      </div>
+      </div> */}
       {/* <LogosMarquee logos={logos} /> */}
 
       <SaleBanner sale={sale} />

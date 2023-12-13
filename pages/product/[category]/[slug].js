@@ -12,7 +12,7 @@ import { Reviews } from "@/components/product_details/reviews/Reviews";
 import { ProductGallery } from "@/components/product_details/productGallery/ProductGallery";
 import { Specs } from "@/components/product_details/first_specs/Specs";
 import { Navigation } from "@/components/product_details/navigation/Navigation";
-import { Description } from "@/components/product_details/description/Description";
+
 import { Colors } from "@/components/product_details/colors/Colors";
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
@@ -24,6 +24,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 
 import FreeShipping from "@/components/svg/FreeShipping";
+import Description from "@/components/product_details/description/description";
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, addItemToCart, setProductColor, color } =
     useStateContext();
@@ -35,7 +36,6 @@ const ProductDetails = ({ product, products }) => {
     <div className="flex flex-col gap-4 mt-12 ">
       <Link href="/" className="absolute z-10 flex items-center gap-4">
         <IoIosArrowBack className="text-3xl cursor-pointer" />
-      
       </Link>
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <div className="flex flex-col justify-start items-center w-full md:hidden pl-6">
@@ -82,22 +82,30 @@ const ProductDetails = ({ product, products }) => {
               <Button
                 buttonText="Add to Cart"
                 onClick={() => addItemToCart(product, qty, color)}
-           
               />
-              <Button
-                buttonText="Buy Now"
-               
-              />
+              <Button buttonText="Buy Now" />
             </div>
           </div>
 
           <span className="h-[2px] w-full lg:w-3/4 my-8 bg-grey"></span>
 
           <div className="w-full grid grid-cols-2 place-items-center lg:place-items-start gap-4">
-            <span className="flex-center gap-3"><FreeShipping/><p>Free Shipping</p></span>
-            <span className="flex-center gap-3"><LiaShippingFastSolid className="text-[35px]"/><p>24h delivery</p></span>
-            <span className="flex-center gap-3"><MdOutlineSecurity  className="text-[35px]"/><p>All time security</p></span>
-            <span className="flex-center gap-3"><BiSupport  className="text-[35px]"/><p>Support help</p></span>
+            <span className="flex-center gap-3">
+              <FreeShipping />
+              <p>Free Shipping</p>
+            </span>
+            <span className="flex-center gap-3">
+              <LiaShippingFastSolid className="text-[35px]" />
+              <p>24h delivery</p>
+            </span>
+            <span className="flex-center gap-3">
+              <MdOutlineSecurity className="text-[35px]" />
+              <p>All time security</p>
+            </span>
+            <span className="flex-center gap-3">
+              <BiSupport className="text-[35px]" />
+              <p>Support help</p>
+            </span>
           </div>
         </div>
       </div>
@@ -106,15 +114,22 @@ const ProductDetails = ({ product, products }) => {
 
       {/* <Description product={product} /> */}
 
-      <div className="w-full min-h-[400px] text-xl text-white flex justify-center ">
+      <div className="w-full min-h-[1000px] text-xl text-white flex justify-center ">
         {(() => {
           switch (tabToggle) {
             case "Description":
-              return <div className="w-[1000px] p-4 text-sm md:text-base lg:text-lg">{product?.longDesc}</div>;
+              return (
+                <div className="flex flex-col gap-4 w-[1000px]">
+                  <Description
+                    longDesc={product?.longDesc}
+                    multipleDesc={product?.multipleDesc}
+                  />
+                </div>
+              );
             case "Specification":
               return (
                 <div className="w-[1200px] flex-center mb-12">
-                  <SpecTable product={product} className='h-16'/>
+                  <SpecTable product={product} className="h-16" />
                 </div>
               );
             case "Reviews":
