@@ -1,12 +1,13 @@
 import React from 'react';
+import SortButton from './SortButton/SortButton';
 
 const Header = () => {
   return (
     <div>
       <div>Main / Categories</div>
       <div className="w-full py-10 flex justify-between items-center">
-        <div>Categories</div>
-        <div>Sort</div>
+        <h4>Category</h4>
+       <SortButton />
       </div>
     </div>
   );
