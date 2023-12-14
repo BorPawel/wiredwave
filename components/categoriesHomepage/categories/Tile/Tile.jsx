@@ -5,11 +5,11 @@ const Tile = ({ products, category }) => {
   const findProduct = products.find((item) => item.category === category);
   const chars = findProduct.category.split("");
   return (
-    <div className="flex flex-col w-full h-full items-center justify-center p-2 relative overflow-hidden group z-0">
+    <div className="flex flex-col w-full h-full items-center justify-center p-2 relative overflow-hidden group z-0 ">
       <div className="h-3/4 z-10">
         <img
           src={urlFor(findProduct.image && findProduct.image[0])}
-          className="max-w-[300px] group-hover:scale-150 duration-300"
+          className="max-w-[300px] group-hover:scale-125 duration-300"
         />
       </div>
 
