@@ -22,7 +22,7 @@ const Categories = ({ products }) => {
   };
 
   return (
-    <div className="min-h-[1000px] flex flex-col mt-12 p-4">
+    <div className="min-h-[1000px] flex flex-col p-4">
       <Header />
       <div className="flex flex-col md:flex-row">
         <Sidebar

@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <div>Main / Categories</div>
       <div className="w-full py-10 flex justify-between items-center">
-        <h4>Category</h4>
+        <h4>Categories</h4>
        <SortButton />
       </div>
     </div>
