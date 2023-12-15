@@ -4,9 +4,9 @@ import SortButton from './SortButton/SortButton';
 const Header = () => {
   return (
     <div>
-      <div>Main / Categories</div>
+      <div>Main / Category</div>
       <div className="w-full py-10 flex justify-between items-center">
-        <h4>Categories</h4>
+        <h4>Category</h4>
        <SortButton />
       </div>
     </div>
