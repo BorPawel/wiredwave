@@ -5,6 +5,9 @@ import moment from "moment";
 import Button from "@/components/reusable/button/Button";
 moment.locale("en");
 const SaleBanner = ({ sale }) => {
+  if(!sale){
+    return <div>No sale</div>
+  }
   const { saleName, image, precent, startDate, endDate } = sale[0];
   const dateStart = moment(startDate).format("MMM Do");
   const dateEnd = moment(endDate).format("MMM Do");

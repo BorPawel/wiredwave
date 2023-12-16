@@ -112,7 +112,7 @@ const ProductDetails = ({ product, products }) => {
 
       <Navigation setTabToggle={setTabToggle} navArray={navArray} />
 
-      {/* <Description product={product} /> */}
+ 
 
       <div className="w-full min-h-[1000px] text-xl text-white flex justify-center ">
         {(() => {
@@ -140,9 +140,7 @@ const ProductDetails = ({ product, products }) => {
         })()}
       </div>
 
-      {/* <div className="w-full flex justify-center p-4">
-        <HotSales products={products} text='Other customers also choose these products.' />
-      </div> */}
+     
     </div>
   );
 };

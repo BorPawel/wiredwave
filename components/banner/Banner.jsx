@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { urlFor } from "@/sanity/lib/client";
 import Image from "next/image";
@@ -7,15 +6,16 @@ import HeadingText from "../heading/HeadingText";
 import Link from "next/link";
 import ButtonFull from "@/components/reusable/button/Button";
 import { Circles } from "../reusable/circles/Circles";
-const Banner = ({
-  banner: { smallText, desc, bigText, image, buttonText, slug, price, name, category },
-}) => {
- 
-  const lowCategory = category.toLowerCase()
- 
+const Banner = ({ banner }) => {
+  if(!banner){
+    return <div>No banner</div>;
+  }
+  const { desc, bigText, image, buttonText, slug, price, name, category } = banner
+  const lowCategory = category.toLowerCase();
+
   return (
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible">
-     <Circles   />
+      <Circles />
       <h1 className="hidden lg:block absolute z-[-1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:text-[9rem] lg:text-[20vw] md:tracking-wider font-bold text-grey">
         {bigText}
       </h1>
@@ -34,10 +34,7 @@ const Banner = ({
           </div>
           <h2 className="font-medium drop-shadow-glow">${price}</h2>
           <Link href={`/product/${lowCategory}/${slug.current}`}>
-            <ButtonFull
-              buttonText={buttonText}
-              type='full'
-            />
+            <ButtonFull buttonText={buttonText} type="full" />
           </Link>
         </div>
       </div>

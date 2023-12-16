@@ -4,10 +4,10 @@ import Head from 'next/head';
 // import Navbar from './Navbar';
 // import Footer from './Footer';
 
-import '../../styles/globals.css'
+import '@/styles/globals.css'
 
-import Navbar from '../navbar/Navbar';
-import Footer from '../footer/Footer';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 
 export default function Layout({ children }) {
   useEffect(() => {
