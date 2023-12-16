@@ -4,7 +4,7 @@ const CategoryHeader = () => {
   return (
     <div className="w-full flex justify-between items-center">
       <h4>Shop by Categories</h4>
-      <Link href='/categories'>
+      <Link href='/category'>
         <p>Show all</p>
       </Link>
     </div>
