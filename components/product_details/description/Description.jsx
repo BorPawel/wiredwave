@@ -5,7 +5,7 @@ const Description = ({ longDesc, multipleDesc }) => {
     <>
       {longDesc
         ? longDesc
-        : multipleDesc.map((item, index) => (
+        : multipleDesc?.map((item, index) => (
             <div key={index}>
               <h4>{item.header}</h4>
               <p>{item.sectionDesc}</p>

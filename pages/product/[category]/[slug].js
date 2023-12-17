@@ -32,7 +32,7 @@ const ProductDetails = ({ product, products }) => {
   const [tabToggle, setTabToggle] = useState("Description");
 
   const navArray = ["Description", "Specification", "Reviews"];
-  return (
+  return product ? (
     <div className="flex flex-col gap-4 mt-12 ">
       <Link href="/" className="absolute z-10 flex items-center gap-4">
         <IoIosArrowBack className="text-3xl cursor-pointer" />
@@ -135,6 +135,7 @@ const ProductDetails = ({ product, products }) => {
             case "Reviews":
               return <div>Reviews comming soon</div>;
             default:
+              
               return <div>default</div>;
           }
         })()}
@@ -142,7 +143,7 @@ const ProductDetails = ({ product, products }) => {
 
      
     </div>
-  );
+  ) : null
 };
 
 export const getStaticPaths = async () => {
