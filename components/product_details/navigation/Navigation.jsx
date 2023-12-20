@@ -1,11 +1,15 @@
+'use client'
 import React, { useEffect, useRef, useState } from "react";
-export function Navigation({setTabToggle, navArray}) {
+
+
+const Navigation = ({setTabToggle}) => {
   const mainDescClass = "m-2 hover:text-blue cursor-pointer";
   //const navArray = ["Description", "Specification", "Reviews"];
   const [toggle, setToggle] = useState("Specification");
 
   const itemsRef = useRef([]);
 
+  
   const toggleHandler = (id) => {
     const animation_line = document.querySelector(".animation_line");
     const current_item = itemsRef.current[id];
@@ -25,6 +29,8 @@ export function Navigation({setTabToggle, navArray}) {
     itemsRef.current[0].classList.add('active')
 
   }, []);
+
+  const navArray = ['Description', "Specification", 'Reviews']
   return (
     <div className="w-full flex items-center justify-center">
       <ul className="flex gap-4 relative mt-8 md:gap-8 lg:gap-12  z-0 nav_container">
@@ -43,3 +49,4 @@ export function Navigation({setTabToggle, navArray}) {
     </div>
   );
 }
+export default Navigation

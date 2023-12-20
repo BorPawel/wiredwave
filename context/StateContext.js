@@ -1,4 +1,5 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+'use client'
+import React, { useState, createContext, useContext } from "react";
 import { toast } from "react-hot-toast";
 
 const Context = createContext();
@@ -23,12 +24,15 @@ export const StateContext = ({ children }) => {
     setColor(color);
   };
   const showCartHandler = () => {
+
+    console.log('asdasd')
     if (!showCart) {
       document.querySelector("body").style.overflow = "hidden";
     } else {
       document.querySelector("body").style.overflow = "auto";
     }
     setShowCart((prev) => !prev);
+
   };
 
   const incQty = () => {
@@ -111,6 +115,8 @@ export const StateContext = ({ children }) => {
   const chooseColor = (product, color) => {
     const findProduct = cartItems.find((item) => item._id === product._id);
   };
+
+ 
   return (
     <Context.Provider
       value={{
@@ -131,6 +137,7 @@ export const StateContext = ({ children }) => {
         decQtyInCart,
         color,
         setProductColor,
+    
       }}
     >
       {children}

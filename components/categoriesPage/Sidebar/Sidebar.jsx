@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Checkbox from './checkbox/Checkbox';
 import PriceRange from './PriceRange/PriceRange';

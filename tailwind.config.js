@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        dark: "var(--dark)",
-        grey: "var(--grey)",
-        blue: "var(--blue)",
-        white: "var(--white)",
+        dark: "#111111",
+        grey: "#181818",
+        blue: "#0074e4",
+        white: "#fff",
       },
     },
     dropShadow: {
@@ -36,7 +36,8 @@ module.exports = {
         "1px 1px 10px rgba(0, 116, 228, 1)",
         "1px 1px 15px rgba(0, 116, 228, 1)",
       ],
+     
     },
   },
   plugins: [],
-};
+}
