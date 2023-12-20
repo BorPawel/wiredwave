@@ -1,6 +1,6 @@
 import Banner from "@/components/banner/Banner";
 import CategoriesHomepage from "@/components/categoriesHomepage/CategoriesHomepage";
-import SaleBanner from "@/components/sale_banner/SaleBanner";
+import SaleBanner from "@/components/saleBanner/SaleBanner";
 import { client } from "@/sanity/lib/client";
 
 export default async function Home() {
