@@ -8,7 +8,7 @@ const ProductTitle = ({ title }) => {
         {chars.map((char, index) => (
           <span
             key={index}
-            className="text-4xl text-dark font-extrabold group-hover:text-black group-hover:text-5xl duration-300 group-hover:[text-shadow:_1px_1px_2px_white]"
+            className="text-4xl text-dark font-extrabold  group-hover:text-5xl duration-300 group-hover:[text-shadow:_0px_0px_22px_black] group-hover:text-blue"
           >
             {char}
           </span>
