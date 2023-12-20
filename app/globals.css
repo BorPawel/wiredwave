@@ -1,27 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  font-size: clamp(2.8rem, 3.25vw + 2rem, 4.56rem);
+}
+h2 {
+  font-size: clamp(2.32rem, 2.38vw + 1.85rem, 3.75rem);
+}
+h3 {
+  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+}
+h4 {
+  font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+}
+h5 {
+  font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+}
+p {
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small_img_active {
+  background-color: #0074e4;
 }
