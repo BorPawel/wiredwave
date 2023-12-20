@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "@/app/Layout";
+import Layout from "@/components/layout/Layout";
 import { StateContext } from "@/context/StateContext";
 import {Toaster} from 'react-hot-toast';
 

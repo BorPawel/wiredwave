@@ -18,7 +18,7 @@ const ProductSwiper = ({ products, category }) => {
 
   const toggleTooltip = (e) => {
     setIsTooltipVisible((prev) => !prev);
-    console.log(e.target);
+ 
   };
 
   const [smallLeftIndex, setSmallLeftIndex] = useState(0);

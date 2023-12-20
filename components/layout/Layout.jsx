@@ -5,9 +5,9 @@ import Head from 'next/head';
 // import Footer from './Footer';
 
 import '@/styles/globals.css'
-
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
+import Script from 'next/script'
+import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
    <div className="bg-dark min-h-screen text-white">
     <Head>
       <title>WiredWave</title>
-      <script
+      <Script
         dangerouslySetInnerHTML={{
           __html: `history.scrollRestoration = "manual"`,
         }}

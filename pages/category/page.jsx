@@ -30,26 +30,26 @@ const Categories = ({ products }) => {
           selectedCheckbox={selectedCheckbox}
           handleCheckboxChange={handleCheckboxChange}
         />
-        <ProductGrid products={products} checkedValue={checkedValue} />
+        {/* <ProductGrid products={products} checkedValue={checkedValue} /> */}
       </div>
     </div>
   );
 };
 
-export const getServerSideProps = async () => {
-  const productQuery = '*[_type == "product"]';
-  const products = await client.fetch(productQuery);
+// export const getServerSideProps = async () => {
+//   const productQuery = '*[_type == "product"]';
+//   const products = await client.fetch(productQuery);
 
-  const saleQuery = '*[_type == "sale"]';
-  const sale = await client.fetch(saleQuery);
+//   const saleQuery = '*[_type == "sale"]';
+//   const sale = await client.fetch(saleQuery);
 
-  return {
-    props: {
-      products,
+//   return {
+//     props: {
+//       products,
 
-      sale,
-    },
-  };
-};
+//       sale,
+//     },
+//   };
+// };
 
 export default Categories;
