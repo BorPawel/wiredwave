@@ -9,7 +9,6 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  
 }
 
 h1 {
@@ -31,7 +30,7 @@ p {
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,62 @@ p {
   background-color: #0074e4;
 }
 
-.gallery_wrapper > div{
+.gallery_wrapper > div {
   border-radius: 20px;
-  background: #181818
+  background: #181818;
+}
+
+.blur-effect {
+  /* Inner blur effect */
+  filter: drop-shadow(0 0 10px black); /* Adjust color and size as needed */
+  border-radius: 40px;
+  grid-column: 1 / -1;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: cover;
+}
+.big-text {
+  display: inline-block;
+  transform: translate3d(0, 100px, 0);
+  animation: fade-up-big  linear forwards;
+  animation-timeline: view();
+  animation-range: cover;
+  scale: .6
+}
+.small-text {
+  display: inline-block;
+  transform: translate3d(0, 200px, 0);
+  animation: fade-up-small linear forwards;
+  animation-timeline: view();
+  animation-range: cover -100px;
+  scale: .6;
+  opacity: .3
+}
+
+@keyframes fade-up-big {
+  to {
+    transform: translate3d(0, -200px, 0);
+    scale: 1.2;
+  }
+}
+
+@keyframes fade-up-small {
+  to {
+    transform: translate3d(0, -250px, 0);
+    scale: 1.2;
+    opacity: 1
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 0.6;
+    scale: 2;
+  }
+}
+.inset-blur {
+  -webkit-box-shadow: inset 0px 0px 47px 55px #111111;
+  -moz-box-shadow: inset 0px 0px 47px 55px #111111;
+  box-shadow: inset 0px 0px 47px 55px #111111;
 }
