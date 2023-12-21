@@ -8,6 +8,7 @@ import Quantity from "@/components/reusable/Quantity";
 import Button from "@/components/reusable/button/Button";
 import FreeShipping from "@/components/svg/FreeShipping";
 import { useStateContext } from "@/context/StateContext";
+import { getDataWithParams } from "@/lib/getData/getData";
 import { client, urlFor } from "@/sanity/lib/client";
 import Link from 'next/link'
 import { AiFillStar } from "react-icons/ai";
@@ -15,7 +16,7 @@ import { BiSupport } from "react-icons/bi";
 import { IoIosArrowBack } from "react-icons/io";
 import { LiaShippingFastSolid } from "react-icons/lia";
 const Page = async ({ params }) => {
-  const product = await getData(params);
+  const product = await getDataWithParams(params);
 
  
   return (
@@ -113,16 +114,6 @@ export const generateStaticParams = async () => {
   return paths;
 };
 
-const getData = async (params) => {
-  const { slug, category } = params;
-  try {
-    const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-    const product = await client.fetch(query);
 
-    return product;
-  } catch (error) {
-    console.error("failed to fetch", error);
-  }
-};
 
 export default Page;

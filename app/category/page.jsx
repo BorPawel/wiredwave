@@ -1,11 +1,12 @@
 import Header from "@/components/categoriesPage/Header/Header";
 import ProductWrapper from "@/components/categoriesPage/ProductWrapper/ProductWrapper";
+import { getData } from "@/lib/getData/getData";
 
-import { client } from "@/sanity/lib/client";
+
 import React from "react";
 
 const Page = async () => {
-  const data = await getData();
+  const data = await getData('product');
 
 
   return (
@@ -17,15 +18,6 @@ const Page = async () => {
   );
 };
 
-const getData = async () => {
-  try {
-    const productQuery = '*[_type == "product"]';
-    const products = await client.fetch(productQuery);
 
-    return products;
-  } catch (error) {
-    console.error("failed to fetch", error);
-  }
-};
 
 export default Page;

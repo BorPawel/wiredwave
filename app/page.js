@@ -1,34 +1,18 @@
 import Banner from "@/components/banner/Banner";
 import CategoriesHomepage from "@/components/categoriesHomepage/CategoriesHomepage";
 import SaleBanner from "@/components/saleBanner/SaleBanner";
-import { client } from "@/sanity/lib/client";
+import { getData } from "@/lib/getData/getData";
+
 
 export default async function Home() {
-  const data = await getData();
+  const data = await getData('banner', 'product', 'sale');
  
+  console.log(data.sale)
   return (
     <main className="m-auto w-full max-w-[1600px]">
       <Banner banner={data.banner && data.banner[0]} />
-      <CategoriesHomepage products={data.products && data.products} />
+      <CategoriesHomepage products={data.product && data.product} />
       <SaleBanner sale={data.sale && data.sale} />
     </main>
   );
 }
-
-const getData = async () => {
-  try {
-    const bannerQuery = '*[_type == "banner"]';
-    const banner = await client.fetch(bannerQuery);
-
-    const productQuery = '*[_type == "product"]';
-    const products = await client.fetch(productQuery);
-
-    const saleQuery = '*[_type == "sale"]';
-    const sale = await client.fetch(saleQuery);
-
-    return { products, banner, sale };
-
-  } catch (error) {
-    console.error("failed to fetch", error);
-  }
-};
