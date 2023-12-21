@@ -40,3 +40,8 @@ p {
 .small_img_active {
   background-color: #0074e4;
 }
+
+.gallery_wrapper > div{
+  border-radius: 20px;
+  background: #181818
+}
