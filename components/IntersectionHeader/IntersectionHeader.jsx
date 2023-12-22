@@ -11,7 +11,7 @@ const IntersectionHeader = () => {
         <span className="text-[6rem]  font-semibold leading-loose big-text">
           Unlock Sonic Brilliance
         </span>
-        <span className="text-[1.5rem]  small-text">Discover Headphones That Resonate with You</span>
+        <span className="text-[1.5rem]  big-text">Discover Headphones That Resonate with You</span>
       </div>
     </div>
   );

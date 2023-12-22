@@ -53,7 +53,7 @@ p {
   opacity: 0;
   animation: fade-in linear forwards;
   animation-timeline: view();
-  animation-range: cover;
+  animation-range: cover -100px;
 }
 .big-text {
   display: inline-block;

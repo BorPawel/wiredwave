@@ -15,7 +15,7 @@ export default async function Home() {
       <Banner banner={data.banner && data.banner[0]} />
       <CategoriesHomepage products={data.product && data.product} />
       <IntersectionHeader/>
-      <AudioGallery />
+      <AudioGallery products={data.product} />
       <SaleBanner sale={data.sale && data.sale} />
     </main>
   );

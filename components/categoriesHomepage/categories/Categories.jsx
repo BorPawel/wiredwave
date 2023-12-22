@@ -16,7 +16,7 @@ const Categories = ({products}) => {
       {categoryArr.map((item, index) => (
         <div
           className={
-            index === 0 ? "bg-grey col-span-2 h-[200px] md:h-[400px]  rounded-[30px]" : "bg-grey col-span-1 h-[200px] md:h-[400px]  rounded-[30px]"
+            index === 0 ? "bg-grey col-span-2 h-[200px] md:h-[400px]  rounded-[30px] " : "bg-grey   col-span-1 h-[200px] md:h-[400px]  rounded-[30px]"
           }
           key={index}
         >
