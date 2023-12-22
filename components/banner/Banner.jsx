@@ -11,7 +11,9 @@ import BannerText from "./BannerText/BannerText";
 const Banner = ({ banner }) => {
   return (
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible mt-24">
+      
       <Circles />
+      
       <BannerText text="Wireless" isHidden={false} />
       <BannerInfo banner={banner} />
       <BannerImage banner={banner} />
