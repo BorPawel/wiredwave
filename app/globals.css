@@ -58,10 +58,10 @@ p {
 .big-text {
   display: inline-block;
   transform: translate3d(0, 100px, 0);
-  animation: fade-up-big  linear forwards;
+  animation: fade-up-big linear forwards;
   animation-timeline: view();
   animation-range: cover;
-  scale: .6
+  scale: 0.6;
 }
 .small-text {
   display: inline-block;
@@ -69,8 +69,8 @@ p {
   animation: fade-up-small linear forwards;
   animation-timeline: view();
   animation-range: cover -100px;
-  scale: .6;
-  opacity: .3
+  scale: 0.6;
+  opacity: 0.3;
 }
 
 @keyframes fade-up-big {
@@ -84,7 +84,7 @@ p {
   to {
     transform: translate3d(0, -250px, 0);
     scale: 1.2;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -100,6 +100,4 @@ p {
   box-shadow: inset 0px 0px 47px 55px #050505;
 }
 
-.shadow{
-  
-}
+
