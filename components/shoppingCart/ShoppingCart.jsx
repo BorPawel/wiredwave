@@ -2,8 +2,11 @@ import React from "react";
 import { useStateContext } from "@/context/StateContext";
 import CartSummary from "./CartSummary/CartSummary";
 import CartHeader from "./CartHeader/CartHeader";
+import CartItem from "./CartItem/CartItem";
 const ShoppingCart = () => {
   const { cartItems } = useStateContext();
+
+
   return (
     <div className="w-screen min-h-screen bg-dark fixed right-0 top-0 z-50 flex-center overflow-auto text-white">
       <div className="w-[1400px] flex flex-col h-screen">
@@ -17,7 +20,7 @@ const ShoppingCart = () => {
             ) : (
               <div className="w-full h-full flex flex-col gap-4">
                 {cartItems.map((item, index) => (
-                  <CartItem item={item}/>
+                  <CartItem item={item} index={index}/>
                 ))}
               </div>
             )}

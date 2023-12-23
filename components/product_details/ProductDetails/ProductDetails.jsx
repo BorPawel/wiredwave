@@ -5,6 +5,7 @@ import { BiSupport } from "react-icons/bi";
 import { MdOutlineSecurity } from "react-icons/md";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { Reviews } from "../reviews/Reviews";
+import AddToCard from "./AddToCard/AddToCard";
 
 const ProductDetails = ({ product }) => {
   return (
@@ -22,14 +23,7 @@ const ProductDetails = ({ product }) => {
       <p className="block md:hidden text-sm lg:w-3/4 pr-2 mb-8 ">
         {product?.shortDesc}
       </p>
-
-      <div className="flex flex-col gap-8 w-full  ">
-        <p className="font-bold w-1/2 text-5xl">${product?.price}</p>
-        <div className="flex justify-around lg:justify-start items-center w-full lg:items-start gap-2  lg:gap-10 flex-wrap ">
-          <Button buttonText="Add to Cart" />
-          <Button buttonText="Buy Now" />
-        </div>
-      </div>
+    <AddToCard product={product}/>
 
       <span className="h-[2px] w-full lg:w-3/4 my-8 bg-grey"></span>
 
