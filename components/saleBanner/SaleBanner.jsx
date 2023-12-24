@@ -3,12 +3,15 @@ import moment from "moment";
 import SaleInfo from "./SaleInfo/SaleInfo";
 import SaleImage from "./SaleImage/SaleImage";
 import SaleAction from "./SaleAction/SaleAction";
+import { getData } from "@/lib/getData/getData";
 moment.locale("en");
-const SaleBanner = ({ sale }) => {
-  if(!sale){
+const SaleBanner = async ( ) => {
+
+  const data = await getData(  'sale');
+  if(!data.sale){
     return <div>No sale</div>
   }
-  const saleData = sale[0];
+  const saleData = data.sale[0];
 
   return (
     <div className="min-w-[320px] w-full p-2 my-32">
