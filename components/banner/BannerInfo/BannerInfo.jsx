@@ -1,4 +1,4 @@
-// BannerInfo.jsx
+
 import React from "react";
 import { BannerTitle } from "./BannerTitle/BannerTitle";
 import { BannerDescription } from "./BannerDescription/BannerDescription";
