@@ -1,18 +1,21 @@
+import { getCategoryWithParams } from "@/lib/getData/getData";
 import React from "react";
-import ProductCard from "../ProductCard/ProductCard";
 import Link from 'next/link'
-const ProductGrid = ({ products, checkedValue }) => {
-  return products ? (
+import ProductCard from "../ProductCard/ProductCard";
+const ProductGrid = async ({ params }) => {
+  const products = await getCategoryWithParams(params);
+
+  return (
     <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {products?.product.map((item) =>
-        item.category === checkedValue ? (
-          <Link href={`/product/${item.category.toLowerCase()}/${item.slug.current}`}>
-            <ProductCard item={item} />
-          </Link>
-        ) : null
-      )}
+      {products.map((item) => (
+        <Link
+          href={`/product/${item.category.toLowerCase()}/${item.slug.current}`}
+        >
+          <ProductCard item={item} />
+        </Link>
+      ))}
     </div>
-  ) : null;
+  );
 };
 
 export default ProductGrid;

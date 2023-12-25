@@ -7,7 +7,7 @@ import BannerText from "./BannerText/BannerText";
 import { getData } from "@/lib/getData/getData";
 const Banner = async () => {
   const data = await getData('banner');
-  console.log(data)
+
   return (
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible mt-24 test">
       

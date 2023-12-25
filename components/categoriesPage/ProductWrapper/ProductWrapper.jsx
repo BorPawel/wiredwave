@@ -1,36 +1,20 @@
-'use client'
-import React, { useState } from "react";
+"use client";
+import React, { Suspense, useState } from "react";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import Sidebar from "../Sidebar/Sidebar";
 
-const ProductWrapper = ({data}) => {
+const ProductWrapper = ({ children }) => {
 
-     const categoryArr = [
-    "Wireless",
-    "Gaming",
-    "Earphones",
-    "Speakers",
-    "Watches",
-  ];
-  const [selectedCheckbox, setSelectedCheckbox] = useState("Wireless");
-  const [checkedValue, setCheckedValue] = useState("Wireless");
-
-
-  const handleCheckboxChange = (selectedItem) => {
-    setSelectedCheckbox(selectedItem);
-    setCheckedValue(selectedItem);
-  };
 
   return (
     <div className="flex flex-col md:flex-row">
       <Sidebar
-        categoryArr={categoryArr}
-        selectedCheckbox={selectedCheckbox}
-        handleCheckboxChange={handleCheckboxChange}
+      
+       
       />
-      <ProductGrid products={data} checkedValue={checkedValue} />
+      <Suspense fallback={<div>Loading</div>}>{children}</Suspense>
     </div>
   );
-};
+};  
 
 export default ProductWrapper;

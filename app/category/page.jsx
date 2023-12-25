@@ -1,23 +1,21 @@
-import Header from "@/components/categoriesPage/Header/Header";
-import ProductWrapper from "@/components/categoriesPage/ProductWrapper/ProductWrapper";
-import { getData } from "@/lib/getData/getData";
 
+import Header from "@/components/categoriesPage/Header/Header";
+import ProductGrid from "@/components/categoriesPage/ProductGrid/ProductGrid";
+import ProductWrapper from "@/components/categoriesPage/ProductWrapper/ProductWrapper";
 
 import React from "react";
 
-const Page = async () => {
-  const data = await getData('product');
+const Page = ({searchParams}) => {
 
 
   return (
     <div className="m-auto w-full max-w-[1600px] flex flex-col p-4 mt-32 text-white">
       <Header />
-
-      <ProductWrapper data={data} />
+      <ProductWrapper>
+        <ProductGrid params={searchParams}/>
+      </ProductWrapper>
     </div>
   );
 };
-
-
 
 export default Page;

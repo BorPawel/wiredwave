@@ -1,3 +1,4 @@
+'use client'
 import { urlFor } from "@/sanity/lib/client";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";

@@ -1,14 +1,8 @@
 import React from "react";
 import Tile from "./Tile/Tile";
-
+import Link from 'next/link'
 const Categories = ({ products }) => {
-  const categoryArr = [
-    "Wireless",
-    "Gaming",
-    "Earphones",
-    "Speakers",
-    "Watches",
-  ];
+  const categoryArr = ["Wireless", "Gaming", "Clip-On", "Open-Ear", "Earbuds"];
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
@@ -21,7 +15,9 @@ const Categories = ({ products }) => {
           }
           key={index}
         >
-          <Tile products={products} category={item} />
+          <Link href={`/category/?category=${item.toLowerCase()}`}>
+            <Tile products={products} category={item} />
+          </Link>
         </div>
       ))}
     </div>
