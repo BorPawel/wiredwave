@@ -6,6 +6,7 @@ import ShoppingCart from "../shoppingCart/ShoppingCart";
 import Logo from "./Logo/Logo";
 import SearchBar from "./SearchBar/SearchBar";
 import ShoppingCartIcon from "./ShopingCartIcon/ShoppingCartIcon";
+import NavigationButtons from "./NavigationButtons/NavigationButtons";
 const Navbar = () => {
   const { showCart } = useStateContext();
   const [scrollDir, setScrollDir] = useState("scrolling up");
@@ -50,12 +51,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full flex justify-between items-center p-4 md:p-2 px-8 md:px-12 fixed z-50 duration-600 nav_active top-0"
+      className="w-1/2 flex justify-between items-center  md:p-2 px-8 md:px-20 fixed z-50 duration-600 nav_active  top-0 bg-dark border-grey border-[2px] text-white rounded-b-[100px]"
       ref={navRef}
     >
       <Logo />
+      <NavigationButtons />
       <div className="flex gap-4 md:gap-6 lg:gap-8">
         <SearchBar />
+
         <ShoppingCartIcon />
       </div>
       {showCart && <ShoppingCart />}

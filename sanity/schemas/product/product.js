@@ -1,167 +1,85 @@
+import {category} from '../lib/category'
+import {specs} from '../lib/specs/specs'
+import {colorImageArray} from '../lib/colors/colors'
+import {desc} from '../lib/desc/desc'
+
+
 export default {
   name: "product",
   title: "Product",
   type: "document",
   fields: [
     {
-      name: "image",
-      title: "Image",
-      type: "array",
-      of: [{ type: "image" }],
+      name: 'image',
+      title: 'Image',
+      type: 'array',
+      of: [{type: 'image'}],
       options: {
         hotspot: true,
       },
     },
     {
-      name: "name",
-      title: "Name",
-      type: "string",
+      name: 'name',
+      title: 'Headphones Name',
+      type: 'string',
     },
     {
-      name: "category",
-      title: "Category",
-      type: "string",
-    },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
       options: {
-        source: "name",
+        source: 'name',
         maxLength: 90,
       },
     },
+    category, // The category field
+    colorImageArray,
     {
-      name: "price",
-      title: "Price",
-      type: "number",
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+      validation: (Rule) => Rule.min(0), // Optional: Ensure price is not negative
     },
     {
-      name: "stars",
-      title: "Stars",
-      type: "number",
+      name: 'discount',
+      title: 'Discount',
+      type: 'number',
+      validation: (Rule) =>
+        Rule.custom((discount, context) => {
+          // Ensure discount is not negative
+          if (discount < 0) {
+            return 'Discount cannot be negative'
+          }
+
+          // Access the price field from the parent document
+          const price = context.document.price
+
+          // Check if discount is greater than price
+          if (discount > price) {
+            return 'Discount cannot be higher than the price'
+          }
+
+          // Return true if validation passes
+          return true
+        }),
+    },
+    {
+      name: 'stars',
+      title: 'Stars',
+      type: 'number',
       validation: (Rule) => Rule.min(0).max(5),
     },
     {
-      name: "reviews",
-      title: "Reviews",
-      type: "number",
+      name: 'reviews',
+      title: 'Reviews',
+      type: 'number',
     },
     {
-      name: "shortDesc",
-      title: "Short Description",
-      type: "string",
+      name: 'shortDesc',
+      title: 'Short Description',
+      type: 'string',
     },
-    {
-      name: "longDesc",
-      title: "Long Description",
-      type: "string",
-    },
-    {
-      name: "multipleDesc",
-      title: 'Description with Sections',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'header',
-              title: 'Section Header',
-              type: 'string'
-            },
-            {
-              name: 'sectionDesc',
-              title: 'Section Description',
-              type: 'string'
-            },
-            
-          ]
-        }
-
-      ]
-    },
-    {
-      name: "connector",
-      title: "Connector",
-      type: "string",
-    },
-    {
-      name: "colors",
-      title: "Colors",
-      type: "array",
-      of: [{ type: "string" }],
-    },
-    {
-      name: "bluetooth",
-      title: "Bluetooth",
-      type: "number",
-    },
-    {
-      name: "batteryLife",
-      title: "Battery Life",
-      type: "number",
-    },
-    {
-      name: "driverSize",
-      title: "Audio Driver Size",
-      type: "string",
-    },
-
-    {
-      name: "soundQuality",
-      title: "Sound Quality",
-      type: "string",
-    },
-    {
-      name: "noiseCancel",
-      title: "Noise Cancellation",
-      type: "string",
-    },
-    {
-      name: "portability",
-      title: "Portability",
-      type: "string",
-    },
-    {
-      name: "comfort",
-      title: "Comfort",
-      type: "string",
-    },
-    {
-      name: "micro",
-      title: "Microphone",
-      type: "string",
-    },
-    {
-      name: "controls",
-      title: "Controls",
-      type: "string",
-    },
-    {
-      name: "chargingTime",
-      title: "Charging Time",
-      type: "string",
-    },
-    {
-      name: "durability",
-      title: "Durability",
-      type: "string",
-    },
-    {
-      name: "freq",
-      title: "Headphone frequency response",
-      type: "string",
-    },
-    {
-      name: "sale",
-      title: "Sale",
-      type: "boolean",
-    },
-    {
-      name: 'hot',
-      title: 'Hot',
-      type: 'boolean'
-    },
+    desc,
+    specs, //specifications
   ],
 };

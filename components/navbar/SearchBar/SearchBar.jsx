@@ -16,11 +16,11 @@ const SearchBar = () => {
 
   return (
     <div
-      className="bg-grey p-3 rounded-full  flex justify-around"
+      className=" p-3 rounded-full  flex justify-around"
       ref={searchbarRef}
     >
       <BiSearchAlt
-        className="text-2xl md:text-3xl lg:text-4xl cursor-pointer text-white "
+        className="text-2xl md:text-3xl lg:text-4xl cursor-pointer  "
         onClick={toggleSearchbar}
       />
       {isSearchbarFocused ? (

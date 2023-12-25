@@ -4,7 +4,8 @@ import logo from "@/assets/logo/logo.png";
 const Logo = () => (
   <div className="flex-center">
     <Link href="/">
-      <Image src={logo} width={100} className="w-12 lg:w-24" />
+      {/* <Image src={logo} width={100} className="w-12 lg:w-24" /> */}
+      <p className="font-extrabold text-lg">WiredWave</p>
     </Link>
   </div>
 );
