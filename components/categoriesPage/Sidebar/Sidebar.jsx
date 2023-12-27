@@ -21,7 +21,7 @@ const Sidebar = () => {
     const isChecked = event.target.checked;
     setSelectedBox(category);
     if (isChecked) {
-      router.replace(`/category?category=${category}`, undefined, {
+      router.replace(`/category?c=${category}`, undefined, {
         shallow: true,
       });
     } else {
