@@ -2,11 +2,8 @@ import React from "react";
 import Link from 'next/link'
 const CategoryHeader = () => {
   return (
-    <div className="w-full flex justify-between items-center">
-      <h4>Shop by Categories</h4>
-      <Link href='/category'>
-        <p>Show all</p>
-      </Link>
+    <div className="w-full flex justify-between items-center px-4 md:px-14">
+      <p className="text-xl md:text-2xl lg:text-3xl">Categories</p>
     </div>
   );
 };
