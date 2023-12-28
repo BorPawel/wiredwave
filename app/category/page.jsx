@@ -9,7 +9,7 @@ const Page = ({searchParams}) => {
 
 
   return (
-    <div className="m-auto w-full max-w-[1600px] flex flex-col p-4 mt-32 text-white min-h-[1200px]">
+    <div className="m-auto w-full max-w-[1600px] flex flex-col p-4 mt-32 text-white min-h-[1100px]">
       <Header />
       <ProductWrapper>
         <ProductGrid params={searchParams}/>
