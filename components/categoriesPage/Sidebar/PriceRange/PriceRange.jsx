@@ -5,7 +5,7 @@ const PriceRange = () => {
   return (
     <div className="py-2 flex flex-col gap-2">
       <p>Price Range</p>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-row md:flex-col gap-2">
        <PriceInput placeholder='0$'/>
        <PriceInput placeholder='10000$'/>
       

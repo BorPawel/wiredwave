@@ -12,7 +12,7 @@ const Banner = async () => {
     <div className="w-full min-h-[500px] md:min-h-[800px] rounded-3xl flex flex-col lg:flex-row relative z-0 overflow-hidden md:overflow-visible mt-24 test">
       
       <Circles />
-      <BannerText text="Wireless" isHidden={false} />
+      <BannerText text="Wireless" />
       <BannerInfo banner={data?.banner[0]} />
       <BannerImage banner={data?.banner[0]} />
     </div>
