@@ -30,10 +30,14 @@ p {
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 }
 .nav_active{
-  translate: 50%;
+  
   box-shadow: 0 0 10px #171717, 0 0 20px #171717;
 }
-
+@media (min-width: 1024px) {
+  .nav_active{
+    translate: 50%;
+  }
+}
 
 .flex-center {
   display: flex;
