@@ -3,7 +3,7 @@ import Tile from "./Tile/Tile";
 import Link from 'next/link'
 const Categories = ({ products }) => {
   const categoryArr = ["Wireless", "Gaming", "Clip-On", "Open-Ear", "Earbuds"];
-
+  console.log(products)
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
       {categoryArr.map((item, index) => (

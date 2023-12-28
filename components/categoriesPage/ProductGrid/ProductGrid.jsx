@@ -5,7 +5,7 @@ import ProductCard from "../ProductCard/ProductCard";
 const ProductGrid = async ({ params }) => {
   const products = await getCategoryWithParams(params);
 
-  console.log(products)
+ 
   return (
     <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {products.map((item) => (
