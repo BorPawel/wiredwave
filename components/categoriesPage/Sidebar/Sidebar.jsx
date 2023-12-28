@@ -16,12 +16,14 @@ const Sidebar = () => {
   ];
 
   const [selectedBox, setSelectedBox] = useState(searchParams.get('category'));
+  
   const handleCheckboxChange = (event) => {
     const category = event.target.value;
     const isChecked = event.target.checked;
     setSelectedBox(category);
+    console.log(selectedBox)
     if (isChecked) {
-      router.replace(`/category?c=${category}`, undefined, {
+      router.replace(`/category?category=${category}`, undefined, {
         shallow: true,
       });
     } else {

@@ -15,7 +15,7 @@ const Categories = ({ products }) => {
           }
           key={index}
         >
-          <Link href={`/category/?category=${item.toLowerCase()}`}>
+          <Link href={`/category?category=${item.toLowerCase()}`}>
             <Tile products={products} category={item} />
           </Link>
         </div>
