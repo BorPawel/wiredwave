@@ -7,7 +7,7 @@ const ProductGrid = async ({ params }) => {
 
  
   return (
-    <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-2 md:grid-cols-3  md:gap-4">
       {products.map((item) => (
         <Link
           href={`/product/${item.category.toLowerCase()}/${item.slug.current}`}
