@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProductTitle = ({ title }) => {
-  const chars = title.split("");
+  const formattedTitle = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+  const chars = formattedTitle.split("");
   return (
     <div className="h-1/4  flex justify-center items-center w-full absolute duration-300 bottom-[40%] -z-1 group-hover:z-20">
       <div className="w-full p-3 flex justify-center items-center duration-300 gap-8 group-hover:gap-2">
