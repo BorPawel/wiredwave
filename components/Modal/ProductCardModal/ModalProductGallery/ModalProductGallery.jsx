@@ -5,7 +5,7 @@ import Button from "@/components/reusable/button/Button";
 
 const ModalProductGallery = ({ image }) => {
   return (
-    <div className="flex flex-col w-1/2 modal_container">
+    <div className="flex flex-col w-full md:w-1/2 modal_container">
       {image ? (
         <div className="flex flex-col">
           <div className="w-full flex items-center justify-center">

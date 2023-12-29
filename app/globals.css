@@ -110,6 +110,10 @@ p {
 }
 
 
-.modal_container{
-  min-height: 500px;
+
+
+@media (min-width: 768px) {
+  .modal_container{
+    min-height: 500px;
+  }
 }
