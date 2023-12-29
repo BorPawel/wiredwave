@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
