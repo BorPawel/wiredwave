@@ -2,6 +2,7 @@ import React from 'react'
 import ColorOptions from '../ColorOptions/ColorOptions'
 import Quantity from '@/components/reusable/Quantity'
 import Button from '@/components/reusable/button/Button'
+import CTAButtons from '../CTAButtons/CTAButtons'
 
 const ProductDetailsModal = ({product}) => {
   return (
@@ -20,11 +21,7 @@ const ProductDetailsModal = ({product}) => {
         <div className="flex w-full justify-center items-center  px-4">
           <p className="text-4xl drop-shadow-glow">${product.price}</p>
         </div>
-        <div className="flex flex-col lg:flex-row h-full justify-center items-center gap-4 p-4">
-          
-          <Button buttonText="Add to Card" />
-          <Button buttonText="Go to product" />
-        </div>
+        <CTAButtons product={product} />
       </div>
   )
 }
