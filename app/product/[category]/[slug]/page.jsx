@@ -20,7 +20,7 @@ const Page = async ({ params }) => {
       </Link>
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <ProductHeader product={product} />
-        <ProductGallery image={product?.image} />
+       {/* {product.image ?  <ProductGallery image={product?.image} /> : null} */}
 
         <ProductDetails product={product} />
       </div>

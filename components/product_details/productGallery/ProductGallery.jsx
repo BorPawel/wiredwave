@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
   
-import { urlFor } from "@/sanity/lib/client";
+  import { urlFor } from "@/sanity/lib/client";
 export function ProductGallery({ image }) {
   
   const [bigImage, setBigImage] = useState(image[0]);
