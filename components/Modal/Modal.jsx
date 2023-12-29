@@ -1,40 +1,44 @@
-'use client'
+"use client";
 
-import { Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { useRouter } from 'next/navigation'
+import { Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { useRouter } from "next/navigation";
+import { IoMdClose } from "react-icons/io";
 
 export default function Modal({ children }) {
-  const router = useRouter()
-  const handleClose = () => router.back()
+  const router = useRouter();
+  const handleClose = () => router.back();
 
   return (
     <Transition.Root show={true} as={Fragment}>
-      <Dialog as='div' className='relative z-50' onClose={handleClose}>
+      <Dialog as="div" className="relative z-50" onClose={handleClose}>
         <Transition.Child
           as={Fragment}
-          enter='ease-out duration-300'
-          enterFrom='opacity-0'
-          enterTo='opacity-100'
-          leave='ease-in duration-200'
-          leaveFrom='opacity-100'
-          leaveTo='opacity-0'
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
         >
-          <div className='fixed inset-0 bg-gray-500/40 transition-opacity' />
+          <div className="fixed inset-0 bg-gray-500/40 transition-opacity" />
         </Transition.Child>
 
-        <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
-          <div className='flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0'>
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
             <Transition.Child
               as={Fragment}
-              enter='ease-out duration-300'
-              enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
-              enterTo='opacity-100 translate-y-0 sm:scale-100'
-              leave='ease-in duration-200'
-              leaveFrom='opacity-100 translate-y-0 sm:scale-100'
-              leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              enterTo="opacity-100 translate-y-0 sm:scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className='relative transform overflow-hidden rounded-2xl bg-dark text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-6xl'>
+              <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-dark text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-6xl">
+                <div className="absolute top-2 right-2 z-40 cursor-pointer" onClick={handleClose}>
+                  <IoMdClose className="text-white w-6 h-6" />
+                </div>
                 {children}
               </Dialog.Panel>
             </Transition.Child>
@@ -42,5 +46,5 @@ export default function Modal({ children }) {
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }
