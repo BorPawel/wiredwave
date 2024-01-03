@@ -1,3 +1,4 @@
+import BackButton from "@/components/product_details/BackButton/BackButton";
 import ProductDetails from "@/components/product_details/ProductDetails/ProductDetails";
 import ProductHeader from "@/components/product_details/ProductHeader/ProductHeader";
 import Switch from "@/components/product_details/Switch/Switch";
@@ -8,16 +9,14 @@ import { getDataWithParams } from "@/lib/getData/getData";
 import { client } from "@/sanity/lib/client";
 import Link from "next/link";
 
-import { IoIosArrowBack } from "react-icons/io";
-
+import useRouter from 'next/navigation'
 const Page = async ({ params }) => {
   const product = await getDataWithParams(params);
-  console.log(product)
+  
+
   return (
     <div className="flex flex-col gap-4 mt-12 m-auto min-h-[500px] p-24 text-white">
-      <Link href="/" className="absolute z-10 flex items-center gap-4">
-        <IoIosArrowBack className="text-3xl cursor-pointer" />
-      </Link>
+      <BackButton />
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <ProductHeader product={product} />
        {product.colorImageArray ?  <ProductGallery images={product?.colorImageArray} /> : null}
