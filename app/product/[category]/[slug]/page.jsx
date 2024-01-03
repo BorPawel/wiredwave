@@ -12,7 +12,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 const Page = async ({ params }) => {
   const product = await getDataWithParams(params);
-
+  console.log(product)
   return (
     <div className="flex flex-col gap-4 mt-12 m-auto min-h-[500px] p-24 text-white">
       <Link href="/" className="absolute z-10 flex items-center gap-4">
@@ -20,7 +20,7 @@ const Page = async ({ params }) => {
       </Link>
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <ProductHeader product={product} />
-       {/* {product.image ?  <ProductGallery image={product?.image} /> : null} */}
+       {product.colorImageArray ?  <ProductGallery images={product?.colorImageArray} /> : null}
 
         <ProductDetails product={product} />
       </div>

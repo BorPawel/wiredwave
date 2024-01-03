@@ -2,23 +2,24 @@
 import React, { useEffect, useState } from "react";
   
   import { urlFor } from "@/sanity/lib/client";
-export function ProductGallery({ image }) {
+export function ProductGallery({ images }) {
   
-  const [bigImage, setBigImage] = useState(image[0]);
+  const [bigImage, setBigImage] = useState(images[0].image);
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const smallImgStyles = 'w-20 md:w-28 lg:w-32 bg-grey rounded-[20px]'
   const toggleProduct = (image, index) => {
     setBigImage(image);
-
-    const smallImg = document.querySelectorAll(".small_img");
-    smallImg.forEach((img) => {
-      img.classList.remove("small_img_active");
-    });
-    smallImg[index].classList.add("small_img_active");
+    setActiveImageIndex(index);
   };
+
   useEffect(() => {
-    document
-      .querySelectorAll(".small_img")[0]
-      .classList.add("small_img_active");
-  }, []);
+    setBigImage(images[0].image);
+    setActiveImageIndex(0);
+  }, [images]);
+
+
+
   return (
     <div className="flex flex-col lg:w-7/12 gap-2 p-2">
      
@@ -30,13 +31,14 @@ export function ProductGallery({ image }) {
         />
       </div>
        <div className="w-full flex-center gap-2 md:gap-4 lg:gap-6">
-        {image?.map((img, index) => (
+        {images?.map((img, index) => (
           <img
-            src={urlFor(img && img)}
+            src={urlFor(img.image && img.image)}
             alt=""
             key={index}
-            className="w-20 md:w-28 lg:w-32 small_img bg-grey rounded-[20px]"
-            onMouseEnter={() => toggleProduct(img, index)}
+            
+            className={index === activeImageIndex ? `small_img_active ${smallImgStyles}` : `${smallImgStyles} small_img`}
+            onMouseEnter={() => toggleProduct(img.image, index)}
           />
         ))}
       </div>
