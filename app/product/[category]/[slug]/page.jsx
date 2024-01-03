@@ -15,7 +15,7 @@ const Page = async ({ params }) => {
   
 
   return (
-    <div className="flex flex-col gap-4 mt-12 m-auto min-h-[500px] p-24 text-white">
+    <div className="flex flex-col gap-4 mt-24 m-auto min-h-[500px]  text-white">
       <BackButton />
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <ProductHeader product={product} />
@@ -24,7 +24,7 @@ const Page = async ({ params }) => {
         <ProductDetails product={product} />
       </div>
 
-      <Switch product={product} />
+      {/* <Switch product={product} /> */}
     </div>
   );
 };
