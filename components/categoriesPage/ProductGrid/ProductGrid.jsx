@@ -11,7 +11,7 @@ const ProductGrid = async ({ params }) => {
       {products.map((item) => (
         <Link
           href={`/product/${item.category.toLowerCase()}/${item.slug.current}`}
-          scroll={false}
+         
        >
           <ProductCard item={item} />
         </Link>
