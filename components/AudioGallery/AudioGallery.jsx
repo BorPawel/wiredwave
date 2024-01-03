@@ -9,8 +9,8 @@ const AudioGallery = async () => {
   return (
     <section className="m-auto w-full max-w-[1600px] text-white my-32 flex flex-col gap-60">
         <WirelessShowcase  product={data.product.filter(item => item.category === 'Wireless')}/>
-        <GamingShowcase product={data.product.filter(item => item.category === 'Gaming')}/>
-        <EarphonesShowcase product={data.product.filter(item => item.category === 'Earphones')}/>
+        {/* <GamingShowcase product={data.product.filter(item => item.category === 'Gaming')}/>
+        <EarphonesShowcase product={data.product.filter(item => item.category === 'Earphones')}/> */}
     </section>
   );
 };
