@@ -51,7 +51,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full lg:w-1/2 flex justify-between items-center  md:p-2 px-8 py-2 md:px-20 fixed z-40 duration-600 nav_active  top-0 bg-dark border-grey border-[2px] text-white md:rounded-b-[100px]"
+      className="w-full flex justify-between items-center  md:p-2 px-8 py-2 md:px-20 fixed z-40 duration-600 nav_active  top-0 bg-dark text-white "
       ref={navRef}
     >
       <Logo />

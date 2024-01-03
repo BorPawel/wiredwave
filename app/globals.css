@@ -31,13 +31,13 @@ p {
 }
 .nav_active{
   
-  box-shadow: 0 0 10px #171717, 0 0 20px #171717;
+  box-shadow: 0 0 10px #171717;
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .nav_active{
     translate: 50%;
   }
-}
+} */
 
 .flex-center {
   display: flex;
