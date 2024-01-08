@@ -9,8 +9,9 @@ const Checkbox = ({value, isChecked, onChange}) => {
         checked={isChecked}
         onChange={onChange}
         value={value.toLowerCase()}
+        
       />
-      <span className="text-sm md:text-md">{value}</span>
+      <span className="text-xl">{value}</span>
     </div>
   );
 };

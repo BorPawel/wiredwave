@@ -21,7 +21,7 @@ const Sidebar = () => {
     const category = event.target.value;
     const isChecked = event.target.checked;
     setSelectedBox(category);
-    console.log(selectedBox)
+  
     if (isChecked) {
       router.replace(`/category?category=${category}`, undefined, {
         shallow: true,
@@ -31,7 +31,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-[250px] flex flex-col gap-2 ">
+    <div className="w-full flex justify-evenly mb-12  ">
       {categoryArr.map((item) => (
         <Checkbox
           key={item}
@@ -40,7 +40,7 @@ const Sidebar = () => {
           onChange={handleCheckboxChange}
         />
       ))}
-      <PriceRange />
+      {/* <PriceRange /> */}
       {/* <ClearButton /> */}
     </div>
   );

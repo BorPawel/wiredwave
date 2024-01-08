@@ -6,7 +6,7 @@ import Sidebar from "../Sidebar/Sidebar";
 const ProductWrapper = ({ children }) => {
   return (
     <div className="flex flex-col md:flex-row ">
-      {/* <Sidebar /> */}
+   
       <Suspense fallback={<div>Loading</div>}>{children}</Suspense>
     </div>
   );

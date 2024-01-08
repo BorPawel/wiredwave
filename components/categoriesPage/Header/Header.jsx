@@ -5,11 +5,11 @@ import BackButton from '@/components/product_details/BackButton/BackButton';
 
 const Header = () => {
   return (
-    <div>
+    <div className="w-full justify-center items-center mt-24">
       <BackButton />
-      <div className="w-full py-14 flex justify-between items-center">
+      <div className=" flex w-full justify-center mb-24 items-center">
         <h4>Category</h4>
-       <SortButton />
+       {/* <SortButton /> */}
       </div>
     </div>
   );
