@@ -53,10 +53,9 @@ p {
   border-radius: 20px;
   background: #050505;
 }
-
+/* 
 .blur-effect {
-  /* Inner blur effect */
-  filter: drop-shadow(0 0 10px black); /* Adjust color and size as needed */
+  filter: drop-shadow(0 0 10px black); 
   border-radius: 40px;
   grid-column: 1 / -1;
   opacity: 0;
@@ -80,7 +79,7 @@ p {
   animation-range: cover -100px;
   scale: 0.6;
   opacity: 0.3;
-}
+} */
 
 @keyframes fade-up-big {
   to {
