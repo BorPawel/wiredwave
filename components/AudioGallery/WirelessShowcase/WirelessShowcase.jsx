@@ -1,10 +1,13 @@
 import React from "react";
 import Layout from "../Layout/Layout";
+import { getData } from "@/lib/getData/getData";
 
-const WirelessShowcase = ({ product }) => {
+const WirelessShowcase = async ({ product }) => {
+  const data = await getData('gallery');
+  // console.log(data.gallery[0].longImage)
   return (
     <div className="m-auto w-full flex flex-col lg:flex-row justify-center">
-      <Layout product={product} />
+      <Layout gallery={data.gallery[0]} />
 
       {/* <div className="w-full lg:w-1/2 flex-center flex-col gap-6">
         
