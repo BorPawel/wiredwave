@@ -3,9 +3,9 @@ import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Copyright = () => {
   return (
-    <div className="flex-center gap-2">
+    <div className="flex-center gap-2 my-4">
       <AiOutlineCopyrightCircle />
-      <p className="text-sm">2023 WiredWave All Rights Reserved</p>
+      <p className="text-sm">2024 WiredWave All Rights Reserved</p>
     </div>
   );
 };
