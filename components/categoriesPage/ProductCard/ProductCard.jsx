@@ -8,11 +8,11 @@ const ProductCard = ({ item }) => {
   return (
     <div className="aspect-auto relative overflow-hidden ">
       <TopLight />
-      <div className="w-full h-full  shadow rounded flex justify-center items-center gap-2 flex-col">
+      <div className="w-full h-full  shadow rounded flex justify-center items-center gap-2 flex-col ">
        { item?.image && <img
           src={urlFor(item?.image && item?.image[0])}
           alt={item?.name}
-          className="md:w-3/4 p-2  rounded-[20px] border-t border-grey border-b "
+          className="md:w-3/4 p-2   hover:scale-110 duration-200"
           />}
         <div className="w-full md:w-3/4  text-sm md:text-lg flex flex-col gap-1">
           <p>{item?.name}</p>
