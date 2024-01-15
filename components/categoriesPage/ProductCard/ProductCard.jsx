@@ -6,9 +6,9 @@ import React from "react";
 
 const ProductCard = ({ item }) => {
   return (
-    <div className="aspect-auto relative overflow-hidden ">
+    <div className="aspect-auto relative overflow-hidden flex justify-center items-center ">
       <TopLight />
-      <div className="w-full h-full  shadow rounded flex justify-center items-center gap-2 flex-col ">
+      <div className="w-3/4 h-3/4  shadow rounded flex justify-center items-center gap-2 flex-col ">
        { item?.image && <img
           src={urlFor(item?.image && item?.image[0])}
           alt={item?.name}
