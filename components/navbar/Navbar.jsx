@@ -7,8 +7,9 @@ import Logo from "./Logo/Logo";
 import SearchBar from "./SearchBar/SearchBar";
 import ShoppingCartIcon from "./ShopingCartIcon/ShoppingCartIcon";
 import NavigationButtons from "./NavigationButtons/NavigationButtons";
+import SearchOverlay from "./SearchOverlay/SearchOverlay";
 const Navbar = () => {
-  const { showCart } = useStateContext();
+  const { showCart,searchOverlay } = useStateContext();
   const [scrollDir, setScrollDir] = useState("scrolling up");
 
   const navRef = useRef(null);
@@ -62,6 +63,7 @@ const Navbar = () => {
         <ShoppingCartIcon />
       </div>
       {showCart && <ShoppingCart />}
+      {searchOverlay && <SearchOverlay />}
     </nav>
   );
 };

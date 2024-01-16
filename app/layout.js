@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className="bg-dark">
         <StateContext>
         <div id="shopping-cart-portal"></div>
+        <div id="search-portal"></div>
           <Navbar />
           {children}
           <Footer />

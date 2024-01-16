@@ -1,4 +1,5 @@
 'use client'
+import SearchOverlay from "@/components/navbar/SearchOverlay/SearchOverlay";
 import React, { useState, createContext, useContext } from "react";
 import { toast } from "react-hot-toast";
 
@@ -8,6 +9,7 @@ export const StateContext = ({ children }) => {
   const [firstHalfProductList, setFirstHalfProductList] = useState([]);
 
   const [showCart, setShowCart] = useState(false);
+  const [showSearchOverlay, setShowSearchOverlay] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
@@ -16,6 +18,9 @@ export const StateContext = ({ children }) => {
 
   const [category, setCategory] = useState("Wireless");
 
+  const showSearchOverlayHandler = () => {
+    setShowSearchOverlay((prev) => !prev);
+  }
   const categoryHandler = (category, id) => {
    
     setCategory(category);
@@ -112,10 +117,6 @@ export const StateContext = ({ children }) => {
     }
   };
 
-  const chooseColor = (product, color) => {
-    const findProduct = cartItems.find((item) => item._id === product._id);
-  };
-
  
   return (
     <Context.Provider
@@ -137,7 +138,8 @@ export const StateContext = ({ children }) => {
         decQtyInCart,
         color,
         setProductColor,
-    
+        showSearchOverlayHandler,
+        SearchOverlay
       }}
     >
       {children}
