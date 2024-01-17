@@ -58,11 +58,11 @@ const Navbar = () => {
       <Logo />
       <NavigationButtons />
       <div className="flex gap-4 md:gap-6 lg:gap-8">
-        <SearchBar />
+        {/* <SearchBar /> */}
 
         <ShoppingCartIcon />
       </div>
-      {showCart && <ShoppingCart />}
+      {/* {showCart && <ShoppingCart />} */}
       {showSearchOverlay && <SearchOverlay />}
     </nav>
   );
