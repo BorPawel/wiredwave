@@ -62,8 +62,8 @@ const Navbar = () => {
 
         <ShoppingCartIcon />
       </div>
-      {/* {showCart && <ShoppingCart />} */}
-      {showSearchOverlay && <SearchOverlay />}
+      {showCart && <ShoppingCart />}
+      {/* {showSearchOverlay && <SearchOverlay />} */}
     </nav>
   );
 };

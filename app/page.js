@@ -11,7 +11,7 @@ export default async function Home() {
 
 
   return (
-    <main className="m-auto w-full max-w-[1600px]">
+    <main className="m-auto w-full">
       <Banner/>
       <CategoriesHomepage/>
       <IntersectionHeader/>

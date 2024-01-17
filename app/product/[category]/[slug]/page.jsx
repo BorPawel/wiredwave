@@ -19,7 +19,7 @@ const Page = async ({ params }) => {
       <BackButton />
       <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
         <ProductHeader product={product} />
-       {product.colorImageArray ?  <ProductGallery images={product?.colorImageArray} /> : null}
+       {product?.colorImageArray ?  <ProductGallery images={product?.colorImageArray} /> : null}
 
         <ProductDetails product={product} />
       </div>
