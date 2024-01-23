@@ -1,3 +1,5 @@
+import { category } from "../lib/category";
+
 export default {
   name: "sale",
   title: "Sale",
@@ -21,6 +23,7 @@ export default {
       title: "Slug",
       type: "slug",
     },
+    category,
     {
       name: "precent",
       title: "Percent Off",
