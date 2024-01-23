@@ -5,7 +5,7 @@ const Copyright = () => {
   return (
     <div className="flex-center gap-2 my-4">
       <AiOutlineCopyrightCircle />
-      <p className="text-sm">2024 WiredWave All Rights Reserved</p>
+      <p className="text-sm">2024 Paweł Bornikowski | WiredWave All Rights Reserved</p>
     </div>
   );
 };
