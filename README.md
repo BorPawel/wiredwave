@@ -26,77 +26,87 @@ I chose to launch the raw or stable version of this website to showcase my work.
 ###
 
 
-### UI/Design Features:
- **Nice Banner:**
+
+<h2 align="left">UI/Design Features:</h2>
+
+
+
    - Attractive banner at the top of the app showcasing featured headphones or promotions, enhancing visual appeal.
 
- **Categories Section with Tiles:**
    - Organized display of headphone categories using visually appealing tiles, facilitating easy navigation.
 
- **Sale Banner:**
    - Prominent banner highlighting ongoing sales, discounts, or special offers, enticing users to explore discounted products.
 
- **Footer:**
    - Inclusion of a footer section with essential links, providing a comprehensive overview of the ecommerce platform.
 
- **Navbar with Hide on Scroll Down:**
    - Implementation of a responsive navbar that intelligently hides when users scroll down, maximizing screen space for content.
 
- **Responsive Design:**
    - Ensuring a responsive design that caters to various screen sizes and devices, optimizing the user experience on both desktop and mobile platforms.
 
-###
 
 
-### Navigation/Routing:
- **Categories Page with All Headphones Categories:**
+<h2 align="left">Navigation/Routing:</h2>
+
    - Dedicated page listing all available headphone categories, enabling users to explore a wide range of options.
 
- **Changing Params in URL:**
    - Implementation of dynamic URL parameters for seamless navigation between sections and categories.
 
-###
 
 
-### Product Presentation:
- **Product Page:**
+
+<h2 align="left">Product Presentation:</h2>
+
    - Detailed product pages for each headphone, featuring specifications, descriptions, and images for informed decisions.
 
- **Image Changer:**
    - Interactive image changer on the product page, allowing users to view different angles or variations of the headphones.
 
-###
 
 
-### Cart Management:
- **Changing Quantity:**
-   - User-friendly functionality allowing customers to adjust the quantity of selected headphones on the product page.
+<h2 align="left">Cart Management:</h2>
 
- **Add to Cart:**
-    - Integration of a smooth and intuitive "Add to Cart" button on the product page.
+  - User-friendly functionality allowing customers to adjust the quantity of selected headphones on the product page.
 
- **Toaster with Info about Add to Cart:**
-    - Implementation of a toaster notification system confirming the successful addition of items to the shopping cart.
-
- **Shopping Cart:**
-    - A dedicated page for users to review and manage items, displaying details such as product names, quantities, and prices.
-
- **Deleting from Cart:**
-    - Capability for users to remove items from their shopping cart, providing control over selections.
-
- **Increment and Decrement Quantity and Delete Inside Shopping Cart:**
-    - Enhanced functionality within the shopping cart, allowing users to adjust quantities and delete products directly.
-
-###
+  - Integration of a smooth and intuitive "Add to Cart" button on the product page.
 
 
-### Routing/System Management:
- **Manage Routing:**
-    - Efficient routing system ensuring smooth navigation between different sections and pages.
+  - Implementation of a toaster notification system confirming the successful addition of items to the shopping cart.
 
-###
+ 
+  - A dedicated page for users to review and manage items, displaying details such as product names, quantities, and prices.
+
+
+  - Capability for users to remove items from their shopping cart, providing control over selections.
+
+
+  - Enhanced functionality within the shopping cart, allowing users to adjust quantities and delete products directly.
+
+
+<h2 align="left">Routing/System Management:</h2>
+
+
+  - Efficient routing system ensuring smooth navigation between different sections and pages.
 
 
 ### Backend/Data Management:
- **Sanity Schema for Dynamic Adding Products:**
-    - Integration of a Sanity schema to support dynamic addition of products, providing a structured and scalable approach to managing and updating the product catalog.
+
+  - Integration of a Sanity schema to support dynamic addition of products, providing a structured and scalable approach to managing and updating the product catalog.
+
+
+## TODO
+
+- [ ] Add animations with Framer Motion / GSAP
+- [ ] Improve performance
+- [ ] Add Lazy Loading
+- [ ] Improve Category Page styles
+- [ ] Improve Product Card styles
+- [ ] Add description to Product Page
+- [ ] Add specifications of Product in Product Page
+- [ ] Implement Strapi for payments (just for testing)
+- [ ] Add some new content in Home Page
+- [ ] Add Search Bar
+- [ ] Remake Button Hover Effects
+- [ ] Add Loading Effect when fetching data
+- [ ] Fix categories list and back button inside Category Page
+- [ ] Fix shopping cart on mobile
+- [ ] Fix sales banner styles on mobile
+- [ ] Improve styles on Product Page on mobile
