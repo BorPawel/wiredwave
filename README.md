@@ -20,7 +20,7 @@ I chose to launch the raw or stable version of this website to showcase my work.
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo"  />
    <img width="12" />
-  <p>Sanity</p>
+  <span>Sanity</span>
 </div>
 
 ###
@@ -45,6 +45,9 @@ I chose to launch the raw or stable version of this website to showcase my work.
  **Responsive Design:**
    - Ensuring a responsive design that caters to various screen sizes and devices, optimizing the user experience on both desktop and mobile platforms.
 
+###
+
+
 ### Navigation/Routing:
  **Categories Page with All Headphones Categories:**
    - Dedicated page listing all available headphone categories, enabling users to explore a wide range of options.
@@ -52,12 +55,18 @@ I chose to launch the raw or stable version of this website to showcase my work.
  **Changing Params in URL:**
    - Implementation of dynamic URL parameters for seamless navigation between sections and categories.
 
+###
+
+
 ### Product Presentation:
  **Product Page:**
    - Detailed product pages for each headphone, featuring specifications, descriptions, and images for informed decisions.
 
  **Image Changer:**
    - Interactive image changer on the product page, allowing users to view different angles or variations of the headphones.
+
+###
+
 
 ### Cart Management:
  **Changing Quantity:**
@@ -78,9 +87,15 @@ I chose to launch the raw or stable version of this website to showcase my work.
  **Increment and Decrement Quantity and Delete Inside Shopping Cart:**
     - Enhanced functionality within the shopping cart, allowing users to adjust quantities and delete products directly.
 
+###
+
+
 ### Routing/System Management:
  **Manage Routing:**
     - Efficient routing system ensuring smooth navigation between different sections and pages.
+
+###
+
 
 ### Backend/Data Management:
  **Sanity Schema for Dynamic Adding Products:**
