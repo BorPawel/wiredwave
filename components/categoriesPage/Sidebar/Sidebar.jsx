@@ -31,7 +31,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-full flex justify-evenly mb-12  flex-row md:flex-col">
+    <div className="w-full flex justify-evenly mb-12 md:items-center flex-row md:flex-col md:w-[200px] gap-5 ">
       {categoryArr.map((item) => (
         <Checkbox
           key={item}

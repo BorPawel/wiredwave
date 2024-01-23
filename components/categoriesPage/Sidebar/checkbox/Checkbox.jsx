@@ -3,7 +3,7 @@ import React from "react";
 const Checkbox = ({value, isChecked, onChange}) => {
  
   return (
-    <div className="flex justify-start items-center gap-2 ">
+    <div className="flex justify-start items-center gap-2  w-full">
        <input
         type="checkbox"
         checked={isChecked}
@@ -11,7 +11,7 @@ const Checkbox = ({value, isChecked, onChange}) => {
         value={value.toLowerCase()}
         
       />
-      <span className="text-xl">{value}</span>
+      <span className="text-lg">{value}</span>
     </div>
   );
 };
