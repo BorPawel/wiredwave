@@ -7,7 +7,7 @@ import React from "react";
 
 const Page = ({ searchParams }) => {
   return (
-    <div className="m-auto w-full  flex flex-col p-4 mt-16 text-white min-h-[1100px]">
+    <div className="m-auto  max-w-[1600px] flex flex-col p-4 mt-16 text-white min-h-[1100px]">
       <Header />
       <div className="block md:hidden">
         <Sidebar />
