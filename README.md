@@ -7,7 +7,6 @@ I chose to launch the raw or stable version of this website to showcase my work.
 
 <h2 align="left">Link to website</h2>
 https://wiredwave.vercel.app/
-###
 
 <h2 align="left">Tech stack</h2>
 
