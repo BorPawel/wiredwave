@@ -7,7 +7,7 @@ import { getData } from "@/lib/getData/getData";
 moment.locale("en");
 const SaleBanner = async ( ) => {
 
-  const data = await getData(  'sale');
+  const data = await getData('sale');
   if(!data.sale){
     return <div>No sale</div>
   }

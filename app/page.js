@@ -14,8 +14,8 @@ export default async function Home() {
     <main className="m-auto w-full">
       <Banner/>
       <CategoriesHomepage/>
-      <IntersectionHeader/>
-      <AudioGallery />
+      {/* <IntersectionHeader/>
+      <AudioGallery /> */}
       <SaleBanner  />
     </main>
   );
