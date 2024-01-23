@@ -9,17 +9,20 @@ import { getDataWithParams } from "@/lib/getData/getData";
 import { client } from "@/sanity/lib/client";
 import Link from "next/link";
 
-import useRouter from 'next/navigation'
+import useRouter from "next/navigation";
 const Page = async ({ params }) => {
   const product = await getDataWithParams(params);
-  
 
   return (
     <div className="flex flex-col gap-4 mt-24 m-auto min-h-[500px]  text-white">
-      <BackButton />
-      <div className="flex  flex-col lg:flex-row  gap-8 justify-center ">
+      
+        <BackButton />
+      
+      <div className="flex  flex-col lg:flex-row  gap-8 justify-center mt-12 lg:mt-4 ">
         <ProductHeader product={product} />
-       {product?.colorImageArray ?  <ProductGallery images={product?.colorImageArray} /> : null}
+        {product?.colorImageArray ? (
+          <ProductGallery images={product?.colorImageArray} />
+        ) : null}
 
         <ProductDetails product={product} />
       </div>

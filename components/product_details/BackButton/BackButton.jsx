@@ -9,9 +9,10 @@ const BackButton = () => {
   return (
     <div
       onClick={handleClose}
-      className="absolute z-10 flex items-center gap-4 "
+      className="absolute z-10 flex items-center gap-4 left-4 md:left-20 md:mt-4"
     >
       <IoIosArrowBack className="text-3xl cursor-pointer" />
+      <span>Back</span>
     </div>
   );
 };
