@@ -109,7 +109,7 @@ https://wiredwave.vercel.app/
 - [ ] Add Search Bar
 - [ ] Remake Button Hover Effects
 - [ ] Add Loading Effect when fetching data
-- [ ] Fix categories list and back button inside Category Page
+- [x] Fix categories list and back button inside Category Page
 - [ ] Fix shopping cart on mobile
 - [ ] Fix sales banner styles on mobile
 - [ ] Improve styles on Product Page on mobile
