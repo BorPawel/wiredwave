@@ -11,9 +11,12 @@ export default async function Home() {
 
 
   return (
-    <main className="m-auto w-full">
+    <main className="m-auto w-full flex flex-col justify-center items-center">
       <Banner/>
+      
+
       <CategoriesHomepage/>
+  
       {/* <IntersectionHeader/>
       <AudioGallery /> */}
       <SaleBanner  />
