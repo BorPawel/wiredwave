@@ -5,7 +5,7 @@ const CartItemRemove = ({ item }) => {
     const { deleteItemFromCart } =
     useStateContext();
   return (
-    <div className="hidden md:flex">
+    <div className="flex">
       <FaTrashAlt
         className="text-red-600 cursor-pointer "
         onClick={() => deleteItemFromCart(item)}

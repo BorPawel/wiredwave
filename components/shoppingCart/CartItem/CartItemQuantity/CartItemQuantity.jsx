@@ -4,7 +4,7 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 const CartItemQuantity = ({ item }) => {
   const { incQtyInCart, decQtyInCart } = useStateContext();
   return (
-    <div className="hidden md:flex justify-between items-center gap-2">
+    <div className=" flex justify-between items-center gap-2">
       <span
         onClick={() => decQtyInCart(item)}
         className="cursor-pointer hover:text-red-600"
@@ -12,7 +12,7 @@ const CartItemQuantity = ({ item }) => {
         <AiOutlineMinus />
       </span>
       <span className="w-1/3 flex justify-center items-center mx-[2px]">
-        {item.quantity}
+        {item?.quantity}
       </span>
       <span
         onClick={() => incQtyInCart(item)}
