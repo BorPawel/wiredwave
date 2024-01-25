@@ -110,6 +110,7 @@ https://wiredwave.vercel.app/
 - [ ] Remake Button Hover Effects
 - [ ] Add Loading Effect when fetching data
 - [x] Fix categories list and back button inside Category Page
-- [ ] Fix shopping cart on mobile
+- [x] Fix shopping cart on mobile
+- [ ] Add color pick functionality for product
 - [ ] Fix sales banner styles on mobile
 - [ ] Improve styles on Product Page on mobile
