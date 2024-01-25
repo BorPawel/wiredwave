@@ -111,6 +111,7 @@ https://wiredwave.vercel.app/
 - [ ] Add Loading Effect when fetching data
 - [x] Fix categories list and back button inside Category Page
 - [x] Fix shopping cart on mobile
-- [ ] Add color pick functionality for product
+- [x] Add color pick functionality for product
+- [ ] Fix color pick (When pick 2 different colors of the same product, display it as 2 separate products in shopping cart)
 - [ ] Fix sales banner styles on mobile
 - [ ] Improve styles on Product Page on mobile
