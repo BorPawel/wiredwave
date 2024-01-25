@@ -1,11 +1,10 @@
 import Button from "@/components/reusable/button/Button";
-import FreeShipping from "@/components/svg/FreeShipping";
+
 import React from "react";
-import { BiSupport } from "react-icons/bi";
-import { MdOutlineSecurity } from "react-icons/md";
-import { LiaShippingFastSolid } from "react-icons/lia";
+
 import { Reviews } from "../reviews/Reviews";
 import AddToCard from "./AddToCard/AddToCard";
+import Services from "./Services/Services";
 
 const ProductDetails = ({ product }) => {
   return (
@@ -23,28 +22,11 @@ const ProductDetails = ({ product }) => {
       <p className="block md:hidden text-sm lg:w-3/4 pr-2 mb-8 ">
         {product?.shortDesc}
       </p>
-    <AddToCard product={product}/>
+      <AddToCard product={product} />
 
       <span className="h-[2px] w-full lg:w-3/4 my-8 bg-grey"></span>
 
-      <div className="w-full grid grid-cols-2 place-items-center lg:place-items-start gap-4">
-        <span className="flex-center gap-3">
-          <FreeShipping />
-          <p>Free Shipping</p>
-        </span>
-        <span className="flex-center gap-3">
-          <LiaShippingFastSolid className="text-[35px]" />
-          <p>24h delivery</p>
-        </span>
-        <span className="flex-center gap-3">
-          <MdOutlineSecurity className="text-[35px]" />
-          <p>All time security</p>
-        </span>
-        <span className="flex-center gap-3">
-          <BiSupport className="text-[35px]" />
-          <p>Support help</p>
-        </span>
-      </div>
+      <Services />
     </div>
   );
 };
