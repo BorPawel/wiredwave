@@ -6,7 +6,7 @@ import CartHeader from "./CartHeader/CartHeader";
 import CartItem from "./CartItem/CartItem";
 const ShoppingCart = () => {
   const { cartItems } = useStateContext();
-
+  
   return ReactDOM.createPortal(
     <div className="w-screen min-h-screen bg-dark fixed right-0 top-0 z-50 flex-center overflow-auto text-white">
       <div className="w-[1400px] flex flex-col h-screen">

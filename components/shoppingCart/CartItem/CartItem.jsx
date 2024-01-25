@@ -7,6 +7,7 @@ import CartItemRemove from "./CartItemRemove/CartItemRemove";
 import NextImage from "@/components/reusable/NextImage/NextImage";
 
 const CartItem = ({ item }) => {
+  console.log(item)
   return (
     <div className="flex w-full bg-grey rounded-[20px] p-2 ">
       {/* <img src={urlFor(item.image && item.image[0])} className="h-20 lg:h-32" /> */}
