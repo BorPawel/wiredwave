@@ -6,7 +6,7 @@ import { getData } from "@/lib/getData/getData";
 const CategoriesHomepage = async () => {
   const data = await getData( 'product');
   return (
-    <div className="flex flex-col gap-8 p-4 text-white mt-12 w-full ">
+    <div className="flex flex-col gap-8 p-4 text-white mt-12 w-full justify-center items-center max-w-[1600px]">
       <CategoryHeader />
       <Categories products={data.product}/>
     </div>

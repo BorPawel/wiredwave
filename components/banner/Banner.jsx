@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Circles } from "../reusable/circles/Circles";
 import BannerImage from "./BannerImage/BannerImage";
