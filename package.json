@@ -11,7 +11,9 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@sanity/image-url": "^1.0.2",
+    "@studio-freight/lenis": "^1.0.34",
     "framer-motion": "^10.17.9",
+    "lenis": "^0.0.2",
     "next": "14.0.4",
     "next-sanity": "^7.0.4",
     "next-sanity-image": "^6.1.1",

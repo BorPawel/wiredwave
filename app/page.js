@@ -1,9 +1,12 @@
 
 import AudioGallery from "@/components/AudioGallery/AudioGallery";
 import IntersectionHeader from "@/components/IntersectionHeader/IntersectionHeader";
+import ZoomParallax from "@/components/ZoomParallax/ZoomParallax";
 import Banner from "@/components/banner/Banner";
 import CategoriesHomepage from "@/components/categoriesHomepage/CategoriesHomepage";
 import SaleBanner from "@/components/saleBanner/SaleBanner";
+
+
 
 
 
@@ -16,7 +19,7 @@ export default async function Home() {
       
 
       <CategoriesHomepage/>
-  
+    <ZoomParallax/>
       {/* <IntersectionHeader/>
       <AudioGallery /> */}
       <SaleBanner  />
