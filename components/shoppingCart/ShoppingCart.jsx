@@ -18,7 +18,7 @@ const ShoppingCart = () => {
                 Your Cart is Empty
               </div>
             ) : (
-              <div className="w-full h-full  gap-4 grid grid-cols-1 md:flex md:flex-col">
+              <div className="w-full h-full  gap-4  flex flex-col">
                 {cartItems.map((item, index) => (
                   <CartItem item={item} index={index} />
                 ))}
