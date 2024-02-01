@@ -23,7 +23,7 @@ const AddToCard = ({ product }) => {
           buttonText="Add to Cart"
           onClick={() => addItemToCart(product, qty, pickedColor)}
         />
-        <Button buttonText="Buy Now" />
+        {/* <Button buttonText="Buy Now" /> */}
       </div>
     </div>
   );
