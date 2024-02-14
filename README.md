@@ -3,7 +3,7 @@
 
 I created a headphone e-commerce app that offers a visually appealing and user-friendly experience. With an attractive banner, a responsive navbar that hides on scroll, and organized category tiles, users can easily navigate the platform. The app highlights special offers, features detailed product pages, and provides a seamless shopping process, including real-time notifications. Cart management is intuitive, and the app is designed to be responsive across various devices, ensuring a consistent experience. The incorporation of a robust routing system and Sanity schema enhances efficiency and scalability.
 
-I chose to launch the raw or stable version of this website to showcase my work. I opted to omit some features I had been working on and focused on deploying the stable version. In the "TODO" section, I will list and monitor all the features that I plan to work on and implement. This approach allows me to demonstrate my progress and current tasks, and it serves as a helpful organizational tool for managing my work.
+
 
 <h2 align="left">Link to website</h2>
 https://wiredwave.vercel.app/
