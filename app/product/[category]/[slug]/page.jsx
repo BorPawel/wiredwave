@@ -7,9 +7,7 @@ import { ProductGallery } from "@/components/product_details/productGallery/Prod
 
 import { getDataWithParams } from "@/lib/getData/getData";
 import { client } from "@/sanity/lib/client";
-import Link from "next/link";
 
-import useRouter from "next/navigation";
 const Page = async ({ params }) => {
   const product = await getDataWithParams(params);
 

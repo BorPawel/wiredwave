@@ -60,7 +60,7 @@ const IntersectionHeader = () => {
          
             <div className="flex flex-col relative justify-center  items-center gap-8 px-6 py-12 rounded-xl border border-grey h-[300px] overflow-hidden">
               <TopLight/>
-              <h4 className="font-semibold">{card.title}</h4>
+              <h3 className="font-semibold">{card.title}</h3>
               <p className="text-center opacity-50">{card.description}</p>
               <BottomLight/>
             </div>
