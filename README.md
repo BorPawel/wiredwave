@@ -30,6 +30,14 @@ https://wiredwave.vercel.app/
 
 
 
+<h2 align="left">Lighthouse</h2>
+I have managed to obtain the best scroes on this site using Lighthouse
+
+![lighthouse performance](https://i.imgur.com/L5BjVwr.png)
+
+
+
+
 <h2 align="left">UI/Design Features:</h2>
 
 
