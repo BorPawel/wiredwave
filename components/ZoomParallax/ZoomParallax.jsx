@@ -113,7 +113,7 @@ const ZoomParallax = () => {
     requestAnimationFrame(raf)
   },[])
   return (
-    <div ref={container}  className="h-[300vh] w-full relative my-64">
+    <div ref={container}  className="hidden md:block h-[300vh] w-full relative my-64">
       <div className="sticky h-[100vh] top-0  overflow-hidden">
         {images.map((image) => (
           <motion.div style={{

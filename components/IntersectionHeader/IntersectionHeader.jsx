@@ -53,12 +53,12 @@ const IntersectionHeader = () => {
         </p>
       </div> */}
       
-      <h2 class="font-bold text-center mb-8">Experience Hassle-Free <br/> Shopping</h2>
+      <h2 class="font-bold text-center mb-8">Empowered Purchasing Place</h2>
 
       <div className="grid gird-cols-1 lg:grid-cols-3  gap-8">
         {cardInfo.map((card, index) => (
          
-            <div className="flex flex-col relative justify-center max-w-[400px] items-center gap-8 px-6 py-12 rounded-xl border border-grey h-[300px] overflow-hidden">
+            <div className="flex flex-col relative justify-center  items-center gap-8 px-6 py-12 rounded-xl border border-grey h-[300px] overflow-hidden">
               <TopLight/>
               <h4 className="font-semibold">{card.title}</h4>
               <p className="text-center opacity-50">{card.description}</p>
