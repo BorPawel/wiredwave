@@ -19,8 +19,8 @@ export default async function Home() {
       
 
       <CategoriesHomepage/>
-    <ZoomParallax/>
       <IntersectionHeader/>
+    <ZoomParallax/>
       {/* <AudioGallery /> */}
       <SaleBanner  />
     </main>
