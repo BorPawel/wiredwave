@@ -8,7 +8,7 @@ import IsSubscribe from "./IsSubscribe/IsSubscribe";
 const FooterSection = ({ title, content, links, isSubscribe }) => {
   return (
     <div className="lg:w-1/4 w-full flex flex-col gap-4 items-center lg:items-start">
-      <Title title={title} />
+      {!isSubscribe ? <Title title={title} /> : null}
     
       <Content content={content} />
 
