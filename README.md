@@ -1,6 +1,8 @@
 
 # WiredWave
 
+(Under development)
+
 ### Project Overview
 
 WiredWave is a e-commerce platform tailored for headphone. This app seamlessly integrates captivating design with advanced functionality to redefine the online headphone shopping experience. Key features include a visually engaging interface, intuitive navigation, comprehensive product pages, efficient shopping processes, responsive design, and intuitive cart management. Leveraging robust routing and Sanity schema.
