@@ -1,7 +1,9 @@
 
+# WiredWave
+
 ### Project Overview
 
-I created a headphone e-commerce app that offers a visually appealing and user-friendly experience. With an attractive banner, a responsive navbar that hides on scroll, and organized category tiles, users can easily navigate the platform. The app highlights special offers, features detailed product pages, and provides a seamless shopping process, including real-time notifications. Cart management is intuitive, and the app is designed to be responsive across various devices, ensuring a consistent experience. The incorporation of a robust routing system and Sanity schema enhances efficiency and scalability.
+WiredWave is a e-commerce platform tailored for headphone. This app seamlessly integrates captivating design with advanced functionality to redefine the online headphone shopping experience. Key features include a visually engaging interface, intuitive navigation, comprehensive product pages, efficient shopping processes, responsive design, and intuitive cart management. Leveraging robust routing and Sanity schema.
 
 
 
@@ -12,26 +14,17 @@ https://wiredwave.vercel.app/
 
 ###
 
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo"  />
-   <img width="12" />
-  <span>Sanity</span>
-</div>
+- Next.js
+- Javascript
+- Tailwind CSS
+- Sanity
 
 ###
 
 
 
 <h2 align="left">Lighthouse</h2>
-I have managed to obtain the best scroes on this site using Lighthouse
+I have managed to obtain the best scores on this site using Lighthouse
 
 ![lighthouse performance](https://i.imgur.com/L5BjVwr.png)
 
