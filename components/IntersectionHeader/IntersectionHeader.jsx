@@ -24,7 +24,7 @@ const IntersectionHeader = () => {
         "Experience worry-free transactions with our secure payment options.",
     },
     {
-      title: "Love to help you",
+      title: "Love to help",
       description:
         "Our dedicated team is here to assist you every step of the way.",
     },
