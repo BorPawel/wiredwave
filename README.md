@@ -1,7 +1,7 @@
 
 # WiredWave
 
-(Under development)
+(I have halted development on this app to redirect my full attention to my primary project, Mealfulness.)
 
 ### Project Overview
 
