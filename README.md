@@ -9,7 +9,6 @@ WiredWave is a e-commerce platform tailored for headphone. This app seamlessly i
 
 
 
-<h2 align="left">Link to website</h2>
 https://wiredwave.vercel.app/
 
 <h2 align="left">Tech stack</h2>
