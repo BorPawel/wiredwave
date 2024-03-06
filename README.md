@@ -15,10 +15,10 @@ https://wiredwave.vercel.app/
 
 ###
 
-- Next.js
-- Javascript
-- Tailwind CSS
-- Sanity
+- `Next.js`
+- `Javascript`
+- `Tailwind CSS`
+- `Sanity`
 
 ###
 
