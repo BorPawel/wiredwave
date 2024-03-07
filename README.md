@@ -97,23 +97,3 @@ I have managed to obtain the best scores on this site using Lighthouse
   - Integration of a Sanity schema to support dynamic addition of products, providing a structured and scalable approach to managing and updating the product catalog.
 
 
-## TODO
-
-- [ ] Add animations with Framer Motion / GSAP
-- [ ] Improve performance
-- [ ] Add Lazy Loading
-- [ ] Improve Category Page styles
-- [ ] Improve Product Card styles
-- [ ] Add description to Product Page
-- [ ] Add specifications of Product in Product Page
-- [ ] Implement Strapi for payments (just for testing)
-- [ ] Add some new content in Home Page
-- [ ] Add Search Bar
-- [ ] Remake Button Hover Effects
-- [ ] Add Loading Effect when fetching data
-- [x] Fix categories list and back button inside Category Page
-- [x] Fix shopping cart on mobile
-- [x] Add color pick functionality for product
-- [ ] Fix color pick (When pick 2 different colors of the same product, display it as 2 separate products in shopping cart)
-- [ ] Fix sales banner styles on mobile
-- [ ] Improve styles on Product Page on mobile
