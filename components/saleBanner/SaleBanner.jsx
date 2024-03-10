@@ -9,7 +9,7 @@ const SaleBanner = async ( ) => {
 
   const data = await getData('sale');
   if(!data.sale){
-    return <div>No sale</div>
+    return null
   }
   const saleData = data.sale[0];
   const lowerCategory = saleData.category.toLowerCase();
