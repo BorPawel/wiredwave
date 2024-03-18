@@ -86,10 +86,7 @@ I have managed to obtain the best scores on this site using Lighthouse
   - Enhanced functionality within the shopping cart, allowing users to adjust quantities and delete products directly.
 
 
-<h2 align="left">Routing/System Management:</h2>
 
-
-  - Efficient routing system ensuring smooth navigation between different sections and pages.
 
 
 ### Backend/Data Management:
