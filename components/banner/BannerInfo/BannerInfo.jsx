@@ -1,9 +1,9 @@
-
 import React from "react";
 import { BannerTitle } from "./BannerTitle/BannerTitle";
 import { BannerDescription } from "./BannerDescription/BannerDescription";
 import { BannerPrice } from "./BannerPrice/BannerPrice";
 import { BannerButton } from "./BannerButton/BannerButton";
+import { motion } from "framer-motion";
 
 const BannerInfo = ({ banner }) => {
   const lowerCategory = banner.category.toLowerCase();
