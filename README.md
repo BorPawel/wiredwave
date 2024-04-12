@@ -89,8 +89,3 @@ I have managed to obtain the best scores on this site using Lighthouse
 
 
 
-### Backend/Data Management:
-
-  - Integration of a Sanity schema to support dynamic addition of products, providing a structured and scalable approach to managing and updating the product catalog.
-
-
