@@ -71,8 +71,6 @@ I have managed to obtain the best scores on this site using Lighthouse
 
   - User-friendly functionality allowing customers to adjust the quantity of selected headphones on the product page.
 
-  - Integration of a smooth and intuitive "Add to Cart" button on the product page.
-
 
   - Implementation of a toaster notification system confirming the successful addition of items to the shopping cart.
 
