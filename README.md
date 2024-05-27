@@ -19,6 +19,7 @@ https://wiredwave.vercel.app/
 - `Javascript`
 - `Tailwind CSS`
 - `Sanity`
+- `Framer-motion`
 
 ###
 
