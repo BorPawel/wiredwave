@@ -1,7 +1,7 @@
 
 # WiredWave
 
-(I have halted development on this app to redirect my full attention to my primary project, Mealfulness.)
+(I have halted development on this app to redirect my full attention to other stuff)
 
 ### Project Overview
 
